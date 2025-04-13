@@ -5,7 +5,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>SoniceAi - Discover the Best AI Tools</title>
     <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/ai-cards.css">
     <script src="js/main.js" defer></script>
+    <script src="js/ai-cards.js" defer></script>
     <!-- Add a Google Font for better typography -->
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
     <!-- Add Font Awesome for icons -->
@@ -61,6 +63,28 @@
                     <div class="category"><i class="fas fa-tasks"></i> Productivity</div>
                     <div class="category"><i class="fas fa-brain"></i> AI Models</div>
                 </div>
+            </div>
+        </section>
+        
+        <!-- New Section for AI Tools -->
+        <section class="ai-tools-section">
+            <div class="container">
+                <div class="section-header">
+                    <h2>AI Assistants</h2>
+                    <a href="pages/ai-assistants.html" class="view-all"><i class="fas fa-arrow-right"></i> View all</a>
+                </div>
+                
+                <!-- Category Filter Buttons -->
+                <div class="category-filters">
+                    <button class="category-filter active" data-category="all">All</button>
+                    <button class="category-filter" data-category="chatbot">Chatbots</button>
+                    <button class="category-filter" data-category="search">Search</button>
+                    <button class="category-filter" data-category="image">Image</button>
+                    <button class="category-filter" data-category="writing">Writing</button>
+                </div>
+                
+                <!-- AI Tools Container - Cards will be dynamically loaded here -->
+                <div id="ai-tools-container"></div>
             </div>
         </section>
         
