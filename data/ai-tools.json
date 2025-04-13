@@ -1,0 +1,50 @@
+[
+  {
+    "id": "claude",
+    "name": "Claude",
+    "description": "Anthropic's conversational AI assistant with advanced reasoning capabilities",
+    "url": "https://claude.ai",
+    "icon": "images/icons/claude.png",
+    "category": "chatbot"
+  },
+  {
+    "id": "deepseek",
+    "name": "DeepSeek",
+    "description": "Advanced AI platform for deep search and analysis of complex data",
+    "url": "https://deepseek.com",
+    "icon": "images/icons/deepseek.png",
+    "category": "search"
+  },
+  {
+    "id": "douban",
+    "name": "Douban AI",
+    "description": "Chinese AI assistant for conversation, content creation and recommendations",
+    "url": "https://douban.com/ai",
+    "icon": "images/icons/douban.png",
+    "category": "chatbot"
+  },
+  {
+    "id": "gemini",
+    "name": "Gemini",
+    "description": "Google's multimodal AI model capable of understanding text, images and code",
+    "url": "https://gemini.google.com",
+    "icon": "images/icons/gemini.png",
+    "category": "chatbot"
+  },
+  {
+    "id": "midjourney",
+    "name": "Midjourney",
+    "description": "AI image generator creating detailed illustrations from text prompts",
+    "url": "https://midjourney.com",
+    "icon": "images/icons/midjourney.png", 
+    "category": "image"
+  },
+  {
+    "id": "copilot",
+    "name": "Microsoft Copilot",
+    "description": "AI assistant for creative and productivity tasks integrated with Microsoft products",
+    "url": "https://copilot.microsoft.com",
+    "icon": "images/icons/copilot.png",
+    "category": "writing"
+  }
+]
