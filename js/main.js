@@ -76,8 +76,9 @@ document.addEventListener('DOMContentLoaded', function() {
             
             // Add click event to the tool card
             toolCard.addEventListener('click', function() {
-                // In a real app, this would navigate to the tool's detail page
-                alert(`You clicked on ${tool.name}`);
+                // Create a URL based on the tool name (in a real app, you might use tool ID)
+                const toolUrl = `/pages/tools/${tool.name.toLowerCase().replace(/\s+/g, '-')}.html`;
+                window.location.href = toolUrl;
             });
             
             // Add the tool card to the container
