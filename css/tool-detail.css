@@ -1,0 +1,514 @@
+/* Tool Detail Page Styles */
+.tool-detail {
+    padding: 40px 0;
+}
+
+/* Tool Header */
+.tool-header {
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    gap: 40px;
+    margin-bottom: 60px;
+    align-items: start;
+}
+
+.tool-image {
+    position: relative;
+    border-radius: var(--border-radius);
+    overflow: hidden;
+    box-shadow: var(--card-shadow);
+    aspect-ratio: 16/9;
+    background-color: var(--light-gray);
+}
+
+.tool-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.3s ease;
+}
+
+.tool-image:hover img {
+    transform: scale(1.05);
+}
+
+.tool-info {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.tool-title {
+    font-size: 2.5rem;
+    font-weight: 700;
+    color: var(--secondary-color);
+    margin: 0;
+}
+
+.tool-meta {
+    display: flex;
+    gap: 20px;
+    color: var(--text-color);
+}
+
+.tool-meta span {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.tool-meta i {
+    color: var(--primary-color);
+}
+
+.tool-actions {
+    display: flex;
+    gap: 15px;
+    margin-top: 20px;
+}
+
+/* Tool Content Sections */
+.tool-content {
+    display: flex;
+    flex-direction: column;
+    gap: 60px;
+}
+
+.tool-content h2 {
+    font-size: 1.8rem;
+    color: var(--secondary-color);
+    margin-bottom: 20px;
+}
+
+/* Description Section */
+.tool-description p {
+    font-size: 1.1rem;
+    line-height: 1.8;
+    color: var(--text-color);
+}
+
+/* Features Section */
+.tool-features ul {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 20px;
+    list-style: none;
+    padding: 0;
+}
+
+.tool-features li {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    padding: 15px;
+    background-color: var(--light-gray);
+    border-radius: var(--border-radius);
+    transition: var(--transition-speed);
+}
+
+.tool-features li:hover {
+    background-color: var(--border-color);
+    transform: translateY(-2px);
+}
+
+.tool-features i {
+    color: var(--primary-color);
+    font-size: 1.2rem;
+}
+
+/* Pricing Section */
+.pricing-cards {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 30px;
+}
+
+.pricing-card {
+    background-color: white;
+    border-radius: var(--border-radius);
+    padding: 30px;
+    box-shadow: var(--card-shadow);
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    transition: var(--transition-speed);
+}
+
+.pricing-card:hover {
+    transform: translateY(-5px);
+    box-shadow: var(--hover-shadow);
+}
+
+.pricing-card.featured {
+    border: 2px solid var(--primary-color);
+    position: relative;
+}
+
+.pricing-card.featured::before {
+    content: '推荐';
+    position: absolute;
+    top: 0;
+    right: 0;
+    background-color: var(--primary-color);
+    color: white;
+    padding: 5px 15px;
+    border-radius: 0 var(--border-radius) 0 var(--border-radius);
+    font-size: 0.9rem;
+}
+
+.pricing-card h3 {
+    font-size: 1.5rem;
+    color: var(--secondary-color);
+    margin: 0;
+}
+
+.price {
+    font-size: 2.5rem;
+    font-weight: 700;
+    color: var(--primary-color);
+}
+
+.pricing-card ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    flex: 1;
+}
+
+.pricing-card li {
+    padding: 8px 0;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.pricing-card li::before {
+    content: '✓';
+    color: var(--primary-color);
+    font-weight: bold;
+}
+
+/* Tutorial Section */
+.tutorial-steps {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 30px;
+}
+
+.step {
+    display: flex;
+    gap: 20px;
+    align-items: start;
+}
+
+.step-number {
+    width: 40px;
+    height: 40px;
+    background-color: var(--primary-color);
+    color: white;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: 700;
+    flex-shrink: 0;
+}
+
+.step-content h3 {
+    font-size: 1.2rem;
+    color: var(--secondary-color);
+    margin: 0 0 10px 0;
+}
+
+.step-content p {
+    color: var(--text-color);
+    margin: 0;
+}
+
+/* Reviews Section */
+.reviews-summary {
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    gap: 40px;
+    margin-bottom: 40px;
+}
+
+.rating-overview {
+    text-align: center;
+    padding: 20px;
+    background-color: var(--light-gray);
+    border-radius: var(--border-radius);
+}
+
+.average-rating {
+    font-size: 3rem;
+    font-weight: 700;
+    color: var(--primary-color);
+    margin-bottom: 10px;
+}
+
+.rating-stars {
+    color: var(--rating-color);
+    font-size: 1.5rem;
+    margin-bottom: 10px;
+}
+
+.total-reviews {
+    color: var(--text-color);
+}
+
+.rating-distribution {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.rating-bar {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.rating-bar span:first-child {
+    width: 40px;
+}
+
+.bar {
+    flex: 1;
+    height: 8px;
+    background-color: var(--light-gray);
+    border-radius: 4px;
+    overflow: hidden;
+}
+
+.bar .fill {
+    height: 100%;
+    background-color: var(--rating-color);
+    transition: width 0.3s ease;
+}
+
+.reviews-list {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+}
+
+.review {
+    background-color: white;
+    border-radius: var(--border-radius);
+    padding: 20px;
+    box-shadow: var(--card-shadow);
+}
+
+.review-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 15px;
+}
+
+.user-info {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.user-avatar {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+.user-name {
+    font-weight: 500;
+    color: var(--secondary-color);
+}
+
+.review-rating {
+    color: var(--rating-color);
+}
+
+.review-content {
+    margin-bottom: 15px;
+}
+
+.review-footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    color: var(--text-color);
+    font-size: 0.9rem;
+}
+
+.review-helpful {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    background: none;
+    border: none;
+    color: var(--text-color);
+    cursor: pointer;
+    transition: color 0.3s ease;
+}
+
+.review-helpful:hover {
+    color: var(--primary-color);
+}
+
+.load-more-reviews {
+    margin-top: 30px;
+    padding: 12px 25px;
+    background-color: var(--light-gray);
+    color: var(--text-color);
+    border: none;
+    border-radius: var(--border-radius);
+    cursor: pointer;
+    transition: var(--transition-speed);
+    align-self: center;
+}
+
+.load-more-reviews:hover {
+    background-color: var(--border-color);
+}
+
+/* FAQ Section */
+.faq-list {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.faq-item {
+    background-color: white;
+    border-radius: var(--border-radius);
+    box-shadow: var(--card-shadow);
+    overflow: hidden;
+}
+
+.faq-question {
+    padding: 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.faq-question:hover {
+    background-color: var(--light-gray);
+}
+
+.faq-question h3 {
+    margin: 0;
+    font-size: 1.1rem;
+    color: var(--secondary-color);
+}
+
+.faq-question i {
+    transition: transform 0.3s ease;
+}
+
+.faq-item.active .faq-question i {
+    transform: rotate(180deg);
+}
+
+.faq-answer {
+    padding: 0 20px;
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.3s ease, padding 0.3s ease;
+}
+
+.faq-item.active .faq-answer {
+    padding: 0 20px 20px;
+    max-height: 500px;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .tool-header {
+        grid-template-columns: 1fr;
+        gap: 30px;
+    }
+
+    .tool-title {
+        font-size: 2rem;
+    }
+
+    .tool-meta {
+        flex-wrap: wrap;
+    }
+
+    .tool-actions {
+        flex-wrap: wrap;
+    }
+
+    .reviews-summary {
+        grid-template-columns: 1fr;
+    }
+
+    .pricing-cards {
+        grid-template-columns: 1fr;
+    }
+}
+
+@media (max-width: 480px) {
+    .tool-title {
+        font-size: 1.8rem;
+    }
+
+    .tool-actions {
+        flex-direction: column;
+    }
+
+    .tool-actions .tool-button {
+        width: 100%;
+    }
+
+    .tutorial-steps {
+        grid-template-columns: 1fr;
+    }
+}
+
+/* Dark Mode Support */
+@media (prefers-color-scheme: dark) {
+    .pricing-card,
+    .review,
+    .faq-item {
+        background-color: #2c3e50;
+    }
+
+    .tool-features li,
+    .rating-overview {
+        background-color: #34495e;
+    }
+
+    .bar {
+        background-color: #34495e;
+    }
+
+    .faq-question:hover {
+        background-color: #34495e;
+    }
+}
+
+/* Print Styles */
+@media print {
+    .tool-actions,
+    .load-more-reviews {
+        display: none;
+    }
+
+    .tool-header {
+        break-inside: avoid;
+    }
+
+    .pricing-cards {
+        break-inside: avoid;
+    }
+
+    .reviews-summary {
+        break-inside: avoid;
+    }
+} 

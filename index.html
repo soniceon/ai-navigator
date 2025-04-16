@@ -3,15 +3,16 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Discover and explore the best AI tools for your needs">
+    <meta name="keywords" content="AI tools, artificial intelligence, machine learning, AI assistants">
     <title>SoniceAi - Discover the Best AI Tools</title>
     <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="css/ai-cards.css">
-    <script src="js/main.js" defer></script>
-    <script src="js/ai-cards.js" defer></script>
-    <!-- Add a Google Font for better typography -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
-    <!-- Add Font Awesome for icons -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="icon" type="image/png" href="images/favicon.png">
 </head>
 <body>
     <header>
@@ -21,26 +22,30 @@
             </div>
             <nav>
                 <ul>
-                    <li><a href="/"><i class="fas fa-home"></i> Home</a></li>
+                    <li><a href="/" class="active"><i class="fas fa-home"></i> Home</a></li>
                     <li><a href="pages/categories.html"><i class="fas fa-th-large"></i> Categories</a></li>
                     <li><a href="pages/ranking.html"><i class="fas fa-chart-line"></i> Rankings</a></li>
                     <li><a href="pages/new.html"><i class="fas fa-star"></i> New Releases</a></li>
                 </ul>
             </nav>
             <div class="search">
-                <input type="text" placeholder="Search AI tools...">
-                <button><i class="fas fa-search"></i> Search</button>
+                <input type="text" placeholder="Search AI tools..." aria-label="Search AI tools">
+                <button aria-label="Search"><i class="fas fa-search"></i></button>
             </div>
+            <button class="mobile-menu-btn" aria-label="Toggle menu">
+                <i class="fas fa-bars"></i>
+            </button>
         </div>
     </header>
+
     <main>
         <section class="hero">
             <div class="container">
                 <h1>Discover the Best AI Tools</h1>
                 <p>Explore, compare and use top AI tools to enhance your work and creativity</p>
                 <div class="search-large">
-                    <input type="text" placeholder="Search AI tools, models or use cases...">
-                    <button><i class="fas fa-search"></i> Search</button>
+                    <input type="text" placeholder="Search AI tools, models or use cases..." aria-label="Search AI tools">
+                    <button aria-label="Search"><i class="fas fa-search"></i> Search</button>
                 </div>
                 <div class="stats-bar">
                     <span><i class="fas fa-tools"></i> 20,000+ AI tools</span> • 
@@ -54,27 +59,52 @@
             <div class="container">
                 <h2>Browse Categories</h2>
                 <div class="category-list">
-                    <div class="category"><i class="fas fa-comment-alt"></i> Text Generation</div>
-                    <div class="category"><i class="fas fa-image"></i> Image Generation</div>
-                    <div class="category"><i class="fas fa-video"></i> Video Creation</div>
-                    <div class="category"><i class="fas fa-code"></i> Coding Assistant</div>
-                    <div class="category"><i class="fas fa-bullhorn"></i> Marketing</div>
-                    <div class="category"><i class="fas fa-paint-brush"></i> Design</div>
-                    <div class="category"><i class="fas fa-tasks"></i> Productivity</div>
-                    <div class="category"><i class="fas fa-brain"></i> AI Models</div>
+                    <div class="category" data-category="text-generation">
+                        <i class="fas fa-comment-alt"></i>
+                        <span>Text Generation</span>
+                    </div>
+                    <div class="category" data-category="image-generation">
+                        <i class="fas fa-image"></i>
+                        <span>Image Generation</span>
+                    </div>
+                    <div class="category" data-category="video-creation">
+                        <i class="fas fa-video"></i>
+                        <span>Video Creation</span>
+                    </div>
+                    <div class="category" data-category="coding-assistant">
+                        <i class="fas fa-code"></i>
+                        <span>Coding Assistant</span>
+                    </div>
+                    <div class="category" data-category="marketing">
+                        <i class="fas fa-bullhorn"></i>
+                        <span>Marketing</span>
+                    </div>
+                    <div class="category" data-category="design">
+                        <i class="fas fa-paint-brush"></i>
+                        <span>Design</span>
+                    </div>
+                    <div class="category" data-category="productivity">
+                        <i class="fas fa-tasks"></i>
+                        <span>Productivity</span>
+                    </div>
+                    <div class="category" data-category="ai-models">
+                        <i class="fas fa-brain"></i>
+                        <span>AI Models</span>
+                    </div>
                 </div>
             </div>
         </section>
         
-        <!-- New Section for AI Tools -->
         <section class="ai-tools-section">
             <div class="container">
                 <div class="section-header">
                     <h2>AI Assistants</h2>
-                    <a href="pages/ai-assistants.html" class="view-all"><i class="fas fa-arrow-right"></i> View all</a>
+                    <a href="pages/ai-assistants.html" class="view-all">
+                        <span>View all</span>
+                        <i class="fas fa-arrow-right"></i>
+                    </a>
                 </div>
                 
-                <!-- Category Filter Buttons -->
                 <div class="category-filters">
                     <button class="category-filter active" data-category="all">All</button>
                     <button class="category-filter" data-category="chatbot">Chatbots</button>
@@ -83,8 +113,7 @@
                     <button class="category-filter" data-category="writing">Writing</button>
                 </div>
                 
-                <!-- AI Tools Container - Cards will be dynamically loaded here -->
-                <div id="ai-tools-container"></div>
+                <div id="ai-tools-container" class="tools-grid"></div>
             </div>
         </section>
         
@@ -92,11 +121,12 @@
             <div class="container">
                 <div class="section-header">
                     <h2>Featured Tools</h2>
-                    <a href="pages/featured.html" class="view-all"><i class="fas fa-arrow-right"></i> View all</a>
+                    <a href="pages/featured.html" class="view-all">
+                        <span>View all</span>
+                        <i class="fas fa-arrow-right"></i>
+                    </a>
                 </div>
-                <div class="tools-grid">
-                    <!-- Tool cards will be added here by JavaScript -->
-                </div>
+                <div class="tools-grid"></div>
             </div>
         </section>
         
@@ -104,7 +134,10 @@
             <div class="container">
                 <div class="section-header">
                     <h2>Text & Writing</h2>
-                    <a href="pages/categories/text-writing.html" class="view-all">More »</a>
+                    <a href="pages/categories/text-writing.html" class="view-all">
+                        <span>More</span>
+                        <i class="fas fa-arrow-right"></i>
+                    </a>
                 </div>
                 <div class="category-filters">
                     <button class="filter-btn active">All</button>
@@ -115,9 +148,7 @@
                     <button class="filter-btn">Summarizer</button>
                     <button class="filter-btn">General Writing</button>
                 </div>
-                <div class="tools-grid text-writing-tools">
-                    <!-- Tool cards will be added here by JavaScript -->
-                </div>
+                <div class="tools-grid text-writing-tools"></div>
             </div>
         </section>
         
@@ -125,14 +156,27 @@
             <div class="container">
                 <div class="section-header">
                     <h2>Image Generation</h2>
-                    <a href="pages/categories/image-generation.html" class="view-all">More »</a>
+                    <a href="pages/categories/image-generation.html" class="view-all">
+                        <span>More</span>
+                        <i class="fas fa-arrow-right"></i>
+                    </a>
                 </div>
-                <div class="tools-grid image-generation-tools">
-                    <!-- Tool cards will be added here by JavaScript -->
-                </div>
+                <div class="tools-grid image-generation-tools"></div>
+            </div>
+        </section>
+
+        <section class="newsletter">
+            <div class="container">
+                <h2>Stay Updated with AI Tools</h2>
+                <p>Subscribe to our newsletter to receive the latest AI tool updates and news</p>
+                <form class="newsletter-form">
+                    <input type="email" placeholder="Enter your email" required aria-label="Email address">
+                    <button type="submit">Subscribe</button>
+                </form>
             </div>
         </section>
     </main>
+
     <footer>
         <div class="container">
             <div class="footer-content">
@@ -140,9 +184,9 @@
                     <h3><i class="fas fa-robot"></i> SoniceAi</h3>
                     <p>Discover the best AI tools and resources</p>
                     <div class="social-icons">
-                        <a href="#" class="social-icon"><i class="fab fa-twitter"></i></a>
-                        <a href="#" class="social-icon"><i class="fab fa-facebook"></i></a>
-                        <a href="#" class="social-icon"><i class="fab fa-linkedin"></i></a>
+                        <a href="#" class="social-icon" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+                        <a href="#" class="social-icon" aria-label="Facebook"><i class="fab fa-facebook"></i></a>
+                        <a href="#" class="social-icon" aria-label="LinkedIn"><i class="fab fa-linkedin"></i></a>
                     </div>
                 </div>
                 <div class="footer-links">
@@ -166,8 +210,15 @@
             </div>
             <div class="copyright">
                 <p>&copy; 2025 SoniceAi. All rights reserved.</p>
+                <div class="footer-legal">
+                    <a href="pages/privacy.html">Privacy Policy</a>
+                    <a href="pages/terms.html">Terms of Service</a>
+                </div>
             </div>
         </div>
     </footer>
+
+    <script src="js/main.js" defer></script>
+    <script src="js/ai-cards.js" defer></script>
 </body>
 </html>
