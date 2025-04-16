@@ -13,6 +13,151 @@
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <link rel="icon" type="image/png" href="images/favicon.png">
+    <style>
+        /* ... existing styles ... */
+
+        /* AI Tools Section */
+        .tools-section {
+            padding: 4rem 0;
+            background: var(--bg-color);
+        }
+
+        .tools-header {
+            text-align: center;
+            margin-bottom: 3rem;
+        }
+
+        .tools-header h2 {
+            font-size: 2.5rem;
+            color: var(--text-color);
+            margin-bottom: 1rem;
+        }
+
+        .tools-header p {
+            color: var(--text-secondary);
+            max-width: 600px;
+            margin: 0 auto;
+        }
+
+        .tools-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+            gap: 2rem;
+            margin-top: 2rem;
+        }
+
+        .tool-card {
+            background: linear-gradient(135deg, #f0f4ff 0%, #e0e7ff 100%);
+            border-radius: 1.5rem;
+            padding: 1.5rem;
+            transition: transform 0.3s, box-shadow 0.3s;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .tool-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 8px 32px rgba(99,102,241,0.18);
+        }
+
+        .tool-image {
+            width: 64px;
+            height: 64px;
+            border-radius: 16px;
+            object-fit: cover;
+            margin-bottom: 1rem;
+            background: #fff;
+            padding: 0.5rem;
+            box-shadow: 0 2px 8px rgba(99,102,241,0.1);
+        }
+
+        .tool-title {
+            font-size: 1.25rem;
+            font-weight: 600;
+            margin-bottom: 0.5rem;
+            color: var(--text-color);
+        }
+
+        .tool-category {
+            display: inline-block;
+            background: #e0e7ff;
+            color: #6366f1;
+            padding: 0.25rem 0.75rem;
+            border-radius: 1rem;
+            font-size: 0.875rem;
+            margin-bottom: 0.75rem;
+        }
+
+        .tool-description {
+            color: var(--text-secondary);
+            font-size: 0.95rem;
+            margin-bottom: 1rem;
+            line-height: 1.5;
+        }
+
+        .tool-meta {
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+            color: var(--text-secondary);
+            font-size: 0.9rem;
+        }
+
+        .tool-rating {
+            color: #f59e42;
+        }
+
+        .tool-views {
+            color: #6366f1;
+        }
+
+        .tool-link {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            color: var(--primary-color);
+            text-decoration: none;
+            font-weight: 500;
+            margin-top: 1rem;
+            transition: color 0.2s;
+        }
+
+        .tool-link:hover {
+            color: var(--primary-hover);
+        }
+
+        .view-all {
+            text-align: center;
+            margin-top: 3rem;
+        }
+
+        .view-all a {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            padding: 0.75rem 1.5rem;
+            background: var(--primary-color);
+            color: white;
+            border-radius: 0.75rem;
+            text-decoration: none;
+            font-weight: 500;
+            transition: background-color 0.2s;
+        }
+
+        .view-all a:hover {
+            background: var(--primary-hover);
+        }
+
+        @media (max-width: 768px) {
+            .tools-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .tools-header h2 {
+                font-size: 2rem;
+            }
+        }
+    </style>
 </head>
 <body>
     <header>
@@ -175,6 +320,23 @@
                 </form>
             </div>
         </section>
+
+        <!-- AI Tools Section -->
+        <section class="tools-section">
+            <div class="tools-header">
+                <h2>Popular AI Tools</h2>
+                <p>Discover the most popular and highly-rated AI tools across different categories</p>
+            </div>
+            <div class="tools-grid" id="toolsGrid">
+                <!-- Tools will be dynamically inserted here -->
+            </div>
+            <div class="view-all">
+                <a href="pages/tools/ranking.html">
+                    <span>View All Tools</span>
+                    <i class="fas fa-arrow-right"></i>
+                </a>
+            </div>
+        </section>
     </main>
 
     <footer>
@@ -220,5 +382,88 @@
 
     <script src="js/main.js" defer></script>
     <script src="js/ai-cards.js" defer></script>
+    <script>
+        // Sample AI tools data
+        const sampleTools = [
+            {
+                name: "ChatGPT",
+                category: "Chatbot",
+                score: 4.8,
+                views: 1500000,
+                desc: "Advanced AI language model for natural conversations and task assistance.",
+                image: "https://openai.com/content/images/2022/05/openai-avatar.png",
+                link: "pages/tools/chatgpt.html"
+            },
+            {
+                name: "Midjourney",
+                category: "Image Generation",
+                score: 4.7,
+                views: 980000,
+                desc: "AI-powered image generation tool that creates stunning artwork from text descriptions.",
+                image: "https://www.midjourney.com/apple-touch-icon.png",
+                link: "pages/tools/midjourney.html"
+            },
+            {
+                name: "GitHub Copilot",
+                category: "Code Assistant",
+                score: 4.6,
+                views: 750000,
+                desc: "AI pair programmer that helps you write better code with real-time suggestions.",
+                image: "https://github.githubassets.com/images/modules/site/icons/footer/github-mark.svg",
+                link: "pages/tools/github-copilot.html"
+            },
+            {
+                name: "DALL-E 3",
+                category: "Image Generation",
+                score: 4.5,
+                views: 650000,
+                desc: "Create realistic images and art from text descriptions with advanced AI.",
+                image: "https://openai.com/content/images/2022/05/openai-avatar.png",
+                link: "pages/tools/dalle-3.html"
+            },
+            {
+                name: "Claude",
+                category: "Chatbot",
+                score: 4.7,
+                views: 550000,
+                desc: "Anthropic's AI assistant focused on helpful, harmless, and honest interactions.",
+                image: "https://www.anthropic.com/favicon.ico",
+                link: "pages/tools/claude.html"
+            },
+            {
+                name: "Stable Diffusion",
+                category: "Image Generation",
+                score: 4.4,
+                views: 480000,
+                desc: "Open source text-to-image model for creating high-quality images.",
+                image: "https://stability.ai/favicon.ico",
+                link: "pages/tools/stable-diffusion.html"
+            }
+        ];
+
+        function renderTools() {
+            const grid = document.getElementById('toolsGrid');
+            if (!grid) return;
+
+            grid.innerHTML = sampleTools.map(tool => `
+                <div class="tool-card">
+                    <img src="${tool.image}" alt="${tool.name}" class="tool-image" loading="lazy">
+                    <div class="tool-title">${tool.name}</div>
+                    <div class="tool-category">${tool.category}</div>
+                    <div class="tool-description">${tool.desc}</div>
+                    <div class="tool-meta">
+                        <span class="tool-rating"><i class="fas fa-star"></i> ${tool.score}</span>
+                        <span class="tool-views"><i class="fas fa-eye"></i> ${tool.views.toLocaleString()}</span>
+                    </div>
+                    <a href="${tool.link}" class="tool-link" target="_blank" rel="noopener noreferrer">
+                        Visit Tool
+                        <i class="fas fa-arrow-right"></i>
+                    </a>
+                </div>
+            `).join('');
+        }
+
+        document.addEventListener('DOMContentLoaded', renderTools);
+    </script>
 </body>
 </html>

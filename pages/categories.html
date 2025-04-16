@@ -1,0 +1,312 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Categories - SoniceAi</title>
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <!-- Font Awesome for icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        :root {
+            --primary-color: #6366f1;
+            --primary-hover: #4f46e5;
+            --secondary-color: #f3f4f6;
+            --text-color: #111827;
+            --text-secondary: #4b5563;
+            --border-color: #e5e7eb;
+        }
+        * { margin: 0; padding: 0; box-sizing: border-box; font-family: 'Inter', sans-serif; }
+        body { background-color: #f9fafb; color: var(--text-color); line-height: 1.5; }
+        a { text-decoration: none; color: inherit; }
+
+        .container { max-width: 1200px; margin: 0 auto; padding: 0 20px; }
+
+        header {
+            background-color: white;
+            box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+            position: sticky;
+            top: 0;
+            z-index: 100;
+        }
+        header .container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 15px 0;
+        }
+        .logo {
+            display: flex;
+            align-items: center;
+            font-weight: 700;
+            font-size: 20px;
+            color: var(--text-color);
+        }
+        .logo i { margin-right: 10px; color: var(--primary-color); font-size: 24px; }
+        nav ul { display: flex; gap: 30px; list-style: none; }
+        nav a {
+            color: var(--text-secondary);
+            font-weight: 500;
+            transition: color 0.2s;
+            display: flex;
+            align-items: center;
+            gap: 5px;
+        }
+        nav a:hover, nav a.active { color: var(--primary-color); }
+        .search { display: flex; align-items: center; gap: 10px; }
+        .search input {
+            padding: 8px 15px;
+            border: 1px solid var(--border-color);
+            border-radius: 8px;
+            font-size: 14px;
+            width: 220px;
+        }
+        .search button {
+            background-color: var(--primary-color);
+            color: white;
+            border: none;
+            border-radius: 8px;
+            padding: 8px 15px;
+            font-weight: 500;
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            gap: 5px;
+            transition: background-color 0.2s;
+        }
+        .search button:hover { background-color: var(--primary-hover); }
+
+        .breadcrumb {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            padding: 20px 0;
+            color: var(--text-secondary);
+        }
+        .breadcrumb a { color: var(--text-secondary); transition: color 0.2s; }
+        .breadcrumb a:hover { color: var(--primary-color); }
+
+        .page-header {
+            background-color: white;
+            padding: 40px 0;
+            border-bottom: 1px solid var(--border-color);
+            margin-bottom: 40px;
+        }
+        .page-header h1 { font-size: 32px; font-weight: 700; margin-bottom: 10px; }
+        .page-header h1 span { color: var(--primary-color); }
+        .page-header p { color: var(--text-secondary); max-width: 600px; }
+
+        .categories-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+            gap: 2rem;
+            margin: 2rem 0;
+        }
+        .category-card {
+            background: rgba(255,255,255,0.85);
+            border-radius: 1.5rem;
+            box-shadow: 0 4px 24px rgba(99,102,241,0.08), 0 1.5px 8px rgba(0,0,0,0.04);
+            padding: 2.2rem 1.5rem 1.5rem 1.5rem;
+            text-align: center;
+            transition: transform 0.18s, box-shadow 0.18s;
+            cursor: pointer;
+            position: relative;
+            border: none;
+            overflow: hidden;
+            backdrop-filter: blur(2px);
+        }
+        .category-card:hover {
+            transform: translateY(-8px) scale(1.03);
+            box-shadow: 0 8px 32px rgba(99,102,241,0.16), 0 2px 12px rgba(0,0,0,0.08);
+            border: 1.5px solid var(--primary-color);
+        }
+        .category-icon {
+            width: 60px;
+            height: 60px;
+            margin: 0 auto 1rem auto;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border-radius: 50%;
+            background: linear-gradient(135deg, #e0e7ff 0%, #6366f1 100%);
+            box-shadow: 0 2px 8px rgba(99,102,241,0.10);
+            font-size: 2rem;
+            color: #fff;
+        }
+        .category-info h3 {
+            font-size: 1.18rem;
+            font-weight: 700;
+            margin-bottom: 0.5rem;
+            color: var(--text-color);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 0.5rem;
+        }
+        .count {
+            background: var(--primary-color);
+            color: #fff;
+            border-radius: 1em;
+            padding: 0.15em 0.8em;
+            font-size: 0.95em;
+            font-weight: 600;
+            margin-left: 0.5em;
+            box-shadow: 0 1px 4px rgba(99,102,241,0.10);
+        }
+        .category-card .more-arrow {
+            position: absolute;
+            right: 1.2rem;
+            bottom: 1.2rem;
+            color: var(--primary-color);
+            font-size: 1.2rem;
+            opacity: 0.7;
+            transition: opacity 0.2s;
+        }
+        .category-card:hover .more-arrow { opacity: 1; }
+
+        footer {
+            background-color: white;
+            padding: 40px 0;
+            border-top: 1px solid var(--border-color);
+            margin-top: 60px;
+        }
+        .footer-content { display: flex; flex-wrap: wrap; gap: 40px; }
+        .footer-logo { flex: 1; min-width: 250px; }
+        .footer-logo h3 {
+            display: flex; align-items: center; gap: 10px; font-size: 20px; margin-bottom: 15px;
+        }
+        .footer-logo p { color: var(--text-secondary); margin-bottom: 20px; }
+        .social-icons { display: flex; gap: 15px; }
+        .social-icon {
+            width: 36px; height: 36px; border-radius: 50%;
+            background-color: var(--secondary-color);
+            display: flex; align-items: center; justify-content: center;
+            color: var(--text-secondary); transition: all 0.2s;
+        }
+        .social-icon:hover { background-color: var(--primary-color); color: white; }
+        .footer-links { min-width: 160px; }
+        .footer-links h4 { font-size: 16px; margin-bottom: 20px; font-weight: 600; }
+        .footer-links ul { list-style: none; }
+        .footer-links li { margin-bottom: 12px; }
+        .footer-links a {
+            color: var(--text-secondary); transition: color 0.2s;
+            display: flex; align-items: center; gap: 5px;
+        }
+        .footer-links a:hover { color: var(--primary-color); }
+        .copyright {
+            margin-top: 40px; text-align: center; color: var(--text-secondary);
+            font-size: 14px; padding-top: 20px; border-top: 1px solid var(--border-color);
+        }
+        @media (max-width: 768px) {
+            header .container { flex-direction: column; gap: 15px; align-items: flex-start; }
+            nav ul { gap: 15px; margin: 10px 0; }
+            .search { width: 100%; }
+            .search input { flex: 1; }
+            .categories-grid { grid-template-columns: repeat(auto-fit, minmax(160px, 1fr)); gap: 1.2rem; }
+            .category-card { padding: 1.2rem 0.7rem 1rem 0.7rem; }
+            .category-icon { width: 44px; height: 44px; font-size: 1.3rem; }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="container">
+            <div class="logo">
+                <i class="fas fa-robot"></i> SoniceAi
+            </div>
+            <nav>
+                <ul>
+                    <li><a href="index.html"><i class="fas fa-home"></i> Home</a></li>
+                    <li><a href="categories.html" class="active"><i class="fas fa-th-large"></i> Categories</a></li>
+                    <li><a href="ranking.html"><i class="fas fa-chart-line"></i> Rankings</a></li>
+                    <li><a href="new.html"><i class="fas fa-star"></i> New Releases</a></li>
+                </ul>
+            </nav>
+            <div class="search">
+                <input type="text" placeholder="Search AI tools...">
+                <button><i class="fas fa-search"></i> Search</button>
+            </div>
+        </div>
+    </header>
+    <div class="breadcrumb container">
+        <a href="index.html"><i class="fas fa-home"></i></a>
+        <i class="fas fa-chevron-right"></i>
+        <span>Categories</span>
+    </div>
+    <section class="page-header">
+        <div class="container">
+            <h1>Find AI by <span id="categoryCount"></span> Categories</h1>
+            <p>Browse AI tools by category to find the perfect solution for your needs</p>
+        </div>
+    </section>
+    <main class="container">
+        <div class="categories-grid" id="categoriesGrid"></div>
+    </main>
+    <footer>
+        <div class="container footer-content">
+            <div class="footer-logo">
+                <h3><i class="fas fa-robot"></i> SoniceAi</h3>
+                <p>Discover the best AI tools by category, ranking, and more.</p>
+                <div class="social-icons">
+                    <a href="#" class="social-icon"><i class="fab fa-github"></i></a>
+                    <a href="#" class="social-icon"><i class="fab fa-twitter"></i></a>
+                    <a href="#" class="social-icon"><i class="fab fa-discord"></i></a>
+                </div>
+            </div>
+            <div class="footer-links">
+                <h4>Navigation</h4>
+                <ul>
+                    <li><a href="index.html"><i class="fas fa-home"></i> Home</a></li>
+                    <li><a href="categories.html"><i class="fas fa-th-large"></i> Categories</a></li>
+                    <li><a href="ranking.html"><i class="fas fa-chart-line"></i> Rankings</a></li>
+                    <li><a href="new.html"><i class="fas fa-star"></i> New Releases</a></li>
+                </ul>
+            </div>
+            <div class="footer-links">
+                <h4>Resources</h4>
+                <ul>
+                    <li><a href="#"><i class="fas fa-book"></i> Blog</a></li>
+                    <li><a href="#"><i class="fas fa-info-circle"></i> About</a></li>
+                    <li><a href="#"><i class="fas fa-envelope"></i> Contact</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="copyright">
+            &copy; 2024 SoniceAi. All rights reserved.
+        </div>
+    </footer>
+    <script>
+    const categories = [
+      { name: "Accounting & Finance", icon: "fa-chart-pie", count: 46, link: "#" },
+      { name: "Video Generation", icon: "fa-film", count: 32, link: "#" },
+      { name: "Audio & Speech", icon: "fa-microphone", count: 27, link: "#" },
+      { name: "Image Generation", icon: "fa-image", count: 41, link: "#" },
+      { name: "Text Generation", icon: "fa-language", count: 54, link: "#" },
+      { name: "Code Generation", icon: "fa-code", count: 22, link: "#" },
+      { name: "Data Analysis", icon: "fa-database", count: 19, link: "#" },
+      { name: "Chatbots", icon: "fa-brain", count: 37, link: "#" },
+      { name: "Productivity", icon: "fa-user-astronaut", count: 29, link: "#" },
+      { name: "Game AI", icon: "fa-gamepad", count: 12, link: "#" },
+      { name: "Security", icon: "fa-shield-alt", count: 8, link: "#" },
+      { name: "Other", icon: "fa-ellipsis-h", count: 15, link: "#" }
+    ];
+
+    function renderCategories() {
+      const grid = document.getElementById('categoriesGrid');
+      grid.innerHTML = categories.map(cat => `
+        <a href="${cat.link}" class="category-card">
+          <div class="category-icon"><i class="fas ${cat.icon}"></i></div>
+          <div class="category-info">
+            <h3>${cat.name} <span class="count">${cat.count}</span></h3>
+          </div>
+          <span class="more-arrow"><i class="fas fa-arrow-right"></i></span>
+        </a>
+      `).join('');
+      document.getElementById('categoryCount').textContent = categories.length;
+    }
+
+    document.addEventListener('DOMContentLoaded', renderCategories);
+    </script>
+</body>
+</html>

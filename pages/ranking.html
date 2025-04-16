@@ -1,0 +1,471 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="AI Tools Rankings - Top Rated Artificial Intelligence Tools">
+    <meta name="keywords" content="AI tools, rankings, artificial intelligence, top rated">
+    <title>AI Tools Rankings</title>
+    
+    <!-- Fonts and Icons -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <style>
+        :root {
+            --primary-color: #6366f1;
+            --primary-hover: #4f46e5;
+            --text-color: #1f2937;
+            --text-secondary: #4b5563;
+            --bg-color: #ffffff;
+            --bg-secondary: #f9fafb;
+            --border-color: #e5e7eb;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Inter', sans-serif;
+            line-height: 1.5;
+            color: var(--text-color);
+            background-color: var(--bg-secondary);
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 1rem;
+        }
+
+        /* Header Styles */
+        header {
+            background: var(--bg-color);
+            border-bottom: 1px solid var(--border-color);
+            padding: 1rem 0;
+            position: sticky;
+            top: 0;
+            z-index: 100;
+        }
+
+        nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .nav-logo {
+            font-size: 1.5rem;
+            font-weight: 700;
+            color: var(--primary-color);
+            text-decoration: none;
+        }
+
+        .nav-links {
+            display: flex;
+            gap: 2rem;
+            list-style: none;
+        }
+
+        .nav-links a {
+            color: var(--text-color);
+            text-decoration: none;
+            font-weight: 500;
+            transition: color 0.2s;
+        }
+
+        .nav-links a:hover {
+            color: var(--primary-color);
+        }
+
+        /* Breadcrumb */
+        .breadcrumb {
+            padding: 1rem 0;
+            color: var(--text-secondary);
+        }
+
+        .breadcrumb a {
+            color: var(--text-secondary);
+            text-decoration: none;
+        }
+
+        .breadcrumb a:hover {
+            color: var(--primary-color);
+        }
+
+        /* Page Header */
+        .page-header {
+            text-align: center;
+            padding: 2rem 0;
+        }
+
+        .page-header h1 {
+            font-size: 2.5rem;
+            margin-bottom: 1rem;
+            color: var(--text-color);
+        }
+
+        .page-header p {
+            color: var(--text-secondary);
+            max-width: 600px;
+            margin: 0 auto;
+        }
+
+        /* AI Card Styles */
+        .ai-card {
+            background: linear-gradient(135deg, #f0f4ff 0%, #e0e7ff 100%);
+            border-radius: 1.5rem;
+            box-shadow: 0 4px 24px rgba(99,102,241,0.10), 0 1.5px 8px rgba(0,0,0,0.04);
+            padding: 1.5rem 1.5rem 1.2rem 1.5rem;
+            display: flex;
+            align-items: center;
+            gap: 1.5rem;
+            margin-bottom: 1.5rem;
+            position: relative;
+            transition: transform 0.18s, box-shadow 0.18s;
+            border: none;
+            overflow: hidden;
+        }
+
+        .ai-card:hover {
+            transform: translateY(-6px) scale(1.02);
+            box-shadow: 0 8px 32px rgba(99,102,241,0.18), 0 2px 12px rgba(0,0,0,0.10);
+            border: 1.5px solid var(--primary-color);
+        }
+
+        .rank-number {
+            position: absolute;
+            top: -0.5rem;
+            left: -0.5rem;
+            background: var(--primary-color);
+            color: white;
+            width: 2.5rem;
+            height: 2.5rem;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: 700;
+            font-size: 1.2rem;
+            box-shadow: 0 4px 12px rgba(99,102,241,0.2);
+        }
+
+        .ai-thumb img {
+            width: 64px;
+            height: 64px;
+            border-radius: 16px;
+            object-fit: cover;
+            box-shadow: 0 2px 8px rgba(99,102,241,0.10);
+            background: #fff;
+        }
+
+        .ai-info {
+            flex: 1;
+        }
+
+        .ai-title {
+            font-size: 1.25rem;
+            font-weight: 700;
+            margin-bottom: 0.3rem;
+            color: var(--text-color);
+        }
+
+        .ai-meta {
+            display: flex;
+            gap: 1.2rem;
+            font-size: 0.98rem;
+            color: var(--text-secondary);
+            margin-bottom: 0.3rem;
+            align-items: center;
+        }
+
+        .ai-meta .score { color: #f59e42; }
+        .ai-meta .views { color: #6366f1; }
+
+        .ai-meta .category {
+            background: #e0e7ff;
+            color: #6366f1;
+            border-radius: 0.7em;
+            padding: 0.1em 0.7em;
+            font-size: 0.95em;
+        }
+
+        .ai-desc {
+            color: #666;
+            font-size: 0.98rem;
+            margin-bottom: 0.5rem;
+        }
+
+        .ai-link {
+            color: var(--primary-color);
+            font-size: 1.3rem;
+            margin-left: 1.2rem;
+            transition: color 0.2s;
+        }
+
+        .ai-link:hover {
+            color: var(--primary-hover);
+        }
+
+        /* Footer */
+        footer {
+            background: var(--bg-color);
+            border-top: 1px solid var(--border-color);
+            padding: 2rem 0;
+            margin-top: 4rem;
+        }
+
+        .footer-content {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .footer-links {
+            display: flex;
+            gap: 1.5rem;
+        }
+
+        .footer-links a {
+            color: var(--text-secondary);
+            text-decoration: none;
+            font-size: 0.9rem;
+        }
+
+        .footer-links a:hover {
+            color: var(--primary-color);
+        }
+
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            .nav-links {
+                display: none;
+            }
+
+            .page-header h1 {
+                font-size: 2rem;
+            }
+
+            .ai-card {
+                flex-direction: column;
+                align-items: flex-start;
+                gap: 0.7rem;
+            }
+
+            .ai-card .ai-thumb img {
+                margin: 0 0 0.7rem 0;
+            }
+
+            .ai-card .ai-link {
+                margin-left: 0;
+            }
+
+            .ai-meta {
+                flex-wrap: wrap;
+                gap: 0.8rem;
+            }
+
+            .footer-content {
+                flex-direction: column;
+                gap: 1rem;
+                text-align: center;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Header -->
+    <header>
+        <nav class="container">
+            <a href="/" class="nav-logo">AI Navigator</a>
+            <ul class="nav-links">
+                <li><a href="/">Home</a></li>
+                <li><a href="/categories.html">Categories</a></li>
+                <li><a href="/ranking.html">Rankings</a></li>
+                <li><a href="/about.html">About</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Main Content -->
+    <main class="container">
+        <!-- Breadcrumb -->
+        <div class="breadcrumb">
+            <a href="/">Home</a> / Rankings
+        </div>
+
+        <!-- Page Header -->
+        <div class="page-header">
+            <h1>Top AI Tools Rankings</h1>
+            <p>Discover the most popular and highly-rated AI tools, ranked by user ratings and popularity.</p>
+        </div>
+
+        <!-- Rankings List -->
+        <div id="rankingList">
+            <!-- Dynamic content will be inserted here -->
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-links">
+                    <a href="/about.html">About</a>
+                    <a href="/privacy.html">Privacy Policy</a>
+                    <a href="/terms.html">Terms of Service</a>
+                    <a href="/contact.html">Contact</a>
+                </div>
+                <div class="copyright">
+                    © 2024 AI Navigator. All rights reserved.
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- JavaScript -->
+    <script>
+        // Sample AI tools data
+        const sampleTools = [
+            {
+                name: "ChatGPT",
+                category: "Chatbot",
+                score: 4.8,
+                views: 1500000,
+                desc: "Advanced AI language model for natural conversations and task assistance.",
+                image: "https://openai.com/content/images/2022/05/openai-avatar.png",
+                link: "https://chat.openai.com"
+            },
+            {
+                name: "Midjourney",
+                category: "Image Generation",
+                score: 4.7,
+                views: 980000,
+                desc: "AI-powered image generation tool that creates stunning artwork from text descriptions.",
+                image: "https://www.midjourney.com/apple-touch-icon.png",
+                link: "https://www.midjourney.com"
+            },
+            {
+                name: "GitHub Copilot",
+                category: "Code Assistant",
+                score: 4.6,
+                views: 750000,
+                desc: "AI pair programmer that helps you write better code with real-time suggestions.",
+                image: "https://github.githubassets.com/images/modules/site/icons/footer/github-mark.svg",
+                link: "https://github.com/features/copilot"
+            },
+            {
+                name: "DALL-E 3",
+                category: "Image Generation",
+                score: 4.5,
+                views: 650000,
+                desc: "Create realistic images and art from text descriptions with advanced AI.",
+                image: "https://openai.com/content/images/2022/05/openai-avatar.png",
+                link: "https://openai.com/dall-e-3"
+            },
+            {
+                name: "Claude",
+                category: "Chatbot",
+                score: 4.7,
+                views: 550000,
+                desc: "Anthropic's AI assistant focused on helpful, harmless, and honest interactions.",
+                image: "https://www.anthropic.com/favicon.ico",
+                link: "https://www.anthropic.com/claude"
+            },
+            {
+                name: "Stable Diffusion",
+                category: "Image Generation",
+                score: 4.4,
+                views: 480000,
+                desc: "Open source text-to-image model for creating high-quality images.",
+                image: "https://stability.ai/favicon.ico",
+                link: "https://stability.ai"
+            },
+            {
+                name: "Notion AI",
+                category: "Productivity",
+                score: 4.5,
+                views: 420000,
+                desc: "AI-powered writing assistant integrated into Notion workspace.",
+                image: "https://www.notion.so/front-static/favicon.ico",
+                link: "https://www.notion.so/product/ai"
+            },
+            {
+                name: "Grammarly",
+                category: "Writing",
+                score: 4.6,
+                views: 380000,
+                desc: "AI writing assistant that helps improve grammar, clarity, and style.",
+                image: "https://www.grammarly.com/favicon.ico",
+                link: "https://www.grammarly.com"
+            },
+            {
+                name: "Runway",
+                category: "Video Editing",
+                score: 4.3,
+                views: 320000,
+                desc: "AI-powered video editing tools for creative professionals.",
+                image: "https://runwayml.com/favicon.ico",
+                link: "https://runwayml.com"
+            },
+            {
+                name: "ElevenLabs",
+                category: "Voice Synthesis",
+                score: 4.4,
+                views: 280000,
+                desc: "AI voice generator and text-to-speech software with natural voices.",
+                image: "https://elevenlabs.io/favicon.ico",
+                link: "https://elevenlabs.io"
+            }
+        ];
+
+        async function renderRankings() {
+            const list = document.getElementById('rankingList');
+            list.innerHTML = '<div style="padding:2rem;text-align:center;">Loading...</div>';
+            
+            try {
+                // Try to fetch from API first
+                const response = await fetch('/api/tools/popular');
+                let rankings;
+                
+                if (response.ok) {
+                    rankings = await response.json();
+                } else {
+                    // Fallback to sample data if API fails
+                    rankings = sampleTools;
+                }
+
+                if (!Array.isArray(rankings) || rankings.length === 0) {
+                    list.innerHTML = '<div style="padding:2rem;text-align:center;">No data available.</div>';
+                    return;
+                }
+
+                list.innerHTML = rankings.map((tool, idx) => `
+                    <div class="ai-card">
+                        <div class="rank-number">${idx + 1}</div>
+                        <div class="ai-thumb"><img src="${tool.image}" alt="${tool.name}" loading="lazy"></div>
+                        <div class="ai-info">
+                            <div class="ai-title">${tool.name}</div>
+                            <div class="ai-meta">
+                                <span class="category">${tool.category}</span>
+                                <span class="score"><i class="fas fa-star"></i> ${tool.score}</span>
+                                <span class="views"><i class="fas fa-eye"></i> ${tool.views.toLocaleString()}</span>
+                            </div>
+                            <div class="ai-desc">${tool.desc}</div>
+                        </div>
+                        <a href="${tool.link}" class="ai-link" target="_blank" rel="noopener noreferrer"><i class="fas fa-arrow-right"></i></a>
+                    </div>
+                `).join('');
+            } catch (e) {
+                // If both API and sample data fail, show error
+                list.innerHTML = '<div style="padding:2rem;text-align:center;color:#f00;">Failed to load data.</div>';
+            }
+        }
+
+        document.addEventListener('DOMContentLoaded', renderRankings);
+    </script>
+</body>
+</html>

@@ -1,0 +1,634 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Midjourney - Advanced AI image generation tool for creating stunning artwork and visual content">
+    <meta name="keywords" content="Midjourney, AI art, image generation, artificial intelligence, digital art, creative AI">
+    <title>Midjourney - AI Image Generation | SoniceAi</title>
+    <link rel="stylesheet" href="../../css/style.css">
+    <link rel="stylesheet" href="../../css/tool-detail.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="icon" type="image/png" href="../../images/favicon.png">
+    <style>
+        :root {
+            --primary-color: #000000;
+            --primary-hover: #333333;
+            --text-color: #1f2937;
+            --text-secondary: #4b5563;
+            --bg-color: #ffffff;
+            --bg-secondary: #f9fafb;
+            --border-color: #e5e7eb;
+        }
+
+        .tool-detail {
+            padding: 2rem 0;
+        }
+
+        .tool-header {
+            display: flex;
+            align-items: center;
+            gap: 2rem;
+            margin-bottom: 3rem;
+            padding: 2rem;
+            background: var(--bg-color);
+            border-radius: 1rem;
+            box-shadow: 0 4px 24px rgba(0,0,0,0.08);
+        }
+
+        .tool-logo {
+            width: 120px;
+            height: 120px;
+            border-radius: 1.5rem;
+            object-fit: cover;
+            background: #fff;
+            padding: 1rem;
+            box-shadow: 0 4px 16px rgba(0,0,0,0.1);
+            background-image: url('https://cdn.discordapp.com/icons/662267976984297473/39d2c7b4e69ab73d0543eefee53d5472.png');
+            background-size: 80%;
+            background-position: center;
+            background-repeat: no-repeat;
+        }
+
+        .tool-info {
+            flex: 1;
+        }
+
+        .tool-title {
+            font-size: 2.5rem;
+            color: var(--text-color);
+            margin-bottom: 1rem;
+        }
+
+        .tool-meta {
+            display: flex;
+            gap: 2rem;
+            margin-bottom: 1.5rem;
+        }
+
+        .tool-category {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            padding: 0.5rem 1rem;
+            background: #f3f4f6;
+            color: #000000;
+            border-radius: 1rem;
+            font-size: 1rem;
+        }
+
+        .tool-rating {
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+            color: #f59e42;
+        }
+
+        .tool-views {
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+            color: var(--text-secondary);
+        }
+
+        .tool-description {
+            color: var(--text-secondary);
+            font-size: 1.1rem;
+            line-height: 1.6;
+            margin-bottom: 1.5rem;
+        }
+
+        .tool-actions {
+            display: flex;
+            gap: 1rem;
+        }
+
+        .primary-btn {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            padding: 0.75rem 1.5rem;
+            background: var(--primary-color);
+            color: white;
+            border-radius: 0.75rem;
+            text-decoration: none;
+            font-weight: 500;
+            transition: background-color 0.2s;
+        }
+
+        .primary-btn:hover {
+            background: var(--primary-hover);
+        }
+
+        .tool-content {
+            display: grid;
+            grid-template-columns: 2fr 1fr;
+            gap: 2rem;
+        }
+
+        .main-content {
+            background: var(--bg-color);
+            border-radius: 1rem;
+            padding: 2rem;
+            box-shadow: 0 4px 24px rgba(0,0,0,0.08);
+        }
+
+        .section {
+            margin-bottom: 3rem;
+        }
+
+        .section-title {
+            font-size: 1.5rem;
+            color: var(--text-color);
+            margin-bottom: 1.5rem;
+        }
+
+        .section-content {
+            color: var(--text-secondary);
+            line-height: 1.6;
+        }
+
+        .pricing-cards {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 1rem;
+            margin: 2rem 0;
+        }
+
+        .pricing-card {
+            background: var(--bg-color);
+            border: 1px solid var(--border-color);
+            border-radius: 0.75rem;
+            padding: 1.5rem;
+            text-align: center;
+            transition: transform 0.2s;
+        }
+
+        .pricing-card:hover {
+            transform: translateY(-2px);
+        }
+
+        .pricing-card.popular {
+            border: 2px solid var(--primary-color);
+            background: #fafafa;
+        }
+
+        .pricing-card h3 {
+            font-size: 1.2rem;
+            margin-bottom: 0.5rem;
+            color: var(--text-color);
+        }
+
+        .pricing-card .price {
+            font-size: 1.8rem;
+            font-weight: 700;
+            margin-bottom: 1rem;
+            color: var(--text-color);
+        }
+
+        .pricing-card ul {
+            list-style: none;
+            padding: 0;
+            margin: 0 0 1.5rem;
+            text-align: left;
+        }
+
+        .pricing-card li {
+            padding: 0.25rem 0;
+            color: var(--text-secondary);
+            font-size: 0.9rem;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+
+        .pricing-card li::before {
+            content: "✓";
+            color: var(--primary-color);
+        }
+
+        .pricing-card .btn {
+            display: inline-block;
+            padding: 0.5rem 1.5rem;
+            background: var(--primary-color);
+            color: white;
+            text-decoration: none;
+            border-radius: 0.5rem;
+            font-size: 0.9rem;
+            transition: background-color 0.2s;
+        }
+
+        .pricing-card .btn:hover {
+            background: var(--primary-hover);
+        }
+
+        .rating-section {
+            margin-bottom: 2rem;
+            padding: 2rem;
+            background: var(--bg-color);
+            border-radius: 1rem;
+            box-shadow: 0 4px 24px rgba(0,0,0,0.08);
+        }
+
+        .rating-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 2rem;
+        }
+
+        .rating-summary {
+            text-align: center;
+        }
+
+        .rating-stars {
+            font-size: 2rem;
+            color: #f59e42;
+            margin-bottom: 0.5rem;
+        }
+
+        .rating-score {
+            font-size: 1.2rem;
+            font-weight: 600;
+            color: var(--text-color);
+            margin-bottom: 0.5rem;
+        }
+
+        .rating-count {
+            color: var(--text-secondary);
+            font-size: 0.9rem;
+        }
+
+        .user-rating {
+            text-align: center;
+            padding: 2rem;
+            border-top: 1px solid var(--border-color);
+            margin-top: 2rem;
+        }
+
+        .user-rating h3 {
+            margin-bottom: 1rem;
+            color: var(--text-color);
+        }
+
+        .star-rating {
+            display: flex;
+            gap: 0.5rem;
+            justify-content: center;
+            margin-bottom: 1rem;
+        }
+
+        .star-rating input {
+            display: none;
+        }
+
+        .star-rating label {
+            cursor: pointer;
+            font-size: 2rem;
+            color: #ddd;
+        }
+
+        .star-rating label:hover,
+        .star-rating label:hover ~ label,
+        .star-rating input:checked ~ label {
+            color: #f59e42;
+        }
+
+        .rating-form textarea {
+            width: 100%;
+            padding: 1rem;
+            border: 1px solid var(--border-color);
+            border-radius: 0.5rem;
+            margin-bottom: 1rem;
+            resize: vertical;
+            min-height: 100px;
+        }
+
+        .rating-form button {
+            padding: 0.75rem 2rem;
+            background: var(--primary-color);
+            color: white;
+            border: none;
+            border-radius: 0.5rem;
+            cursor: pointer;
+            font-weight: 500;
+            transition: background-color 0.2s;
+        }
+
+        .rating-form button:hover {
+            background: var(--primary-hover);
+        }
+
+        .sidebar {
+            display: flex;
+            flex-direction: column;
+            gap: 2rem;
+        }
+
+        .info-card {
+            background: var(--bg-color);
+            border-radius: 1rem;
+            padding: 1.5rem;
+            box-shadow: 0 4px 24px rgba(0,0,0,0.08);
+        }
+
+        .info-title {
+            font-size: 1.25rem;
+            color: var(--text-color);
+            margin-bottom: 1rem;
+        }
+
+        .info-list {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+
+        .info-item {
+            display: flex;
+            align-items: center;
+            gap: 0.75rem;
+            padding: 0.75rem 0;
+            border-bottom: 1px solid var(--border-color);
+        }
+
+        .info-item:last-child {
+            border-bottom: none;
+        }
+
+        .info-item i {
+            color: var(--primary-color);
+            width: 20px;
+        }
+
+        @media (max-width: 768px) {
+            .tool-header {
+                flex-direction: column;
+                text-align: center;
+            }
+
+            .tool-meta {
+                justify-content: center;
+            }
+
+            .tool-actions {
+                justify-content: center;
+            }
+
+            .tool-content {
+                grid-template-columns: 1fr;
+            }
+
+            .pricing-cards {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="container">
+            <div class="logo">
+                <a href="../../"><i class="fas fa-robot"></i> SoniceAi</a>
+            </div>
+            <nav>
+                <ul>
+                    <li><a href="../../"><i class="fas fa-home"></i> Home</a></li>
+                    <li><a href="../../pages/categories.html"><i class="fas fa-th-large"></i> Categories</a></li>
+                    <li><a href="../../pages/ranking.html"><i class="fas fa-chart-line"></i> Rankings</a></li>
+                    <li><a href="../../pages/new.html"><i class="fas fa-star"></i> New Releases</a></li>
+                </ul>
+            </nav>
+            <div class="search">
+                <input type="text" placeholder="Search AI tools..." aria-label="Search AI tools">
+                <button aria-label="Search"><i class="fas fa-search"></i></button>
+            </div>
+        </div>
+    </header>
+
+    <main class="container tool-detail">
+        <div class="tool-header">
+            <div class="tool-logo"></div>
+            <div class="tool-info">
+                <h1 class="tool-title">Midjourney</h1>
+                <div class="tool-meta">
+                    <span class="tool-category">
+                        <i class="fas fa-paint-brush"></i>
+                        Image Generation
+                    </span>
+                    <span class="tool-rating">
+                        <i class="fas fa-star"></i>
+                        4.8
+                    </span>
+                    <span class="tool-views">
+                        <i class="fas fa-eye"></i>
+                        1,200,000
+                    </span>
+                </div>
+                <p class="tool-description">
+                    Advanced AI image generation tool that creates stunning artwork and visual content through natural language prompts. Perfect for artists, designers, and creative professionals.
+                </p>
+                <div class="tool-actions">
+                    <a href="https://www.midjourney.com" class="primary-btn" target="_blank" rel="noopener noreferrer">
+                        <i class="fas fa-external-link-alt"></i>
+                        Visit Website
+                    </a>
+                </div>
+            </div>
+        </div>
+
+        <div class="tool-content">
+            <div class="main-content">
+                <section class="section">
+                    <h2 class="section-title">
+                        <i class="fas fa-info-circle"></i>
+                        Overview
+                    </h2>
+                    <div class="section-content">
+                        <p>
+                            Midjourney is a powerful AI image generation tool that transforms text descriptions into stunning visual artwork. It uses advanced machine learning algorithms to create unique and high-quality images based on natural language prompts.
+                        </p>
+                        <p>
+                            Key features include:
+                        </p>
+                        <ul>
+                            <li>High-quality image generation from text prompts</li>
+                            <li>Multiple artistic styles and variations</li>
+                            <li>Real-time collaboration and feedback</li>
+                            <li>Customizable output parameters</li>
+                            <li>Commercial usage rights</li>
+                            <li>Active community and support</li>
+                        </ul>
+                    </div>
+                </section>
+
+                <section class="section">
+                    <h2 class="section-title">
+                        <i class="fas fa-tags"></i>
+                        Pricing Plans
+                    </h2>
+                    <div class="pricing-cards">
+                        <div class="pricing-card">
+                            <h3>Basic</h3>
+                            <div class="price">$10/month</div>
+                            <ul>
+                                <li>200 images per month</li>
+                                <li>Standard generation speed</li>
+                                <li>Basic support</li>
+                                <li>Personal use only</li>
+                            </ul>
+                            <a href="https://www.midjourney.com" class="btn" target="_blank" rel="noopener noreferrer">Get Started</a>
+                        </div>
+                        <div class="pricing-card popular">
+                            <h3>Pro</h3>
+                            <div class="price">$30/month</div>
+                            <ul>
+                                <li>900 images per month</li>
+                                <li>Faster generation speed</li>
+                                <li>Priority support</li>
+                                <li>Commercial usage rights</li>
+                                <li>Advanced features</li>
+                            </ul>
+                            <a href="https://www.midjourney.com" class="btn" target="_blank" rel="noopener noreferrer">Get Started</a>
+                        </div>
+                        <div class="pricing-card">
+                            <h3>Enterprise</h3>
+                            <div class="price">Custom</div>
+                            <ul>
+                                <li>Unlimited generations</li>
+                                <li>Maximum speed</li>
+                                <li>Dedicated support</li>
+                                <li>Custom solutions</li>
+                                <li>API access</li>
+                            </ul>
+                            <a href="https://www.midjourney.com/enterprise" class="btn" target="_blank" rel="noopener noreferrer">Contact Sales</a>
+                        </div>
+                    </div>
+                </section>
+
+                <section class="section">
+                    <h2 class="section-title">
+                        <i class="fas fa-star"></i>
+                        Ratings & Reviews
+                    </h2>
+                    <div class="rating-section">
+                        <div class="rating-header">
+                            <div class="rating-summary">
+                                <div class="rating-stars">
+                                    ★★★★★
+                                </div>
+                                <div class="rating-score">
+                                    4.8 out of 5
+                                </div>
+                                <div class="rating-count">
+                                    Based on 2,500+ reviews
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="user-rating">
+                            <h3>Rate this tool</h3>
+                            <form class="rating-form">
+                                <div class="star-rating">
+                                    <input type="radio" id="star5" name="rating" value="5">
+                                    <label for="star5">★</label>
+                                    <input type="radio" id="star4" name="rating" value="4">
+                                    <label for="star4">★</label>
+                                    <input type="radio" id="star3" name="rating" value="3">
+                                    <label for="star3">★</label>
+                                    <input type="radio" id="star2" name="rating" value="2">
+                                    <label for="star2">★</label>
+                                    <input type="radio" id="star1" name="rating" value="1">
+                                    <label for="star1">★</label>
+                                </div>
+                                <textarea placeholder="Share your experience with this tool (optional)"></textarea>
+                                <button type="submit">Submit Review</button>
+                            </form>
+                        </div>
+                    </div>
+                </section>
+            </div>
+
+            <aside class="sidebar">
+                <div class="info-card">
+                    <h3 class="info-title">
+                        <i class="fas fa-info-circle"></i>
+                        Quick Info
+                    </h3>
+                    <ul class="info-list">
+                        <li class="info-item">
+                            <i class="fas fa-calendar"></i>
+                            <span>Launched: July 2022</span>
+                        </li>
+                        <li class="info-item">
+                            <i class="fas fa-building"></i>
+                            <span>Company: Midjourney Inc.</span>
+                        </li>
+                        <li class="info-item">
+                            <i class="fas fa-globe"></i>
+                            <span>Website: midjourney.com</span>
+                        </li>
+                        <li class="info-item">
+                            <i class="fas fa-users"></i>
+                            <span>Users: 5M+</span>
+                        </li>
+                        <li class="info-item">
+                            <i class="fas fa-language"></i>
+                            <span>Languages: 10+</span>
+                        </li>
+                    </ul>
+                </div>
+
+                <div class="info-card">
+                    <h3 class="info-title">
+                        <i class="fas fa-share-alt"></i>
+                        Share
+                    </h3>
+                    <div class="tool-actions">
+                        <a href="https://twitter.com/intent/tweet?text=Check%20out%20Midjourney%20-%20AI%20image%20generation%20tool&url=https%3A%2F%2Fwww.midjourney.com" class="primary-btn" target="_blank" rel="noopener noreferrer">
+                            <i class="fab fa-twitter"></i>
+                            Twitter
+                        </a>
+                        <a href="https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Fwww.midjourney.com" class="primary-btn" target="_blank" rel="noopener noreferrer">
+                            <i class="fab fa-facebook"></i>
+                            Facebook
+                        </a>
+                    </div>
+                </div>
+            </aside>
+        </div>
+    </main>
+
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-logo">
+                    <h3><i class="fas fa-robot"></i> SoniceAi</h3>
+                    <p>Discover the best AI tools and resources</p>
+                </div>
+                <div class="footer-links">
+                    <h4>Quick Links</h4>
+                    <ul>
+                        <li><a href="../../"><i class="fas fa-home"></i> Home</a></li>
+                        <li><a href="../../pages/categories.html"><i class="fas fa-th-large"></i> Categories</a></li>
+                        <li><a href="../../pages/ranking.html"><i class="fas fa-chart-line"></i> Rankings</a></li>
+                        <li><a href="../../pages/about.html"><i class="fas fa-info-circle"></i> About Us</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="copyright">
+                <p>&copy; 2025 SoniceAi. All rights reserved.</p>
+                <div class="footer-legal">
+                    <a href="../../pages/privacy.html">Privacy Policy</a>
+                    <a href="../../pages/terms.html">Terms of Service</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="../../js/main.js"></script>
+</body>
+</html> 
