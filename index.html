@@ -166,7 +166,7 @@
         /* Main Content Layout */
         .main-content {
             display: grid;
-            grid-template-columns: 160px minmax(0, 1fr) 240px;
+            grid-template-columns: minmax(0, 1fr) 240px;
             gap: 1rem;
             padding: 1rem;
             max-width: 1400px;
@@ -175,7 +175,7 @@
 
         /* Ad Spaces */
         .ad-space {
-            background: #fff;
+            background: white;
             border-radius: 0.5rem;
             padding: 1rem;
             height: calc(100vh - 100px);
@@ -185,8 +185,8 @@
             display: flex;
             align-items: center;
             justify-content: center;
-            color: #9ca3af;
-            font-size: 0.875rem;
+            color: transparent;
+            font-size: 0;
         }
 
         /* Tools Grid */
@@ -398,6 +398,17 @@
                 grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
             }
         }
+
+        /* Header Styles */
+        .logo a {
+            text-decoration: none;
+            color: inherit;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+            font-weight: 600;
+            font-size: 1.25rem;
+        }
     </style>
 </head>
 <body>
@@ -522,10 +533,6 @@
         </section>
 
         <div class="main-content">
-            <aside class="ad-space">
-                广告位 Left
-            </aside>
-            
             <section class="tools-section">
                 <div class="tools-grid" id="tools-grid">
                     <!-- Tools will be dynamically loaded here -->
@@ -538,10 +545,6 @@
                     <!-- Featured tools will be dynamically loaded here -->
                 </div>
             </section>
-
-            <aside class="ad-space">
-                广告位 Right
-            </aside>
         </div>
     </main>
 
