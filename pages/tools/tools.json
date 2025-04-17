@@ -1,0 +1,2298 @@
+{
+    "tools": [
+        {
+            "id": "chatgpt",
+            "title": "ChatGPT",
+            "description": "Advanced AI language model for natural conversations and task assistance",
+            "keywords": "AI chatbot, language model, OpenAI, GPT-4",
+            "logo_url": "https://openai.com/favicon.ico",
+            "category": "Language Model",
+            "category_icon": "fas fa-comments",
+            "rating": 4.9,
+            "views": 1000000,
+            "overview": "ChatGPT is a state-of-the-art language model that can engage in natural conversations, answer questions, and assist with various tasks. It's powered by OpenAI's GPT-4 architecture.",
+            "capabilities": [
+                "Natural language conversations",
+                "Code generation and debugging",
+                "Content creation and editing",
+                "Research assistance",
+                "Multi-language support",
+                "API integration"
+            ],
+            "pricing_plans": [
+                {
+                    "name": "Free",
+                    "price": "$0",
+                    "features": [
+                        "Basic chat access",
+                        "Standard response speed",
+                        "Limited context window",
+                        "Community support"
+                    ],
+                    "action_url": "https://chat.openai.com",
+                    "action_text": "Get Started"
+                },
+                {
+                    "name": "Plus",
+                    "price": "$20/month",
+                    "features": [
+                        "Priority access",
+                        "Faster response speed",
+                        "Extended context window",
+                        "Advanced features",
+                        "Priority support"
+                    ],
+                    "action_url": "https://chat.openai.com/plus",
+                    "action_text": "Subscribe"
+                },
+                {
+                    "name": "Enterprise",
+                    "price": "Custom",
+                    "features": [
+                        "Unlimited access",
+                        "Custom solutions",
+                        "Dedicated support",
+                        "API access",
+                        "Team management"
+                    ],
+                    "action_url": "https://openai.com/enterprise",
+                    "action_text": "Contact Sales"
+                }
+            ],
+            "rating_stars": "★★★★★",
+            "review_count": 8500,
+            "launch_date": "2022",
+            "company": "OpenAI",
+            "website": "chat.openai.com",
+            "website_url": "https://chat.openai.com",
+            "user_count": "100M+",
+            "extra_info": {
+                "label": "Languages Supported",
+                "value": "20+"
+            },
+            "share_text": "Check out ChatGPT - Advanced AI language model for natural conversations and task assistance"
+        },
+        {
+            "id": "midjourney",
+            "title": "Midjourney",
+            "description": "AI-powered image generation platform for creating stunning artworks",
+            "keywords": "AI art, image generation, Midjourney, text-to-image",
+            "logo_url": "https://www.midjourney.com/favicon.ico",
+            "category": "Image Generation",
+            "category_icon": "fas fa-image",
+            "rating": 4.8,
+            "views": 800000,
+            "overview": "Midjourney is a powerful AI art generation platform that creates stunning, high-quality images from text descriptions. It's known for its artistic style and attention to detail.",
+            "capabilities": [
+                "High-quality image generation",
+                "Artistic style control",
+                "Multiple aspect ratios",
+                "Image upscaling",
+                "Style variations",
+                "Commercial usage rights"
+            ],
+            "pricing_plans": [
+                {
+                    "name": "Basic",
+                    "price": "$10/month",
+                    "features": [
+                        "200 images per month",
+                        "Standard resolution",
+                        "Basic editing tools",
+                        "Community support"
+                    ],
+                    "action_url": "https://www.midjourney.com",
+                    "action_text": "Get Started"
+                },
+                {
+                    "name": "Standard",
+                    "price": "$30/month",
+                    "features": [
+                        "900 images per month",
+                        "High resolution",
+                        "Advanced editing tools",
+                        "Priority support",
+                        "Commercial license"
+                    ],
+                    "action_url": "https://www.midjourney.com",
+                    "action_text": "Subscribe"
+                },
+                {
+                    "name": "Pro",
+                    "price": "$60/month",
+                    "features": [
+                        "Unlimited images",
+                        "Maximum resolution",
+                        "All editing tools",
+                        "Dedicated support",
+                        "Team features"
+                    ],
+                    "action_url": "https://www.midjourney.com",
+                    "action_text": "Subscribe"
+                }
+            ],
+            "rating_stars": "★★★★★",
+            "review_count": 4200,
+            "launch_date": "2022",
+            "company": "Midjourney",
+            "website": "midjourney.com",
+            "website_url": "https://www.midjourney.com",
+            "user_count": "1M+",
+            "extra_info": {
+                "label": "Images Generated",
+                "value": "10M+"
+            },
+            "share_text": "Check out Midjourney - AI-powered image generation platform for creating stunning artworks"
+        },
+        {
+            "id": "elevenlabs",
+            "title": "ElevenLabs",
+            "description": "AI voice synthesis platform for natural and expressive text-to-speech",
+            "keywords": "text to speech, voice synthesis, AI voice, voice cloning",
+            "logo_url": "https://elevenlabs.io/favicon.ico",
+            "category": "Voice Synthesis",
+            "category_icon": "fas fa-microphone",
+            "rating": 4.8,
+            "views": 280000,
+            "overview": "ElevenLabs is a state-of-the-art voice synthesis platform that creates natural and expressive voices using AI technology. It offers voice cloning, multilingual support, and real-time voice generation.",
+            "capabilities": [
+                "Text-to-speech synthesis",
+                "Voice cloning",
+                "Multilingual support",
+                "Real-time generation",
+                "Voice design",
+                "API access"
+            ],
+            "pricing_plans": [
+                {
+                    "name": "Free",
+                    "price": "$0",
+                    "features": [
+                        "10,000 characters/month",
+                        "Basic voices",
+                        "Standard quality",
+                        "Community support"
+                    ],
+                    "action_text": "Start Free",
+                    "action_url": "https://elevenlabs.io/sign-up"
+                },
+                {
+                    "name": "Creator",
+                    "price": "$22/month",
+                    "is_popular": true,
+                    "features": [
+                        "30,000 characters/month",
+                        "Professional voices",
+                        "Voice cloning",
+                        "Priority support"
+                    ],
+                    "action_text": "Get Creator",
+                    "action_url": "https://elevenlabs.io/pricing"
+                },
+                {
+                    "name": "Enterprise",
+                    "price": "Custom",
+                    "features": [
+                        "Custom character limit",
+                        "Custom voice design",
+                        "Dedicated support",
+                        "API integration"
+                    ],
+                    "action_text": "Contact Sales",
+                    "action_url": "https://elevenlabs.io/enterprise"
+                }
+            ],
+            "rating_stars": "★★★★★",
+            "review_count": "2,000+",
+            "launch_date": "2021",
+            "company": "ElevenLabs",
+            "website": "elevenlabs.io",
+            "user_count": "250K+",
+            "extra_info": {
+                "label": "Languages",
+                "value": "25+"
+            },
+            "share_text": "Check out ElevenLabs - AI voice synthesis platform",
+            "website_url": "https://elevenlabs.io"
+        },
+        {
+            "id": "stable-diffusion",
+            "title": "Stable Diffusion",
+            "description": "Open-source AI image generation model for creating high-quality artworks",
+            "keywords": "AI art, image generation, stable diffusion, text-to-image",
+            "logo_url": "https://stability.ai/favicon.ico",
+            "category": "AI Art",
+            "category_icon": "fas fa-palette",
+            "rating": 4.8,
+            "views": 500000,
+            "overview": "Stable Diffusion is a powerful open-source AI model for generating high-quality images from text descriptions. It offers exceptional image quality, fast generation speeds, and extensive customization options for artists and creators.",
+            "capabilities": [
+                "High-quality image generation",
+                "Text-to-image synthesis",
+                "Image-to-image editing",
+                "Inpainting and outpainting",
+                "Style transfer",
+                "Multiple model versions"
+            ],
+            "pricing_plans": [
+                {
+                    "name": "Free",
+                    "price": "$0",
+                    "features": [
+                        "Basic image generation",
+                        "Community models",
+                        "Standard speed"
+                    ],
+                    "action_text": "Try Free",
+                    "action_url": "https://stability.ai"
+                },
+                {
+                    "name": "Pro",
+                    "price": "$20/month",
+                    "features": [
+                        "Faster generation",
+                        "Priority access",
+                        "Advanced features",
+                        "Commercial usage"
+                    ],
+                    "action_text": "Go Pro",
+                    "action_url": "https://stability.ai/pricing"
+                },
+                {
+                    "name": "Enterprise",
+                    "price": "Custom",
+                    "features": [
+                        "Custom deployment",
+                        "API access",
+                        "Dedicated support",
+                        "Custom models"
+                    ],
+                    "action_text": "Contact Sales",
+                    "action_url": "https://stability.ai/enterprise"
+                }
+            ],
+            "rating_stars": "★★★★★",
+            "review_count": 5000,
+            "launch_date": "2022",
+            "company": "Stability AI",
+            "website": "stability.ai",
+            "website_url": "https://stability.ai",
+            "user_count": "2M+",
+            "extra_info": {
+                "label": "Model Versions",
+                "value": "5+"
+            },
+            "share_text": "Check out Stable Diffusion - Open-source AI image generation model for creating high-quality artworks"
+        },
+        {
+            "id": "anthropic-claude",
+            "title": "Claude",
+            "description": "Advanced AI assistant with strong reasoning and analysis capabilities",
+            "keywords": "AI assistant, language model, Claude, Anthropic",
+            "logo_url": "https://www.anthropic.com/favicon.ico",
+            "category": "AI Assistant",
+            "category_icon": "fas fa-robot",
+            "rating": 4.9,
+            "views": 350000,
+            "overview": "Claude is an advanced AI assistant developed by Anthropic, known for its strong reasoning capabilities, factual accuracy, and ability to handle complex tasks. It excels in analysis, writing, and coding while maintaining high safety standards.",
+            "capabilities": [
+                "Advanced reasoning",
+                "Code generation",
+                "Content writing",
+                "Data analysis",
+                "Research assistance",
+                "Multi-language support"
+            ],
+            "pricing_plans": [
+                {
+                    "name": "Free",
+                    "price": "$0",
+                    "features": [
+                        "Basic chat access",
+                        "Standard features",
+                        "Limited usage"
+                    ],
+                    "action_text": "Try Free",
+                    "action_url": "https://claude.ai"
+                },
+                {
+                    "name": "Pro",
+                    "price": "$20/month",
+                    "features": [
+                        "Unlimited usage",
+                        "Priority access",
+                        "Advanced features",
+                        "Longer context"
+                    ],
+                    "action_text": "Upgrade",
+                    "action_url": "https://claude.ai/plans"
+                },
+                {
+                    "name": "Enterprise",
+                    "price": "Custom",
+                    "features": [
+                        "Custom solutions",
+                        "API access",
+                        "Enhanced security",
+                        "Dedicated support"
+                    ],
+                    "action_text": "Contact Sales",
+                    "action_url": "https://anthropic.com/enterprise"
+                }
+            ],
+            "rating_stars": "★★★★★",
+            "review_count": 3500,
+            "launch_date": "2023",
+            "company": "Anthropic",
+            "website": "claude.ai",
+            "website_url": "https://claude.ai",
+            "user_count": "500K+",
+            "extra_info": {
+                "label": "Context Length",
+                "value": "100K+"
+            },
+            "share_text": "Check out Claude - Advanced AI assistant with strong reasoning and analysis capabilities"
+        },
+        {
+            "id": "runwayml",
+            "title": "Runway ML",
+            "description": "AI-powered video and image editing platform with machine learning tools",
+            "keywords": "Runway ML, AI video, image editing, machine learning",
+            "logo_url": "https://runwayml.com/favicon.ico",
+            "category": "AI Video",
+            "category_icon": "fas fa-video",
+            "rating": 4.8,
+            "views": 750000,
+            "overview": "Runway ML provides a suite of AI tools for video and image editing, making it easy for creators to implement advanced machine learning techniques in their creative workflow.",
+            "capabilities": [
+                "AI video generation",
+                "Image-to-video conversion",
+                "Style transfer",
+                "Object removal",
+                "Green screen effects",
+                "Motion tracking"
+            ],
+            "pricing_plans": [
+                {
+                    "name": "Basic",
+                    "price": "$15/month",
+                    "features": [
+                        "720p video export",
+                        "Basic AI tools",
+                        "Community support",
+                        "Limited credits"
+                    ],
+                    "action_url": "https://runwayml.com/pricing",
+                    "action_text": "Get Started"
+                },
+                {
+                    "name": "Pro",
+                    "price": "$35/month",
+                    "is_popular": true,
+                    "features": [
+                        "1080p video export",
+                        "All AI tools",
+                        "Priority support",
+                        "More credits",
+                        "Custom models"
+                    ],
+                    "action_url": "https://runwayml.com/pricing",
+                    "action_text": "Subscribe"
+                },
+                {
+                    "name": "Enterprise",
+                    "price": "Custom",
+                    "features": [
+                        "4K video export",
+                        "Custom solutions",
+                        "Dedicated support",
+                        "Unlimited credits",
+                        "API access"
+                    ],
+                    "action_url": "https://runwayml.com/enterprise",
+                    "action_text": "Contact Sales"
+                }
+            ],
+            "rating_stars": "★★★★★",
+            "review_count": "2,800+",
+            "launch_date": "2018",
+            "company": "Runway Research",
+            "website": "runwayml.com",
+            "user_count": "300K+",
+            "extra_info": {
+                "label": "AI Models",
+                "value": "30+"
+            },
+            "share_text": "Check out Runway ML - AI-powered video and image editing platform",
+            "website_url": "https://runwayml.com"
+        },
+        {
+            "id": "replicate",
+            "title": "Replicate",
+            "description": "Cloud platform for deploying and running AI models",
+            "keywords": "AI deployment, model hosting, cloud computing, machine learning",
+            "logo_url": "https://replicate.com/favicon.ico",
+            "category": "AI Infrastructure",
+            "category_icon": "fas fa-cloud",
+            "rating": 4.7,
+            "views": 250000,
+            "overview": "Replicate is a cloud platform that makes it easy to deploy and run AI models. It provides a simple API for running models, version control for ML, and seamless scaling for production workloads.",
+            "capabilities": [
+                "Model deployment",
+                "API integration",
+                "Version control",
+                "Auto-scaling",
+                "Model marketplace",
+                "Custom training"
+            ],
+            "pricing_plans": [
+                {
+                    "name": "Starter",
+                    "price": "$0",
+                    "features": [
+                        "Basic usage",
+                        "Public models",
+                        "Community support"
+                    ],
+                    "action_text": "Start Free",
+                    "action_url": "https://replicate.com"
+                },
+                {
+                    "name": "Pro",
+                    "price": "$50/month",
+                    "features": [
+                        "Higher usage limits",
+                        "Priority support",
+                        "Private models",
+                        "Team collaboration"
+                    ],
+                    "action_text": "Go Pro",
+                    "action_url": "https://replicate.com/pricing"
+                },
+                {
+                    "name": "Enterprise",
+                    "price": "Custom",
+                    "features": [
+                        "Custom deployment",
+                        "Dedicated support",
+                        "SLA guarantees",
+                        "Advanced security"
+                    ],
+                    "action_text": "Contact Sales",
+                    "action_url": "https://replicate.com/enterprise"
+                }
+            ],
+            "rating_stars": "★★★★★",
+            "review_count": 2500,
+            "launch_date": "June 2021",
+            "company": "Replicate",
+            "website": "replicate.com",
+            "website_url": "https://replicate.com",
+            "user_count": "100K+",
+            "extra_info": {
+                "label": "Models Available",
+                "value": "1000+"
+            },
+            "share_text": "Check out Replicate - Cloud platform for deploying and running AI models"
+        },
+        {
+            "id": "huggingface",
+            "title": "Hugging Face",
+            "description": "Open-source platform for machine learning models and datasets",
+            "keywords": "machine learning, NLP, AI models, datasets",
+            "logo_url": "https://huggingface.co/favicon.ico",
+            "category": "AI Infrastructure",
+            "category_icon": "fas fa-brain",
+            "rating": 4.8,
+            "views": 750000,
+            "overview": "Hugging Face is the leading platform for machine learning, offering thousands of pre-trained models, datasets, and tools for building AI applications. It provides comprehensive resources for the AI community.",
+            "capabilities": [
+                "Model hosting",
+                "Dataset management",
+                "Model training",
+                "Collaboration tools",
+                "API endpoints",
+                "Community features"
+            ],
+            "pricing_plans": [
+                {
+                    "name": "Free",
+                    "price": "$0",
+                    "features": [
+                        "Public models",
+                        "Basic compute",
+                        "Community support"
+                    ],
+                    "action_text": "Start Free",
+                    "action_url": "https://huggingface.co"
+                },
+                {
+                    "name": "Pro",
+                    "price": "$40/month",
+                    "features": [
+                        "Private models",
+                        "More compute",
+                        "Priority support",
+                        "Team features"
+                    ],
+                    "action_text": "Go Pro",
+                    "action_url": "https://huggingface.co/pricing"
+                },
+                {
+                    "name": "Enterprise",
+                    "price": "Custom",
+                    "features": [
+                        "Custom deployment",
+                        "Dedicated support",
+                        "Security features",
+                        "Custom training"
+                    ],
+                    "action_text": "Contact Sales",
+                    "action_url": "https://huggingface.co/enterprise"
+                }
+            ],
+            "rating_stars": "★★★★★",
+            "review_count": 7500,
+            "launch_date": "June 2016",
+            "company": "Hugging Face",
+            "website": "huggingface.co",
+            "website_url": "https://huggingface.co",
+            "user_count": "500K+",
+            "extra_info": {
+                "label": "Models",
+                "value": "200K+"
+            },
+            "share_text": "Check out Hugging Face - Open-source platform for machine learning models and datasets"
+        },
+        {
+            "id": "runwayml",
+            "title": "Runway",
+            "description": "AI-powered creative tools for video and content creation",
+            "keywords": "AI video, content creation, creative tools, video editing",
+            "logo_url": "https://runway.com/favicon.ico",
+            "category": "AI Creative",
+            "category_icon": "fas fa-video",
+            "rating": 4.7,
+            "views": 300000,
+            "overview": "Runway is a creative suite powered by AI, offering tools for video editing, motion graphics, and content creation. It combines powerful AI capabilities with an intuitive interface for professionals.",
+            "capabilities": [
+                "Video editing",
+                "Motion graphics",
+                "Text-to-video",
+                "Image generation",
+                "Green screen",
+                "Video synthesis"
+            ],
+            "pricing_plans": [
+                {
+                    "name": "Free",
+                    "price": "$0",
+                    "features": [
+                        "Basic features",
+                        "Limited exports",
+                        "Standard quality"
+                    ],
+                    "action_text": "Try Free",
+                    "action_url": "https://runway.com"
+                },
+                {
+                    "name": "Pro",
+                    "price": "$35/month",
+                    "features": [
+                        "All features",
+                        "4K exports",
+                        "Priority rendering",
+                        "More credits"
+                    ],
+                    "action_text": "Go Pro",
+                    "action_url": "https://runway.com/pricing"
+                },
+                {
+                    "name": "Enterprise",
+                    "price": "Custom",
+                    "features": [
+                        "Custom solutions",
+                        "API access",
+                        "Dedicated support",
+                        "Team management"
+                    ],
+                    "action_text": "Contact Sales",
+                    "action_url": "https://runway.com/enterprise"
+                }
+            ],
+            "rating_stars": "★★★★★",
+            "review_count": 2800,
+            "launch_date": "2018",
+            "company": "Runway",
+            "website": "runway.com",
+            "website_url": "https://runway.com",
+            "user_count": "200K+",
+            "extra_info": {
+                "label": "AI Models",
+                "value": "30+"
+            },
+            "share_text": "Check out Runway - AI-powered creative tools for video and content creation"
+        },
+        {
+            "id": "leonardo-ai",
+            "title": "Leonardo.Ai",
+            "description": "AI platform for generating and editing creative assets",
+            "keywords": "AI art, asset generation, creative tools, game assets",
+            "logo_url": "https://leonardo.ai/favicon.ico",
+            "category": "AI Art",
+            "category_icon": "fas fa-palette",
+            "rating": 4.6,
+            "views": 200000,
+            "overview": "Leonardo.Ai is an AI platform specializing in generating and editing creative assets for games, design, and digital art. It offers powerful tools for creating custom assets and illustrations.",
+            "capabilities": [
+                "Asset generation",
+                "Style customization",
+                "Batch processing",
+                "Custom training",
+                "Asset library",
+                "API access"
+            ],
+            "pricing_plans": [
+                {
+                    "name": "Free",
+                    "price": "$0",
+                    "features": [
+                        "Basic generation",
+                        "Community models",
+                        "Limited tokens"
+                    ],
+                    "action_text": "Start Free",
+                    "action_url": "https://leonardo.ai"
+                },
+                {
+                    "name": "Pro",
+                    "price": "$25/month",
+                    "features": [
+                        "More tokens",
+                        "Priority access",
+                        "Custom models",
+                        "Advanced features"
+                    ],
+                    "action_text": "Go Pro",
+                    "action_url": "https://leonardo.ai/pricing"
+                },
+                {
+                    "name": "Business",
+                    "price": "Custom",
+                    "features": [
+                        "Unlimited tokens",
+                        "API access",
+                        "Team features",
+                        "Custom training"
+                    ],
+                    "action_text": "Contact Sales",
+                    "action_url": "https://leonardo.ai/enterprise"
+                }
+            ],
+            "rating_stars": "★★★★★",
+            "review_count": 1800,
+            "launch_date": "December 2022",
+            "company": "Leonardo.Ai",
+            "website": "leonardo.ai",
+            "website_url": "https://leonardo.ai",
+            "user_count": "150K+",
+            "extra_info": {
+                "label": "Asset Types",
+                "value": "20+"
+            },
+            "share_text": "Check out Leonardo.Ai - AI platform for generating and editing creative assets"
+        },
+        {
+            "id": "jasper",
+            "title": "Jasper",
+            "description": "AI-powered content creation platform for marketing and business",
+            "keywords": "AI writing, content creation, marketing, copywriting",
+            "logo_url": "https://www.jasper.ai/favicon.ico",
+            "category": "Content Creation",
+            "category_icon": "fas fa-pen",
+            "rating": 4.8,
+            "views": 450000,
+            "overview": "Jasper is an advanced AI content creation platform that helps businesses and marketers create high-quality content at scale. It uses GPT technology to generate blog posts, social media content, marketing copy, and more.",
+            "capabilities": [
+                "Blog post generation",
+                "Marketing copy creation",
+                "Social media content",
+                "SEO optimization",
+                "Multi-language support",
+                "Team collaboration"
+            ],
+            "pricing_plans": [
+                {
+                    "name": "Creator",
+                    "price": "$39/month",
+                    "features": [
+                        "35,000 words per month",
+                        "50+ AI templates",
+                        "Basic SEO tools",
+                        "Chrome extension"
+                    ],
+                    "action_url": "https://www.jasper.ai/pricing",
+                    "action_text": "Get Started"
+                },
+                {
+                    "name": "Pro",
+                    "price": "$99/month",
+                    "features": [
+                        "Unlimited words",
+                        "All AI templates",
+                        "Advanced SEO tools",
+                        "Priority support",
+                        "API access"
+                    ],
+                    "action_url": "https://www.jasper.ai/pricing",
+                    "action_text": "Go Pro"
+                },
+                {
+                    "name": "Business",
+                    "price": "Custom",
+                    "features": [
+                        "Custom solutions",
+                        "Dedicated support",
+                        "Team management",
+                        "Custom integrations",
+                        "Training sessions"
+                    ],
+                    "action_url": "https://www.jasper.ai/enterprise",
+                    "action_text": "Contact Sales"
+                }
+            ],
+            "review_count": 3800,
+            "launch_date": "2021",
+            "company": "Jasper.ai",
+            "website": "jasper.ai",
+            "website_url": "https://www.jasper.ai",
+            "user_count": "500K+",
+            "extra_info": {
+                "label": "Content Types",
+                "value": "50+"
+            }
+        },
+        {
+            "id": "stability-ai",
+            "title": "Stability AI",
+            "description": "Open-source AI company developing state-of-the-art image and language models",
+            "keywords": "AI models, stable diffusion, image generation, language models",
+            "logo_url": "https://stability.ai/favicon.ico",
+            "category": "AI Research",
+            "category_icon": "fas fa-flask",
+            "rating": 4.7,
+            "views": 500000,
+            "overview": "Stability AI is a leading open-source AI research company known for developing Stable Diffusion and other groundbreaking AI models. They focus on democratizing AI through open-source development.",
+            "capabilities": [
+                "Image generation",
+                "Text generation",
+                "Model development",
+                "Research tools",
+                "API access",
+                "Community collaboration"
+            ],
+            "pricing_plans": [
+                {
+                    "name": "Free",
+                    "price": "$0",
+                    "features": [
+                        "Basic API access",
+                        "Community models",
+                        "Standard support",
+                        "Limited generations"
+                    ],
+                    "action_text": "Start Free",
+                    "action_url": "https://stability.ai/pricing"
+                },
+                {
+                    "name": "Pro",
+                    "price": "$20/month",
+                    "is_popular": true,
+                    "features": [
+                        "Advanced API access",
+                        "Priority processing",
+                        "Premium support",
+                        "Increased limits"
+                    ],
+                    "action_text": "Go Pro",
+                    "action_url": "https://stability.ai/pricing"
+                },
+                {
+                    "name": "Enterprise",
+                    "price": "Custom",
+                    "features": [
+                        "Custom solutions",
+                        "Dedicated support",
+                        "Model fine-tuning",
+                        "Custom deployment"
+                    ],
+                    "action_text": "Contact Sales",
+                    "action_url": "https://stability.ai/enterprise"
+                }
+            ],
+            "rating_stars": "★★★★★",
+            "review_count": "3,000+",
+            "launch_date": "2020",
+            "company": "Stability AI",
+            "website": "stability.ai",
+            "user_count": "1M+",
+            "extra_info": {
+                "label": "Open Models",
+                "value": "10+"
+            },
+            "share_text": "Check out Stability AI - Open-source AI research company",
+            "website_url": "https://stability.ai"
+        },
+        {
+            "id": "anthropic",
+            "title": "Anthropic",
+            "description": "AI research company developing safe and ethical AI systems",
+            "keywords": "AI safety, Claude, language models, ethical AI",
+            "logo_url": "https://anthropic.com/favicon.ico",
+            "category": "AI Research",
+            "category_icon": "fas fa-brain",
+            "rating": 4.9,
+            "views": 400000,
+            "overview": "Anthropic is a leading AI research company focused on developing safe and ethical AI systems. They are known for Claude, their advanced language model, and their work on AI alignment.",
+            "capabilities": [
+                "Language models",
+                "AI safety research",
+                "Ethical AI development",
+                "Constitutional AI",
+                "Model evaluation",
+                "Research publications"
+            ],
+            "pricing_plans": [
+                {
+                    "name": "Claude Free",
+                    "price": "$0",
+                    "features": [
+                        "Basic access",
+                        "Limited usage",
+                        "Standard support",
+                        "Web interface"
+                    ],
+                    "action_text": "Try Free",
+                    "action_url": "https://claude.ai"
+                },
+                {
+                    "name": "Claude Pro",
+                    "price": "$20/month",
+                    "is_popular": true,
+                    "features": [
+                        "Priority access",
+                        "Higher usage limits",
+                        "Faster response times",
+                        "Premium features"
+                    ],
+                    "action_text": "Go Pro",
+                    "action_url": "https://claude.ai/settings"
+                },
+                {
+                    "name": "Enterprise",
+                    "price": "Custom",
+                    "features": [
+                        "Custom solutions",
+                        "API access",
+                        "Dedicated support",
+                        "Custom models"
+                    ],
+                    "action_text": "Contact Sales",
+                    "action_url": "https://anthropic.com/enterprise"
+                }
+            ],
+            "rating_stars": "★★★★★",
+            "review_count": "2,500+",
+            "launch_date": "2021",
+            "company": "Anthropic",
+            "website": "anthropic.com",
+            "user_count": "500K+",
+            "extra_info": {
+                "label": "Research Papers",
+                "value": "20+"
+            },
+            "share_text": "Check out Anthropic - Leading AI safety research company",
+            "website_url": "https://anthropic.com"
+        },
+        {
+            "id": "descript",
+            "title": "Descript",
+            "description": "AI-powered video and audio editing platform",
+            "keywords": "AI video, audio editing, transcription, content creation",
+            "logo_url": "https://descript.com/favicon.ico",
+            "category": "Video",
+            "category_icon": "fas fa-video",
+            "rating": 4.7,
+            "views": 200000,
+            "overview": "Descript is an all-in-one video and audio editing platform that uses AI to make editing as easy as editing a document.",
+            "capabilities": [
+                "Video editing",
+                "Audio editing",
+                "Transcription",
+                "Screen recording",
+                "Voice cloning",
+                "Multi-track editing"
+            ],
+            "pricing_plans": [
+                {
+                    "name": "Free",
+                    "price": "$0",
+                    "features": [
+                        "Basic editing",
+                        "Limited exports",
+                        "Standard quality"
+                    ],
+                    "action_text": "Try Free",
+                    "action_url": "https://descript.com"
+                },
+                {
+                    "name": "Creator",
+                    "price": "$15/month",
+                    "features": [
+                        "Advanced editing",
+                        "More exports",
+                        "HD quality",
+                        "Team features"
+                    ],
+                    "action_text": "Get Creator",
+                    "action_url": "https://descript.com/pricing"
+                },
+                {
+                    "name": "Pro",
+                    "price": "$30/month",
+                    "features": [
+                        "Unlimited exports",
+                        "4K quality",
+                        "API access",
+                        "Custom branding"
+                    ],
+                    "action_text": "Go Pro",
+                    "action_url": "https://descript.com/pro"
+                }
+            ],
+            "rating_stars": "★★★★★",
+            "review_count": 1800,
+            "launch_date": "2017",
+            "company": "Descript",
+            "website": "descript.com",
+            "website_url": "https://descript.com",
+            "user_count": "200K+",
+            "extra_info": {
+                "label": "Export Formats",
+                "value": "20+"
+            },
+            "share_text": "Check out Descript - AI-powered video and audio editing"
+        },
+        {
+            "id": "synthesia",
+            "title": "Synthesia",
+            "description": "AI video generation platform with virtual avatars",
+            "keywords": "AI video, virtual avatars, video generation, content creation",
+            "logo_url": "https://synthesia.io/favicon.ico",
+            "category": "Video",
+            "category_icon": "fas fa-user-circle",
+            "rating": 4.8,
+            "views": 250000,
+            "overview": "Synthesia creates professional videos with AI avatars that can speak any language, making video production fast and accessible.",
+            "capabilities": [
+                "AI avatars",
+                "Text-to-speech",
+                "Multi-language support",
+                "Custom avatars",
+                "Video templates",
+                "API integration"
+            ],
+            "pricing_plans": [
+                {
+                    "name": "Personal",
+                    "price": "$30/month",
+                    "features": [
+                        "Basic avatars",
+                        "Limited minutes",
+                        "Standard quality"
+                    ],
+                    "action_text": "Get Started",
+                    "action_url": "https://synthesia.io"
+                },
+                {
+                    "name": "Business",
+                    "price": "$100/month",
+                    "features": [
+                        "More avatars",
+                        "More minutes",
+                        "HD quality",
+                        "Custom avatars"
+                    ],
+                    "action_text": "Get Business",
+                    "action_url": "https://synthesia.io/pricing"
+                },
+                {
+                    "name": "Enterprise",
+                    "price": "Custom",
+                    "features": [
+                        "Unlimited avatars",
+                        "Unlimited minutes",
+                        "4K quality",
+                        "API access"
+                    ],
+                    "action_text": "Contact Sales",
+                    "action_url": "https://synthesia.io/enterprise"
+                }
+            ],
+            "rating_stars": "★★★★★",
+            "review_count": 1500,
+            "launch_date": "2017",
+            "company": "Synthesia",
+            "website": "synthesia.io",
+            "website_url": "https://synthesia.io",
+            "user_count": "50K+",
+            "extra_info": {
+                "label": "Languages",
+                "value": "120+"
+            },
+            "share_text": "Check out Synthesia - AI video generation with virtual avatars"
+        },
+        {
+            "id": "perplexity-ai",
+            "title": "Perplexity AI",
+            "description": "AI-powered research and knowledge platform",
+            "keywords": "AI research, knowledge base, Perplexity, information retrieval",
+            "logo_url": "https://perplexity.ai/favicon.ico",
+            "category": "Research",
+            "category_icon": "fas fa-search",
+            "rating": 4.8,
+            "views": 250000,
+            "overview": "Perplexity AI is an advanced research platform that uses AI to help users find, understand, and analyze information from various sources.",
+            "capabilities": [
+                "Research assistance",
+                "Knowledge synthesis",
+                "Source verification",
+                "Data analysis",
+                "Citation generation",
+                "Multi-language support"
+            ],
+            "pricing_plans": [
+                {
+                    "name": "Free",
+                    "price": "$0",
+                    "features": [
+                        "Basic research",
+                        "Limited queries",
+                        "Standard sources"
+                    ],
+                    "action_text": "Try Free",
+                    "action_url": "https://perplexity.ai"
+                },
+                {
+                    "name": "Pro",
+                    "price": "$20/month",
+                    "features": [
+                        "Advanced research",
+                        "More queries",
+                        "Premium sources",
+                        "API access"
+                    ],
+                    "action_text": "Go Pro",
+                    "action_url": "https://perplexity.ai/pricing"
+                },
+                {
+                    "name": "Enterprise",
+                    "price": "Custom",
+                    "features": [
+                        "Custom solutions",
+                        "Dedicated support",
+                        "Team features",
+                        "Custom integrations"
+                    ],
+                    "action_text": "Contact Sales",
+                    "action_url": "https://perplexity.ai/enterprise"
+                }
+            ],
+            "rating_stars": "★★★★★",
+            "review_count": 1800,
+            "launch_date": "December 2022",
+            "company": "Perplexity",
+            "website": "perplexity.ai",
+            "website_url": "https://perplexity.ai",
+            "user_count": "200K+",
+            "extra_info": {
+                "label": "Sources",
+                "value": "100M+"
+            },
+            "share_text": "Check out Perplexity AI - AI-powered research and knowledge platform"
+        },
+        {
+            "id": "character-ai",
+            "title": "Character.AI",
+            "description": "AI-powered character creation and interaction platform",
+            "keywords": "AI characters, chatbots, virtual assistants, roleplay",
+            "logo_url": "https://character.ai/favicon.ico",
+            "category": "Chat",
+            "category_icon": "fas fa-comments",
+            "rating": 4.6,
+            "views": 300000,
+            "overview": "Character.AI allows users to create and interact with AI-powered characters, enabling engaging conversations and role-playing experiences.",
+            "capabilities": [
+                "Character creation",
+                "Natural conversations",
+                "Personality customization",
+                "Multi-character interactions",
+                "Memory system",
+                "API integration"
+            ],
+            "pricing_plans": [
+                {
+                    "name": "Free",
+                    "price": "$0",
+                    "features": [
+                        "Basic characters",
+                        "Limited messages",
+                        "Standard quality"
+                    ],
+                    "action_text": "Try Free",
+                    "action_url": "https://character.ai"
+                },
+                {
+                    "name": "Plus",
+                    "price": "$15/month",
+                    "features": [
+                        "More characters",
+                        "Priority access",
+                        "Advanced features",
+                        "Custom training"
+                    ],
+                    "action_text": "Get Plus",
+                    "action_url": "https://character.ai/pricing"
+                },
+                {
+                    "name": "Pro",
+                    "price": "$50/month",
+                    "features": [
+                        "Unlimited characters",
+                        "API access",
+                        "Custom models",
+                        "Team features"
+                    ],
+                    "action_text": "Go Pro",
+                    "action_url": "https://character.ai/pro"
+                }
+            ],
+            "rating_stars": "★★★★★",
+            "review_count": 2500,
+            "launch_date": "September 2022",
+            "company": "Character.AI",
+            "website": "character.ai",
+            "website_url": "https://character.ai",
+            "user_count": "500K+",
+            "extra_info": {
+                "label": "Characters",
+                "value": "10K+"
+            },
+            "share_text": "Check out Character.AI - Create and interact with AI characters"
+        },
+        {
+            "id": "notion-ai",
+            "title": "Notion AI",
+            "description": "AI-powered workspace and productivity tool",
+            "keywords": "AI workspace, productivity, Notion, knowledge management",
+            "logo_url": "https://notion.so/favicon.ico",
+            "category": "Productivity",
+            "category_icon": "fas fa-tasks",
+            "rating": 4.8,
+            "views": 400000,
+            "overview": "Notion AI enhances the popular workspace tool with AI capabilities for writing, summarizing, and organizing information.",
+            "capabilities": [
+                "AI writing assistance",
+                "Content summarization",
+                "Task automation",
+                "Knowledge organization",
+                "Team collaboration",
+                "Custom templates"
+            ],
+            "pricing_plans": [
+                {
+                    "name": "Free",
+                    "price": "$0",
+                    "features": [
+                        "Basic AI features",
+                        "Limited blocks",
+                        "Personal workspace"
+                    ],
+                    "action_text": "Start Free",
+                    "action_url": "https://notion.so"
+                },
+                {
+                    "name": "Plus",
+                    "price": "$8/month",
+                    "features": [
+                        "More AI features",
+                        "Unlimited blocks",
+                        "Team workspace",
+                        "Version history"
+                    ],
+                    "action_text": "Get Plus",
+                    "action_url": "https://notion.so/pricing"
+                },
+                {
+                    "name": "Business",
+                    "price": "$15/month",
+                    "features": [
+                        "Advanced AI features",
+                        "Admin tools",
+                        "SAML SSO",
+                        "API access"
+                    ],
+                    "action_text": "Get Business",
+                    "action_url": "https://notion.so/business"
+                }
+            ],
+            "rating_stars": "★★★★★",
+            "review_count": 3500,
+            "launch_date": "2016",
+            "company": "Notion",
+            "website": "notion.so",
+            "website_url": "https://notion.so",
+            "user_count": "20M+",
+            "extra_info": {
+                "label": "Templates",
+                "value": "1000+"
+            },
+            "share_text": "Check out Notion AI - AI-powered workspace"
+        },
+        {
+            "id": "grammarly-ai",
+            "title": "Grammarly AI",
+            "description": "AI-powered writing assistant and grammar checker",
+            "keywords": "AI writing, grammar check, proofreading, editing",
+            "logo_url": "https://grammarly.com/favicon.ico",
+            "category": "Writing",
+            "category_icon": "fas fa-pen-fancy",
+            "rating": 4.7,
+            "views": 500000,
+            "overview": "Grammarly AI provides advanced writing assistance with grammar checking, style suggestions, and tone analysis powered by artificial intelligence.",
+            "capabilities": [
+                "Grammar checking",
+                "Style suggestions",
+                "Tone analysis",
+                "Plagiarism detection",
+                "Writing insights",
+                "Multi-platform support"
+            ],
+            "pricing_plans": [
+                {
+                    "name": "Free",
+                    "price": "$0",
+                    "features": [
+                        "Basic grammar check",
+                        "Limited suggestions",
+                        "Browser extension"
+                    ],
+                    "action_text": "Try Free",
+                    "action_url": "https://grammarly.com"
+                },
+                {
+                    "name": "Premium",
+                    "price": "$12/month",
+                    "features": [
+                        "Advanced grammar check",
+                        "Style suggestions",
+                        "Tone detection",
+                        "Plagiarism check"
+                    ],
+                    "action_text": "Get Premium",
+                    "action_url": "https://grammarly.com/premium"
+                },
+                {
+                    "name": "Business",
+                    "price": "$15/month",
+                    "features": [
+                        "Team features",
+                        "Style guide",
+                        "Analytics",
+                        "API access"
+                    ],
+                    "action_text": "Get Business",
+                    "action_url": "https://grammarly.com/business"
+                }
+            ],
+            "rating_stars": "★★★★★",
+            "review_count": 4200,
+            "launch_date": "2009",
+            "company": "Grammarly",
+            "website": "grammarly.com",
+            "website_url": "https://grammarly.com",
+            "user_count": "30M+",
+            "extra_info": {
+                "label": "Languages",
+                "value": "20+"
+            },
+            "share_text": "Check out Grammarly AI - AI-powered writing assistant"
+        },
+        {
+            "id": "fireflies-ai",
+            "title": "Fireflies.AI",
+            "description": "AI-powered meeting assistant and transcription service",
+            "keywords": "AI meetings, transcription, notes, voice recognition",
+            "logo_url": "https://fireflies.ai/favicon.ico",
+            "category": "Productivity",
+            "category_icon": "fas fa-microphone",
+            "rating": 4.6,
+            "views": 150000,
+            "overview": "Fireflies.AI automatically transcribes, summarizes, and analyzes meetings, making it easy to capture and share important information.",
+            "capabilities": [
+                "Meeting transcription",
+                "Voice recognition",
+                "Meeting summaries",
+                "Action items",
+                "Searchable archives",
+                "Integration with tools"
+            ],
+            "pricing_plans": [
+                {
+                    "name": "Free",
+                    "price": "$0",
+                    "features": [
+                        "Basic transcription",
+                        "Limited storage",
+                        "Standard quality"
+                    ],
+                    "action_text": "Start Free",
+                    "action_url": "https://fireflies.ai"
+                },
+                {
+                    "name": "Pro",
+                    "price": "$10/month",
+                    "features": [
+                        "Advanced transcription",
+                        "More storage",
+                        "AI summaries",
+                        "Team features"
+                    ],
+                    "action_text": "Go Pro",
+                    "action_url": "https://fireflies.ai/pricing"
+                },
+                {
+                    "name": "Business",
+                    "price": "$19/month",
+                    "features": [
+                        "Unlimited storage",
+                        "Custom vocabulary",
+                        "API access",
+                        "Advanced analytics"
+                    ],
+                    "action_text": "Get Business",
+                    "action_url": "https://fireflies.ai/business"
+                }
+            ],
+            "rating_stars": "★★★★★",
+            "review_count": 1200,
+            "launch_date": "2019",
+            "company": "Fireflies",
+            "website": "fireflies.ai",
+            "website_url": "https://fireflies.ai",
+            "user_count": "100K+",
+            "extra_info": {
+                "label": "Integrations",
+                "value": "40+"
+            },
+            "share_text": "Check out Fireflies.AI - AI-powered meeting assistant"
+        },
+        {
+            "id": "copy-ai",
+            "title": "Copy.ai",
+            "description": "AI-powered copywriting and content generation platform",
+            "keywords": "AI writing, copywriting, content generation, marketing",
+            "logo_url": "https://copy.ai/favicon.ico",
+            "category": "Writing",
+            "category_icon": "fas fa-pen-nib",
+            "rating": 4.7,
+            "views": 300000,
+            "overview": "Copy.ai helps businesses and creators generate high-quality marketing copy, blog posts, and other content using artificial intelligence.",
+            "capabilities": [
+                "Marketing copy",
+                "Blog post generation",
+                "Social media content",
+                "Product descriptions",
+                "Email templates",
+                "SEO optimization"
+            ],
+            "pricing_plans": [
+                {
+                    "name": "Free",
+                    "price": "$0",
+                    "features": [
+                        "Basic generation",
+                        "Limited credits",
+                        "Standard templates"
+                    ],
+                    "action_text": "Try Free",
+                    "action_url": "https://copy.ai"
+                },
+                {
+                    "name": "Pro",
+                    "price": "$49/month",
+                    "features": [
+                        "More credits",
+                        "Advanced templates",
+                        "Team features",
+                        "Priority support"
+                    ],
+                    "action_text": "Go Pro",
+                    "action_url": "https://copy.ai/pricing"
+                },
+                {
+                    "name": "Enterprise",
+                    "price": "Custom",
+                    "features": [
+                        "Unlimited credits",
+                        "Custom templates",
+                        "API access",
+                        "Dedicated support"
+                    ],
+                    "action_text": "Contact Sales",
+                    "action_url": "https://copy.ai/enterprise"
+                }
+            ],
+            "rating_stars": "★★★★★",
+            "review_count": 2500,
+            "launch_date": "2020",
+            "company": "Copy.ai",
+            "website": "copy.ai",
+            "website_url": "https://copy.ai",
+            "user_count": "500K+",
+            "extra_info": {
+                "label": "Templates",
+                "value": "90+"
+            },
+            "share_text": "Check out Copy.ai - AI-powered copywriting platform"
+        },
+        {
+            "id": "jenni-ai",
+            "title": "Jenni AI",
+            "description": "AI writing assistant for academic and research writing",
+            "keywords": "AI writing, academic writing, research, citations",
+            "logo_url": "https://jenni.ai/favicon.ico",
+            "category": "Writing",
+            "category_icon": "fas fa-graduation-cap",
+            "rating": 4.6,
+            "views": 120000,
+            "overview": "Jenni AI is an intelligent writing assistant designed specifically for academic and research writing, helping with citations, references, and content generation.",
+            "capabilities": [
+                "Academic writing",
+                "Citation generation",
+                "Reference management",
+                "Research assistance",
+                "Plagiarism check",
+                "Formatting help"
+            ],
+            "pricing_plans": [
+                {
+                    "name": "Free",
+                    "price": "$0",
+                    "features": [
+                        "Basic writing",
+                        "Limited citations",
+                        "Standard formatting"
+                    ],
+                    "action_text": "Start Free",
+                    "action_url": "https://jenni.ai"
+                },
+                {
+                    "name": "Student",
+                    "price": "$20/month",
+                    "features": [
+                        "More citations",
+                        "Advanced formatting",
+                        "Research tools",
+                        "Priority support"
+                    ],
+                    "action_text": "Get Student",
+                    "action_url": "https://jenni.ai/pricing"
+                },
+                {
+                    "name": "Academic",
+                    "price": "$40/month",
+                    "features": [
+                        "Unlimited citations",
+                        "Custom formatting",
+                        "API access",
+                        "Team features"
+                    ],
+                    "action_text": "Get Academic",
+                    "action_url": "https://jenni.ai/academic"
+                }
+            ],
+            "rating_stars": "★★★★★",
+            "review_count": 800,
+            "launch_date": "2021",
+            "company": "Jenni",
+            "website": "jenni.ai",
+            "website_url": "https://jenni.ai",
+            "user_count": "50K+",
+            "extra_info": {
+                "label": "Citation Styles",
+                "value": "10+"
+            },
+            "share_text": "Check out Jenni AI - AI writing assistant for academic writing"
+        },
+        {
+            "id": "tome-ai",
+            "title": "Tome AI",
+            "description": "AI-powered presentation and storytelling platform",
+            "keywords": "AI presentations, storytelling, content creation, slides",
+            "logo_url": "https://tome.app/favicon.ico",
+            "category": "Productivity",
+            "category_icon": "fas fa-presentation",
+            "rating": 4.7,
+            "views": 150000,
+            "overview": "Tome AI helps create engaging presentations and stories using artificial intelligence, making it easy to generate professional content.",
+            "capabilities": [
+                "Presentation generation",
+                "Content creation",
+                "Design assistance",
+                "Storytelling tools",
+                "Collaboration features",
+                "Export options"
+            ],
+            "pricing_plans": [
+                {
+                    "name": "Free",
+                    "price": "$0",
+                    "features": [
+                        "Basic generation",
+                        "Limited slides",
+                        "Standard templates"
+                    ],
+                    "action_text": "Try Free",
+                    "action_url": "https://tome.app"
+                },
+                {
+                    "name": "Pro",
+                    "price": "$20/month",
+                    "features": [
+                        "More slides",
+                        "Advanced templates",
+                        "Custom branding",
+                        "Team features"
+                    ],
+                    "action_text": "Go Pro",
+                    "action_url": "https://tome.app/pricing"
+                },
+                {
+                    "name": "Enterprise",
+                    "price": "Custom",
+                    "features": [
+                        "Unlimited slides",
+                        "Custom templates",
+                        "API access",
+                        "Dedicated support"
+                    ],
+                    "action_text": "Contact Sales",
+                    "action_url": "https://tome.app/enterprise"
+                }
+            ],
+            "rating_stars": "★★★★★",
+            "review_count": 1200,
+            "launch_date": "2022",
+            "company": "Tome",
+            "website": "tome.app",
+            "website_url": "https://tome.app",
+            "user_count": "100K+",
+            "extra_info": {
+                "label": "Templates",
+                "value": "50+"
+            },
+            "share_text": "Check out Tome AI - AI-powered presentation platform"
+        },
+        {
+            "id": "beautiful-ai",
+            "title": "Beautiful.AI",
+            "description": "AI-powered presentation design platform",
+            "keywords": "AI design, presentations, slides, automation",
+            "logo_url": "https://beautiful.ai/favicon.ico",
+            "category": "Design",
+            "category_icon": "fas fa-paint-brush",
+            "rating": 4.8,
+            "views": 200000,
+            "overview": "Beautiful.AI uses artificial intelligence to automatically design beautiful presentations, making professional design accessible to everyone.",
+            "capabilities": [
+                "Smart design",
+                "Auto-layout",
+                "Template library",
+                "Brand consistency",
+                "Team collaboration",
+                "Export options"
+            ],
+            "pricing_plans": [
+                {
+                    "name": "Free",
+                    "price": "$0",
+                    "features": [
+                        "Basic design",
+                        "Limited slides",
+                        "Standard templates"
+                    ],
+                    "action_text": "Start Free",
+                    "action_url": "https://beautiful.ai"
+                },
+                {
+                    "name": "Pro",
+                    "price": "$12/month",
+                    "features": [
+                        "More slides",
+                        "Advanced templates",
+                        "Custom branding",
+                        "Team features"
+                    ],
+                    "action_text": "Go Pro",
+                    "action_url": "https://beautiful.ai/pricing"
+                },
+                {
+                    "name": "Team",
+                    "price": "$40/month",
+                    "features": [
+                        "Unlimited slides",
+                        "Custom templates",
+                        "API access",
+                        "Advanced analytics"
+                    ],
+                    "action_text": "Get Team",
+                    "action_url": "https://beautiful.ai/team"
+                }
+            ],
+            "rating_stars": "★★★★★",
+            "review_count": 1500,
+            "launch_date": "2015",
+            "company": "Beautiful.AI",
+            "website": "beautiful.ai",
+            "website_url": "https://beautiful.ai",
+            "user_count": "200K+",
+            "extra_info": {
+                "label": "Design Styles",
+                "value": "30+"
+            },
+            "share_text": "Check out Beautiful.AI - AI-powered presentation design"
+        },
+        {
+            "id": "canva-ai",
+            "title": "Canva AI",
+            "description": "AI-powered design and content creation platform",
+            "keywords": "AI design, content creation, graphics, templates",
+            "logo_url": "https://canva.com/favicon.ico",
+            "category": "Design",
+            "category_icon": "fas fa-paint-brush",
+            "rating": 4.8,
+            "views": 800000,
+            "overview": "Canva AI enhances the popular design platform with artificial intelligence features for creating professional graphics and content.",
+            "capabilities": [
+                "Smart design",
+                "Content generation",
+                "Image editing",
+                "Template suggestions",
+                "Brand consistency",
+                "Team collaboration"
+            ],
+            "pricing_plans": [
+                {
+                    "name": "Free",
+                    "price": "$0",
+                    "features": [
+                        "Basic design",
+                        "Limited templates",
+                        "Standard assets"
+                    ],
+                    "action_text": "Start Free",
+                    "action_url": "https://canva.com"
+                },
+                {
+                    "name": "Pro",
+                    "price": "$12.99/month",
+                    "features": [
+                        "More templates",
+                        "Premium assets",
+                        "Brand kit",
+                        "Team features"
+                    ],
+                    "action_text": "Go Pro",
+                    "action_url": "https://canva.com/pricing"
+                },
+                {
+                    "name": "Enterprise",
+                    "price": "Custom",
+                    "features": [
+                        "Unlimited templates",
+                        "Custom assets",
+                        "API access",
+                        "Dedicated support"
+                    ],
+                    "action_text": "Contact Sales",
+                    "action_url": "https://canva.com/enterprise"
+                }
+            ],
+            "rating_stars": "★★★★★",
+            "review_count": 5000,
+            "launch_date": "2013",
+            "company": "Canva",
+            "website": "canva.com",
+            "website_url": "https://canva.com",
+            "user_count": "100M+",
+            "extra_info": {
+                "label": "Templates",
+                "value": "500K+"
+            },
+            "share_text": "Check out Canva AI - AI-powered design platform"
+        },
+        {
+            "id": "adobe-firefly",
+            "title": "Adobe Firefly",
+            "description": "AI-powered creative tools by Adobe",
+            "keywords": "AI design, Adobe, creative tools, image generation",
+            "logo_url": "https://adobe.com/favicon.ico",
+            "category": "Design",
+            "category_icon": "fas fa-paint-brush",
+            "rating": 4.9,
+            "views": 600000,
+            "overview": "Adobe Firefly is a collection of AI-powered creative tools that integrate with Adobe's creative suite, offering advanced image generation and editing capabilities.",
+            "capabilities": [
+                "Image generation",
+                "Text effects",
+                "Color variations",
+                "Style transfer",
+                "Content creation",
+                "Adobe integration"
+            ],
+            "pricing_plans": [
+                {
+                    "name": "Free",
+                    "price": "$0",
+                    "features": [
+                        "Basic generation",
+                        "Limited credits",
+                        "Standard quality"
+                    ],
+                    "action_text": "Try Free",
+                    "action_url": "https://adobe.com/firefly"
+                },
+                {
+                    "name": "Creative Cloud",
+                    "price": "$54.99/month",
+                    "features": [
+                        "More credits",
+                        "Higher quality",
+                        "All Adobe apps",
+                        "Cloud storage"
+                    ],
+                    "action_text": "Get Creative Cloud",
+                    "action_url": "https://adobe.com/creativecloud"
+                },
+                {
+                    "name": "Enterprise",
+                    "price": "Custom",
+                    "features": [
+                        "Unlimited credits",
+                        "Custom solutions",
+                        "API access",
+                        "Dedicated support"
+                    ],
+                    "action_text": "Contact Sales",
+                    "action_url": "https://adobe.com/enterprise"
+                }
+            ],
+            "rating_stars": "★★★★★",
+            "review_count": 3000,
+            "launch_date": "2023",
+            "company": "Adobe",
+            "website": "adobe.com",
+            "website_url": "https://adobe.com/firefly",
+            "user_count": "20M+",
+            "extra_info": {
+                "label": "Tools",
+                "value": "10+"
+            },
+            "share_text": "Check out Adobe Firefly - AI-powered creative tools"
+        },
+        {
+            "id": "figma-ai",
+            "title": "Figma AI",
+            "description": "AI-powered design and prototyping platform",
+            "keywords": "AI design, prototyping, UI/UX, collaboration",
+            "logo_url": "https://figma.com/favicon.ico",
+            "category": "Design",
+            "category_icon": "fas fa-paint-brush",
+            "rating": 4.8,
+            "views": 400000,
+            "overview": "Figma AI enhances the popular design platform with artificial intelligence features for UI/UX design and prototyping.",
+            "capabilities": [
+                "Smart design",
+                "Auto-layout",
+                "Component suggestions",
+                "Style consistency",
+                "Team collaboration",
+                "Prototyping"
+            ],
+            "pricing_plans": [
+                {
+                    "name": "Free",
+                    "price": "$0",
+                    "features": [
+                        "Basic design",
+                        "Limited files",
+                        "Standard collaboration"
+                    ],
+                    "action_text": "Start Free",
+                    "action_url": "https://figma.com"
+                },
+                {
+                    "name": "Professional",
+                    "price": "$12/month",
+                    "features": [
+                        "More files",
+                        "Advanced features",
+                        "Team libraries",
+                        "Version history"
+                    ],
+                    "action_text": "Go Pro",
+                    "action_url": "https://figma.com/pricing"
+                },
+                {
+                    "name": "Organization",
+                    "price": "$45/month",
+                    "features": [
+                        "Unlimited files",
+                        "Custom plugins",
+                        "API access",
+                        "Advanced security"
+                    ],
+                    "action_text": "Get Organization",
+                    "action_url": "https://figma.com/organization"
+                }
+            ],
+            "rating_stars": "★★★★★",
+            "review_count": 2500,
+            "launch_date": "2016",
+            "company": "Figma",
+            "website": "figma.com",
+            "website_url": "https://figma.com",
+            "user_count": "4M+",
+            "extra_info": {
+                "label": "Plugins",
+                "value": "1000+"
+            },
+            "share_text": "Check out Figma AI - AI-powered design platform"
+        },
+        {
+            "id": "microsoft-copilot",
+            "title": "Microsoft Copilot",
+            "description": "AI-powered coding and development assistant",
+            "keywords": "AI coding, development, Microsoft, programming",
+            "logo_url": "https://microsoft.com/favicon.ico",
+            "category": "Development",
+            "category_icon": "fas fa-code",
+            "rating": 4.8,
+            "views": 500000,
+            "overview": "Microsoft Copilot is an AI-powered coding assistant that helps developers write better code faster, with intelligent suggestions and completions.",
+            "capabilities": [
+                "Code completion",
+                "Code suggestions",
+                "Bug detection",
+                "Documentation generation",
+                "Multi-language support",
+                "IDE integration"
+            ],
+            "pricing_plans": [
+                {
+                    "name": "Free",
+                    "price": "$0",
+                    "features": [
+                        "Basic suggestions",
+                        "Limited languages",
+                        "Standard quality"
+                    ],
+                    "action_text": "Try Free",
+                    "action_url": "https://microsoft.com/copilot"
+                },
+                {
+                    "name": "Pro",
+                    "price": "$10/month",
+                    "features": [
+                        "Advanced suggestions",
+                        "More languages",
+                        "Priority access",
+                        "Team features"
+                    ],
+                    "action_text": "Go Pro",
+                    "action_url": "https://microsoft.com/copilot/pricing"
+                },
+                {
+                    "name": "Enterprise",
+                    "price": "Custom",
+                    "features": [
+                        "Custom models",
+                        "API access",
+                        "Dedicated support",
+                        "Advanced security"
+                    ],
+                    "action_text": "Contact Sales",
+                    "action_url": "https://microsoft.com/copilot/enterprise"
+                }
+            ],
+            "rating_stars": "★★★★★",
+            "review_count": 4000,
+            "launch_date": "2023",
+            "company": "Microsoft",
+            "website": "microsoft.com/copilot",
+            "website_url": "https://microsoft.com/copilot",
+            "user_count": "5M+",
+            "extra_info": {
+                "label": "Languages",
+                "value": "20+"
+            },
+            "share_text": "Check out Microsoft Copilot - AI-powered coding assistant"
+        },
+        {
+            "id": "tabnine",
+            "title": "Tabnine",
+            "description": "AI-powered code completion tool",
+            "keywords": "AI coding, code completion, development, programming",
+            "logo_url": "https://tabnine.com/favicon.ico",
+            "category": "Development",
+            "category_icon": "fas fa-code",
+            "rating": 4.6,
+            "views": 200000,
+            "overview": "Tabnine is an AI-powered code completion tool that helps developers write code faster and with fewer errors.",
+            "capabilities": [
+                "Code completion",
+                "Code suggestions",
+                "Multi-language support",
+                "IDE integration",
+                "Team learning",
+                "Custom models"
+            ],
+            "pricing_plans": [
+                {
+                    "name": "Free",
+                    "price": "$0",
+                    "features": [
+                        "Basic completion",
+                        "Limited languages",
+                        "Standard quality"
+                    ],
+                    "action_text": "Try Free",
+                    "action_url": "https://tabnine.com"
+                },
+                {
+                    "name": "Pro",
+                    "price": "$12/month",
+                    "features": [
+                        "Advanced completion",
+                        "All languages",
+                        "Priority support",
+                        "Team features"
+                    ],
+                    "action_text": "Go Pro",
+                    "action_url": "https://tabnine.com/pricing"
+                },
+                {
+                    "name": "Enterprise",
+                    "price": "Custom",
+                    "features": [
+                        "Custom models",
+                        "API access",
+                        "Dedicated support",
+                        "Advanced security"
+                    ],
+                    "action_text": "Contact Sales",
+                    "action_url": "https://tabnine.com/enterprise"
+                }
+            ],
+            "rating_stars": "★★★★★",
+            "review_count": 2000,
+            "launch_date": "2018",
+            "company": "Tabnine",
+            "website": "tabnine.com",
+            "website_url": "https://tabnine.com",
+            "user_count": "1M+",
+            "extra_info": {
+                "label": "Languages",
+                "value": "30+"
+            },
+            "share_text": "Check out Tabnine - AI-powered code completion tool"
+        },
+        {
+            "id": "deepcode",
+            "title": "DeepCode",
+            "description": "AI-powered code review and security analysis",
+            "keywords": "AI security, code review, static analysis, bug detection",
+            "logo_url": "https://deepcode.ai/favicon.ico",
+            "category": "Security",
+            "category_icon": "fas fa-shield-alt",
+            "rating": 4.7,
+            "views": 180000,
+            "overview": "DeepCode uses AI to analyze code for bugs, security vulnerabilities, and quality issues.",
+            "capabilities": [
+                "Code analysis",
+                "Security scanning",
+                "Bug detection",
+                "Quality checks",
+                "IDE integration",
+                "Team collaboration"
+            ],
+            "pricing_plans": [
+                {
+                    "name": "Free",
+                    "price": "$0",
+                    "features": [
+                        "Basic analysis",
+                        "Limited scans",
+                        "Community support"
+                    ],
+                    "action_text": "Try Free",
+                    "action_url": "https://deepcode.ai"
+                },
+                {
+                    "name": "Pro",
+                    "price": "$15/month",
+                    "features": [
+                        "Advanced analysis",
+                        "More scans",
+                        "Priority support",
+                        "Team features"
+                    ],
+                    "action_text": "Go Pro",
+                    "action_url": "https://deepcode.ai/pricing"
+                },
+                {
+                    "name": "Enterprise",
+                    "price": "Custom",
+                    "features": [
+                        "Custom analysis",
+                        "API access",
+                        "Dedicated support",
+                        "Advanced security"
+                    ],
+                    "action_text": "Contact Sales",
+                    "action_url": "https://deepcode.ai/enterprise"
+                }
+            ],
+            "rating_stars": "★★★★★",
+            "review_count": 1500,
+            "launch_date": "2016",
+            "company": "DeepCode",
+            "website": "deepcode.ai",
+            "website_url": "https://deepcode.ai",
+            "user_count": "100K+",
+            "extra_info": {
+                "label": "Languages",
+                "value": "15+"
+            },
+            "share_text": "Check out DeepCode - AI-powered code review"
+        },
+        {
+            "id": "gitguardian",
+            "title": "GitGuardian",
+            "description": "AI-powered secrets detection and security platform",
+            "keywords": "AI security, secrets detection, git security, devops",
+            "logo_url": "https://gitguardian.com/favicon.ico",
+            "category": "Security",
+            "category_icon": "fas fa-shield-alt",
+            "rating": 4.7,
+            "views": 150000,
+            "overview": "GitGuardian uses AI to detect and prevent secrets and sensitive information from being exposed in code repositories.",
+            "capabilities": [
+                "Secrets detection",
+                "Real-time monitoring",
+                "Incident response",
+                "Policy enforcement",
+                "Git integration",
+                "Team collaboration"
+            ],
+            "pricing_plans": [
+                {
+                    "name": "Free",
+                    "price": "$0",
+                    "features": [
+                        "Basic detection",
+                        "Limited scans",
+                        "Standard alerts"
+                    ],
+                    "action_text": "Try Free",
+                    "action_url": "https://gitguardian.com"
+                },
+                {
+                    "name": "Team",
+                    "price": "$20/month",
+                    "features": [
+                        "Advanced detection",
+                        "More scans",
+                        "Team features",
+                        "Priority support"
+                    ],
+                    "action_text": "Get Team",
+                    "action_url": "https://gitguardian.com/pricing"
+                },
+                {
+                    "name": "Enterprise",
+                    "price": "Custom",
+                    "features": [
+                        "Custom detection",
+                        "API access",
+                        "Dedicated support",
+                        "Advanced security"
+                    ],
+                    "action_text": "Contact Sales",
+                    "action_url": "https://gitguardian.com/enterprise"
+                }
+            ],
+            "rating_stars": "★★★★★",
+            "review_count": 1200,
+            "launch_date": "2017",
+            "company": "GitGuardian",
+            "website": "gitguardian.com",
+            "website_url": "https://gitguardian.com",
+            "user_count": "200K+",
+            "extra_info": {
+                "label": "Detectors",
+                "value": "300+"
+            },
+            "share_text": "Check out GitGuardian - AI-powered secrets detection"
+        },
+        {
+            "id": "datadog",
+            "title": "Datadog",
+            "description": "AI-powered monitoring and analytics platform",
+            "keywords": "AI monitoring, analytics, observability, devops",
+            "logo_url": "https://datadoghq.com/favicon.ico",
+            "category": "Monitoring",
+            "category_icon": "fas fa-chart-line",
+            "rating": 4.8,
+            "views": 400000,
+            "overview": "Datadog provides AI-powered monitoring and analytics for cloud-scale applications, helping teams understand and optimize their systems.",
+            "capabilities": [
+                "Infrastructure monitoring",
+                "Application performance",
+                "Log management",
+                "Security monitoring",
+                "Synthetic monitoring",
+                "Team collaboration"
+            ],
+            "pricing_plans": [
+                {
+                    "name": "Free",
+                    "price": "$0",
+                    "features": [
+                        "Basic monitoring",
+                        "Limited hosts",
+                        "Standard metrics"
+                    ],
+                    "action_text": "Start Free",
+                    "action_url": "https://datadoghq.com"
+                },
+                {
+                    "name": "Pro",
+                    "price": "$15/month",
+                    "features": [
+                        "Advanced monitoring",
+                        "More hosts",
+                        "Custom metrics",
+                        "Team features"
+                    ],
+                    "action_text": "Go Pro",
+                    "action_url": "https://datadoghq.com/pricing"
+                },
+                {
+                    "name": "Enterprise",
+                    "price": "Custom",
+                    "features": [
+                        "Custom monitoring",
+                        "API access",
+                        "Dedicated support",
+                        "Advanced security"
+                    ],
+                    "action_text": "Contact Sales",
+                    "action_url": "https://datadoghq.com/enterprise"
+                }
+            ],
+            "rating_stars": "★★★★★",
+            "review_count": 3000,
+            "launch_date": "2010",
+            "company": "Datadog",
+            "website": "datadoghq.com",
+            "website_url": "https://datadoghq.com",
+            "user_count": "15M+",
+            "extra_info": {
+                "label": "Integrations",
+                "value": "500+"
+            },
+            "share_text": "Check out Datadog - AI-powered monitoring platform"
+        },
+        {
+            "id": "new-relic",
+            "title": "New Relic",
+            "description": "AI-powered observability platform",
+            "keywords": "AI observability, monitoring, analytics, devops",
+            "logo_url": "https://newrelic.com/favicon.ico",
+            "category": "Monitoring",
+            "category_icon": "fas fa-chart-line",
+            "rating": 4.7,
+            "views": 350000,
+            "overview": "New Relic provides AI-powered observability for modern software systems, helping teams understand and optimize their applications.",
+            "capabilities": [
+                "Application monitoring",
+                "Infrastructure monitoring",
+                "Log management",
+                "Error tracking",
+                "Synthetic monitoring",
+                "Team collaboration"
+            ],
+            "pricing_plans": [
+                {
+                    "name": "Free",
+                    "price": "$0",
+                    "features": [
+                        "Basic monitoring",
+                        "Limited data",
+                        "Standard features"
+                    ],
+                    "action_text": "Try Free",
+                    "action_url": "https://newrelic.com"
+                },
+                {
+                    "name": "Pro",
+                    "price": "$99/month",
+                    "features": [
+                        "Advanced monitoring",
+                        "More data",
+                        "Custom alerts",
+                        "Team features"
+                    ],
+                    "action_text": "Go Pro",
+                    "action_url": "https://newrelic.com/pricing"
+                },
+                {
+                    "name": "Enterprise",
+                    "price": "Custom",
+                    "features": [
+                        "Custom monitoring",
+                        "API access",
+                        "Dedicated support",
+                        "Advanced security"
+                    ],
+                    "action_text": "Contact Sales",
+                    "action_url": "https://newrelic.com/enterprise"
+                }
+            ],
+            "rating_stars": "★★★★★",
+            "review_count": 2500,
+            "launch_date": "2008",
+            "company": "New Relic",
+            "website": "newrelic.com",
+            "website_url": "https://newrelic.com",
+            "user_count": "10M+",
+            "extra_info": {
+                "label": "Integrations",
+                "value": "400+"
+            },
+            "share_text": "Check out New Relic - AI-powered observability platform"
+        }
+    ]
+} 

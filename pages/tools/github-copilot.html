@@ -3,9 +3,9 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="GitHub Copilot - AI pair programmer that helps you write better code">
-    <meta name="keywords" content="GitHub Copilot, AI coding, code assistant, programming, development">
-    <title>GitHub Copilot - AI Coding Assistant | SoniceAi</title>
+    <meta name="description" content="GitHub Copilot - AI-powered code completion assistant that helps developers write better code faster">
+    <meta name="keywords" content="GitHub Copilot, AI coding, code completion, pair programming, developer tools">
+    <title>GitHub Copilot - AI Code Assistant | SoniceAi</title>
     <link rel="stylesheet" href="../../css/style.css">
     <link rel="stylesheet" href="../../css/tool-detail.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -51,6 +51,12 @@
 
         .tool-info {
             flex: 1;
+        }
+
+        .tool-title-wrapper {
+            display: flex;
+            align-items: center;
+            gap: 1rem;
         }
 
         .tool-title {
@@ -407,13 +413,15 @@
 
     <main class="container tool-detail">
         <div class="tool-header">
-            <img src="https://github.githubassets.com/images/modules/logos_page/GitHub-Mark.png" alt="GitHub Copilot Logo" class="tool-logo">
             <div class="tool-info">
-                <h1 class="tool-title">GitHub Copilot</h1>
+                <div class="tool-title-wrapper">
+                    <img src="https://github.githubassets.com/images/modules/site/copilot/copilot.png" alt="GitHub Copilot Logo" class="tool-logo">
+                    <h1 class="tool-title">GitHub Copilot</h1>
+                </div>
                 <div class="tool-meta">
                     <span class="tool-category">
                         <i class="fas fa-code"></i>
-                        Coding Assistant
+                        Code Assistant
                     </span>
                     <span class="tool-rating">
                         <i class="fas fa-star"></i>
@@ -425,7 +433,7 @@
                     </span>
                 </div>
                 <p class="tool-description">
-                    Your AI pair programmer that helps you write better code. GitHub Copilot uses OpenAI Codex to suggest code and entire functions in real-time, right from your editor.
+                    GitHub Copilot is your AI pair programmer that helps you write better code faster. It draws context from comments and code to suggest individual lines and whole functions instantly.
                 </p>
                 <div class="tool-actions">
                     <a href="https://github.com/features/copilot" class="primary-btn" target="_blank" rel="noopener noreferrer">
@@ -445,18 +453,18 @@
                     </h2>
                     <div class="section-content">
                         <p>
-                            GitHub Copilot is an AI pair programmer that helps you write better code. It uses OpenAI Codex to suggest code and entire functions in real-time, right from your editor.
+                            GitHub Copilot is an AI-powered code completion tool that helps developers write code more efficiently. It uses OpenAI Codex to analyze your code and comments, providing intelligent suggestions for whole lines or entire functions.
                         </p>
                         <p>
                             Key capabilities include:
                         </p>
                         <ul>
                             <li>Real-time code suggestions</li>
-                            <li>Multiple language support</li>
+                            <li>Multiple programming language support</li>
                             <li>Context-aware completions</li>
-                            <li>Integration with popular IDEs</li>
-                            <li>Code documentation</li>
-                            <li>Team collaboration features</li>
+                            <li>Function generation</li>
+                            <li>Test writing assistance</li>
+                            <li>Code refactoring help</li>
                         </ul>
                     </div>
                 </section>
@@ -468,34 +476,37 @@
                     </h2>
                     <div class="pricing-cards">
                         <div class="pricing-card">
-                            <h3>Free</h3>
-                            <div class="price">$0</div>
-                            <ul>
-                                <li>Basic code suggestions</li>
-                                <li>Limited completions</li>
-                                <li>Standard support</li>
-                            </ul>
-                            <a href="https://github.com/features/copilot" class="btn" target="_blank" rel="noopener noreferrer">Get Started</a>
-                        </div>
-                        <div class="pricing-card popular">
                             <h3>Individual</h3>
                             <div class="price">$10/month</div>
                             <ul>
-                                <li>Advanced code suggestions</li>
-                                <li>Unlimited completions</li>
-                                <li>Priority support</li>
-                                <li>Personal use only</li>
+                                <li>Personal account</li>
+                                <li>All core features</li>
+                                <li>Multi-language support</li>
+                                <li>IDE integrations</li>
                             </ul>
-                            <a href="https://github.com/features/copilot" class="btn" target="_blank" rel="noopener noreferrer">Get Started</a>
+                            <a href="https://github.com/features/copilot/signup" class="btn" target="_blank" rel="noopener noreferrer">Get Started</a>
+                        </div>
+                        <div class="pricing-card popular">
+                            <h3>Business</h3>
+                            <div class="price">$19/month</div>
+                            <ul>
+                                <li>Team management</li>
+                                <li>Organization billing</li>
+                                <li>License management</li>
+                                <li>Policy controls</li>
+                                <li>Security features</li>
+                            </ul>
+                            <a href="https://github.com/features/copilot/business" class="btn" target="_blank" rel="noopener noreferrer">Get Started</a>
                         </div>
                         <div class="pricing-card">
-                            <h3>Business</h3>
-                            <div class="price">$19/user/month</div>
+                            <h3>Enterprise</h3>
+                            <div class="price">Custom</div>
                             <ul>
-                                <li>All Individual features</li>
-                                <li>Team management</li>
-                                <li>Enterprise support</li>
-                                <li>Compliance features</li>
+                                <li>Custom deployment</li>
+                                <li>Advanced security</li>
+                                <li>Dedicated support</li>
+                                <li>Custom policies</li>
+                                <li>Training & onboarding</li>
                             </ul>
                             <a href="https://github.com/enterprise" class="btn" target="_blank" rel="noopener noreferrer">Contact Sales</a>
                         </div>
@@ -517,7 +528,7 @@
                                     4.8 out of 5
                                 </div>
                                 <div class="rating-count">
-                                    Based on 2,500+ reviews
+                                    Based on 5,000+ reviews
                                 </div>
                             </div>
                         </div>
@@ -558,7 +569,7 @@
                         </li>
                         <li class="info-item">
                             <i class="fas fa-building"></i>
-                            <span>Company: GitHub</span>
+                            <span>Company: GitHub (Microsoft)</span>
                         </li>
                         <li class="info-item">
                             <i class="fas fa-globe"></i>
@@ -581,7 +592,7 @@
                         Share
                     </h3>
                     <div class="tool-actions">
-                        <a href="https://twitter.com/intent/tweet?text=Check%20out%20GitHub%20Copilot%20-%20AI%20pair%20programmer&url=https%3A%2F%2Fgithub.com%2Ffeatures%2Fcopilot" class="primary-btn" target="_blank" rel="noopener noreferrer">
+                        <a href="https://twitter.com/intent/tweet?text=Check%20out%20GitHub%20Copilot%20-%20Your%20AI%20pair%20programmer&url=https%3A%2F%2Fgithub.com%2Ffeatures%2Fcopilot" class="primary-btn" target="_blank" rel="noopener noreferrer">
                             <i class="fab fa-twitter"></i>
                             Twitter
                         </a>

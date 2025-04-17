@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="ChatGPT - Advanced AI language model for natural conversations and task assistance">
-    <meta name="keywords" content="ChatGPT, OpenAI, AI chatbot, language model, artificial intelligence, conversational AI">
+    <meta name="keywords" content="ChatGPT, OpenAI, AI assistant, language model, AI chat">
     <title>ChatGPT - AI Language Model | SoniceAi</title>
     <link rel="stylesheet" href="../../css/style.css">
     <link rel="stylesheet" href="../../css/tool-detail.css">
@@ -15,8 +15,8 @@
     <link rel="icon" type="image/png" href="../../images/favicon.png">
     <style>
         :root {
-            --primary-color: #10a37f;
-            --primary-hover: #0d8a6c;
+            --primary-color: #000000;
+            --primary-hover: #333333;
             --text-color: #1f2937;
             --text-secondary: #4b5563;
             --bg-color: #ffffff;
@@ -47,14 +47,16 @@
             background: #fff;
             padding: 1rem;
             box-shadow: 0 4px 16px rgba(0,0,0,0.1);
-            background-image: url('https://store-images.s-microsoft.com/image/apps.48252.14191569775252647.a571dd89-74e7-4cbd-9453-371ab0c0e31a.f5174f06-8097-4a5f-b116-6a4f2940c8b4');
-            background-size: contain;
-            background-position: center;
-            background-repeat: no-repeat;
         }
 
         .tool-info {
             flex: 1;
+        }
+
+        .tool-title-wrapper {
+            display: flex;
+            align-items: center;
+            gap: 1rem;
         }
 
         .tool-title {
@@ -411,13 +413,15 @@
 
     <main class="container tool-detail">
         <div class="tool-header">
-            <div class="tool-logo"></div>
             <div class="tool-info">
-                <h1 class="tool-title">ChatGPT</h1>
+                <div class="tool-title-wrapper">
+                    <img src="https://chat.openai.com/favicon.ico" alt="ChatGPT Logo" class="tool-logo">
+                    <h1 class="tool-title">ChatGPT</h1>
+                </div>
                 <div class="tool-meta">
                     <span class="tool-category">
                         <i class="fas fa-comments"></i>
-                        Chatbot
+                        AI Assistant
                     </span>
                     <span class="tool-rating">
                         <i class="fas fa-star"></i>
@@ -425,11 +429,11 @@
                     </span>
                     <span class="tool-views">
                         <i class="fas fa-eye"></i>
-                        2,500,000
+                        5,000,000
                     </span>
                 </div>
                 <p class="tool-description">
-                    Advanced AI language model that can engage in natural conversations, answer questions, and assist with various tasks. Powered by OpenAI's cutting-edge technology.
+                    ChatGPT is a powerful AI language model developed by OpenAI, capable of engaging in natural conversations, answering questions, and assisting with various tasks.
                 </p>
                 <div class="tool-actions">
                     <a href="https://chat.openai.com" class="primary-btn" target="_blank" rel="noopener noreferrer">
@@ -449,17 +453,17 @@
                     </h2>
                     <div class="section-content">
                         <p>
-                            ChatGPT is a state-of-the-art AI language model developed by OpenAI. It can understand and generate human-like text, making it useful for a wide range of applications including conversation, content creation, and problem-solving.
+                            ChatGPT is an advanced AI language model that can understand and generate human-like text. It's designed to assist with a wide range of tasks, from answering questions to creative writing and coding.
                         </p>
                         <p>
-                            Key features include:
+                            Key capabilities include:
                         </p>
                         <ul>
-                            <li>Natural language understanding and generation</li>
-                            <li>Contextual conversation capabilities</li>
-                            <li>Knowledge across various domains</li>
-                            <li>Code generation and debugging</li>
-                            <li>Content creation and editing</li>
+                            <li>Natural language understanding</li>
+                            <li>Contextual conversation</li>
+                            <li>Code generation and review</li>
+                            <li>Content creation</li>
+                            <li>Research assistance</li>
                             <li>Multi-language support</li>
                         </ul>
                     </div>
@@ -475,34 +479,34 @@
                             <h3>Free</h3>
                             <div class="price">$0</div>
                             <ul>
-                                <li>Basic conversation features</li>
+                                <li>Basic access</li>
                                 <li>Standard response time</li>
-                                <li>Limited access during peak times</li>
                                 <li>Community support</li>
+                                <li>Limited features</li>
                             </ul>
-                            <a href="https://chat.openai.com" class="btn" target="_blank" rel="noopener noreferrer">Get Started</a>
+                            <a href="https://chat.openai.com/auth/login" class="btn" target="_blank" rel="noopener noreferrer">Get Started</a>
                         </div>
                         <div class="pricing-card popular">
                             <h3>Plus</h3>
                             <div class="price">$20/month</div>
                             <ul>
-                                <li>Priority access to new features</li>
-                                <li>Faster response times</li>
-                                <li>Unlimited access</li>
+                                <li>Priority access</li>
+                                <li>Faster response time</li>
                                 <li>Priority support</li>
-                                <li>Advanced capabilities</li>
+                                <li>Advanced features</li>
+                                <li>API access</li>
                             </ul>
-                            <a href="https://chat.openai.com" class="btn" target="_blank" rel="noopener noreferrer">Get Started</a>
+                            <a href="https://chat.openai.com/auth/login" class="btn" target="_blank" rel="noopener noreferrer">Get Started</a>
                         </div>
                         <div class="pricing-card">
                             <h3>Enterprise</h3>
                             <div class="price">Custom</div>
                             <ul>
                                 <li>Custom solutions</li>
-                                <li>API access</li>
                                 <li>Dedicated support</li>
-                                <li>Enhanced security</li>
-                                <li>Team management</li>
+                                <li>Custom integrations</li>
+                                <li>SLA guarantee</li>
+                                <li>Advanced security</li>
                             </ul>
                             <a href="https://openai.com/enterprise" class="btn" target="_blank" rel="noopener noreferrer">Contact Sales</a>
                         </div>
@@ -524,7 +528,7 @@
                                     4.9 out of 5
                                 </div>
                                 <div class="rating-count">
-                                    Based on 5,000+ reviews
+                                    Based on 8,500+ reviews
                                 </div>
                             </div>
                         </div>
@@ -577,7 +581,7 @@
                         </li>
                         <li class="info-item">
                             <i class="fas fa-language"></i>
-                            <span>Languages: 50+</span>
+                            <span>Languages: 20+</span>
                         </li>
                     </ul>
                 </div>
@@ -588,7 +592,7 @@
                         Share
                     </h3>
                     <div class="tool-actions">
-                        <a href="https://twitter.com/intent/tweet?text=Check%20out%20ChatGPT%20-%20Advanced%20AI%20language%20model&url=https%3A%2F%2Fchat.openai.com" class="primary-btn" target="_blank" rel="noopener noreferrer">
+                        <a href="https://twitter.com/intent/tweet?text=Check%20out%20ChatGPT%20-%20Advanced%20AI%20assistant&url=https%3A%2F%2Fchat.openai.com" class="primary-btn" target="_blank" rel="noopener noreferrer">
                             <i class="fab fa-twitter"></i>
                             Twitter
                         </a>

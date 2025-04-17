@@ -1,0 +1,118 @@
+<!-- Sidebar Navigation -->
+<aside class="sidebar">
+    <nav class="sidebar-nav">
+        <ul>
+            <li>
+                <a href="#" data-category="text-generation">
+                    <i class="fas fa-comment-alt"></i>
+                    <span>Text Generation</span>
+                </a>
+            </li>
+            <li>
+                <a href="#" data-category="image-generation">
+                    <i class="fas fa-image"></i>
+                    <span>Image Generation</span>
+                </a>
+            </li>
+            <li>
+                <a href="#" data-category="video-creation">
+                    <i class="fas fa-video"></i>
+                    <span>Video Creation</span>
+                </a>
+            </li>
+            <li>
+                <a href="#" data-category="coding-assistant">
+                    <i class="fas fa-code"></i>
+                    <span>Coding Assistant</span>
+                </a>
+            </li>
+            <li>
+                <a href="#" data-category="marketing">
+                    <i class="fas fa-bullhorn"></i>
+                    <span>Marketing</span>
+                </a>
+            </li>
+            <li>
+                <a href="#" data-category="design">
+                    <i class="fas fa-paint-brush"></i>
+                    <span>Design</span>
+                </a>
+            </li>
+            <li>
+                <a href="#" data-category="productivity">
+                    <i class="fas fa-tasks"></i>
+                    <span>Productivity</span>
+                </a>
+            </li>
+            <li>
+                <a href="#" data-category="ai-models">
+                    <i class="fas fa-brain"></i>
+                    <span>AI Models</span>
+                </a>
+            </li>
+        </ul>
+    </nav>
+</aside>
+
+<style>
+.sidebar {
+    position: fixed;
+    left: 0;
+    top: 0;
+    bottom: 0;
+    width: 60px;
+    background: #fff;
+    border-right: 1px solid #eee;
+    transition: width 0.3s;
+    overflow: hidden;
+    z-index: 1000;
+    margin-top: 64px; /* Header height */
+}
+
+.sidebar:hover {
+    width: 200px;
+    box-shadow: 4px 0 8px rgba(0, 0, 0, 0.1);
+}
+
+.sidebar-nav ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.sidebar-nav li {
+    margin: 0;
+    padding: 0;
+}
+
+.sidebar-nav a {
+    display: flex;
+    align-items: center;
+    padding: 1rem;
+    color: #4b5563;
+    text-decoration: none;
+    transition: background-color 0.2s;
+    white-space: nowrap;
+}
+
+.sidebar-nav a:hover {
+    background-color: #f3f4f6;
+    color: #6b21a8;
+}
+
+.sidebar-nav i {
+    font-size: 1.25rem;
+    width: 24px;
+    text-align: center;
+    margin-right: 1rem;
+}
+
+.sidebar-nav span {
+    opacity: 0;
+    transition: opacity 0.2s;
+}
+
+.sidebar:hover .sidebar-nav span {
+    opacity: 1;
+}
+</style> 

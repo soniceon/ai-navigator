@@ -1,0 +1,111 @@
+<!-- Font Awesome -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+<header>
+    <div class="container">
+        <div class="logo">
+            <a href="/" style="color: #6b21a8; text-decoration: none; display: flex; align-items: center; gap: 0.5rem;">
+                <i class="fas fa-robot" style="font-size: 24px;"></i>
+                <span style="font-weight: 500;">SoniceAi</span>
+            </a>
+        </div>
+        <nav>
+            <ul style="display: flex; gap: 2rem; list-style: none; margin: 0; padding: 0;">
+                <li><a href="/" style="color: #4b5563; text-decoration: none; display: flex; align-items: center; gap: 0.5rem;"><i class="fas fa-home" style="font-size: 20px;"></i> Home</a></li>
+                <li><a href="/categories" style="color: #4b5563; text-decoration: none; display: flex; align-items: center; gap: 0.5rem;"><i class="fas fa-th-large" style="font-size: 20px;"></i> Categories</a></li>
+                <li><a href="/rankings" style="color: #4b5563; text-decoration: none; display: flex; align-items: center; gap: 0.5rem;"><i class="fas fa-chart-line" style="font-size: 20px;"></i> Rankings</a></li>
+                <li><a href="/new-releases" style="color: #4b5563; text-decoration: none; display: flex; align-items: center; gap: 0.5rem;"><i class="fas fa-star" style="font-size: 20px;"></i> New Releases</a></li>
+            </ul>
+        </nav>
+        <div class="search">
+            <input type="text" placeholder="Search AI tools..." aria-label="Search AI tools">
+            <button aria-label="Search"><i class="fas fa-search"></i></button>
+        </div>
+    </div>
+</header>
+
+<style>
+header {
+    background: #fff;
+    border-bottom: 1px solid #eee;
+    padding: 1rem 0;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 1rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 2rem;
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.logo a {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    color: #6b21a8;
+    text-decoration: none;
+    font-weight: 500;
+}
+
+.logo i {
+    font-size: 24px;
+}
+
+nav ul {
+    display: flex;
+    gap: 2rem;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+nav a {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    color: #4b5563;
+    text-decoration: none;
+}
+
+nav a i {
+    font-size: 20px;
+}
+
+.search {
+    position: relative;
+    width: 240px;
+}
+
+.search input {
+    width: 100%;
+    padding: 0.5rem 2rem 0.5rem 1rem;
+    border: 1px solid #e5e7eb;
+    border-radius: 0.5rem;
+    font-size: 0.875rem;
+}
+
+.search button {
+    position: absolute;
+    right: 0.75rem;
+    top: 50%;
+    transform: translateY(-50%);
+    background: none;
+    border: none;
+    padding: 0;
+    cursor: pointer;
+    color: #4b5563;
+}
+
+.search button i {
+    font-size: 16px;
+}
+</style> 
