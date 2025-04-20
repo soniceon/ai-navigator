@@ -1,59 +1,5 @@
 [
   {
-    "id": "claude",
-    "name": "Claude",
-    "description": "Anthropic's conversational AI assistant with advanced reasoning capabilities",
-    "url": "https://claude.ai",
-    "icon": "images/icons/claude.webp",
-    "category": "chatbot",
-    "title": "Claude"
-  },
-  {
-    "id": "deepseek",
-    "name": "DeepSeek",
-    "description": "Advanced AI platform for deep search and analysis of complex data",
-    "url": "https://deepseek.com",
-    "icon": "images/icons/deepseek.webp",
-    "category": "search",
-    "title": "DeepSeek"
-  },
-  {
-    "id": "doubao",
-    "name": "Doubao AI",
-    "description": "Chinese AI assistant for conversation, content creation and recommendations",
-    "url": "https://doubao.com/ai",
-    "icon": "images/icons/doubao.webp",
-    "category": "chatbot",
-    "title": "Doubao AI"
-  },
-  {
-    "id": "gemini",
-    "name": "Gemini",
-    "description": "Google's multimodal AI model capable of understanding text, images and code",
-    "url": "https://gemini.google.com",
-    "icon": "images/icons/gemini.webp",
-    "category": "chatbot",
-    "title": "Gemini"
-  },
-  {
-    "id": "midjourney",
-    "name": "Midjourney",
-    "description": "AI image generator creating detailed illustrations from text prompts",
-    "url": "https://midjourney.com",
-    "icon": "images/icons/midjourney.webp",
-    "category": "image",
-    "title": "Midjourney"
-  },
-  {
-    "id": "copilot",
-    "name": "Microsoft Copilot",
-    "description": "AI assistant for creative and productivity tasks integrated with Microsoft products",
-    "url": "https://copilot.microsoft.com",
-    "icon": "images/icons/copilot.webp",
-    "category": "writing",
-    "title": "Microsoft Copilot"
-  },
-  {
     "id": "stable-diffusion",
     "title": "Stable Diffusion",
     "description": "Open-source AI art generation model capable of creating photorealistic images from text descriptions",
@@ -120,8 +66,7 @@
     "extra_info": {
       "Latest Version": "3.0",
       "Runtime": "Local or Cloud"
-    },
-    "name": "Stable Diffusion"
+    }
   },
   {
     "id": "dall-e",
@@ -190,8 +135,7 @@
     "extra_info": {
       "Technology": "Diffusion Models",
       "Integration": "Available in ChatGPT"
-    },
-    "name": "DALL-E 3"
+    }
   },
   {
     "id": "chatgpt",
@@ -260,8 +204,7 @@
     "extra_info": {
       "Latest Model": "GPT-4o",
       "Features": "Plugins, Web Browsing, DALL-E Integration"
-    },
-    "name": "ChatGPT"
+    }
   },
   {
     "id": "jasper",
@@ -331,8 +274,7 @@
     "extra_info": {
       "Supported Languages": "25+",
       "Integration": "Google Docs, WordPress, Chrome"
-    },
-    "name": "Jasper AI"
+    }
   },
   {
     "id": "copy-ai",
@@ -401,8 +343,7 @@
     "extra_info": {
       "Templates": "90+",
       "Supported Languages": "25+"
-    },
-    "name": "Copy.ai"
+    }
   },
   {
     "id": "github-copilot",
@@ -472,8 +413,7 @@
     "extra_info": {
       "Supported Languages": "Dozens",
       "IDE Support": "VS Code, Visual Studio, JetBrains, Vim, Neovim"
-    },
-    "name": "GitHub Copilot"
+    }
   },
   {
     "id": "runwayml",
@@ -543,8 +483,7 @@
     "extra_info": {
       "Latest Feature": "Gen-2 Video Generation",
       "Used By": "Film Studios, Marketing Agencies, Content Creators"
-    },
-    "name": "Runway ML"
+    }
   },
   {
     "id": "elevenlabs",
@@ -614,8 +553,7 @@
     "extra_info": {
       "Supported Languages": "28+",
       "Audio Formats": "MP3, WAV, OGG, FLAC"
-    },
-    "name": "ElevenLabs"
+    }
   },
   {
     "id": "luma-ai",
@@ -685,8 +623,7 @@
     "extra_info": {
       "Export Formats": "GLB, USDZ, FBX, OBJ",
       "Integration": "Unity, Unreal Engine, Blender"
-    },
-    "name": "Luma AI"
+    }
   },
   {
     "id": "perplexity",
@@ -756,7 +693,6 @@
     "extra_info": {
       "Sources": "Web, Academic Papers, News",
       "Languages": "Multiple languages supported"
-    },
-    "name": "Perplexity AI"
+    }
   }
-]
+] 
