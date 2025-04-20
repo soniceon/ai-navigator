@@ -1,0 +1,15 @@
+Tool icon images will be placed in this directory.
+The following icons should be added:
+- stable-diffusion.png
+- dalle.png
+- chatgpt.png
+- jasper.png
+- copyai.png
+- github-copilot.png
+- runwayml.png
+- elevenlabs.png
+- luma-ai.png
+- perplexity.png
+And more tool icons as needed.
+
+Each icon should be approximately 80x80 pixels in size. 
