@@ -7,6 +7,7 @@
     "generate": "node generate-tools.js"
   },
   "dependencies": {
+    "cheerio": "^1.0.0",
     "handlebars": "^4.7.8"
   }
-} 
+}

@@ -1,6 +1,4 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
+<!DOCTYPE html><html lang="en"><head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="Anthropic Claude 2 - Advanced AI language model for conversation and text generation">
@@ -9,8 +7,8 @@
     <link rel="stylesheet" href="../../css/style.css">
     <link rel="stylesheet" href="../../css/tool-detail.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <link rel="icon" type="image/png" href="../../images/favicon.png">
     <style>
@@ -40,17 +38,23 @@
         }
 
         .tool-logo {
-            width: 120px;
-            height: 120px;
-            border-radius: 1.5rem;
-            object-fit: cover;
-            background: #fff;
-            padding: 1rem;
-            box-shadow: 0 4px 16px rgba(0,0,0,0.1);
-        }
+  width: 120px;
+  height: 120px;
+  border-radius: 1.5rem;
+  object-fit: cover;
+  background: #fff;
+  padding: 1rem;
+  box-shadow: 0 4px 16px rgba(0,0,0,0.1);
+}
 
         .tool-info {
             flex: 1;
+        }
+
+        .tool-title-wrapper {
+            display: flex;
+            align-items: center;
+            gap: 1rem;
         }
 
         .tool-title {
@@ -407,30 +411,26 @@
 
     <main class="container tool-detail">
         <div class="tool-header">
-            <img src="https://www.anthropic.com/images/favicon.ico" alt="Claude 2 Logo" class="tool-logo">
             <div class="tool-info">
-                <h1 class="tool-title">Claude 2</h1>
-                <div class="tool-meta">
-                    <span class="tool-category">
-                        <i class="fas fa-brain"></i>
-                        Language Model
-                    </span>
-                    <span class="tool-rating">
-                        <i class="fas fa-star"></i>
-                        4.8
-                    </span>
-                    <span class="tool-views">
-                        <i class="fas fa-eye"></i>
-                        380,000
-                    </span>
+                <div class="tool-title-wrapper">
+                    <div class="tool-logo">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" width="100" height="100">
+            <rect width="100" height="100" rx="15" fill="#DC3545"></rect>
+            <text x="50" y="55" font-family="Arial, sans-serif" font-size="24" font-weight="bold" fill="#FFFFFF" text-anchor="middle">C2</text>
+        </svg>
+    </div>
+                    <h1 class="tool-title">Claude 2</h1>
                 </div>
-                <p class="tool-description">
-                    Claude 2 is Anthropic's most capable AI assistant, featuring enhanced reasoning, coding, and analysis capabilities with a 100K token context window.
-                </p>
+                <div class="tool-meta">
+                    <span class="tool-category"><i class="fas fa-tools"></i> Tool</span>
+                    <span class="tool-rating"><i class="fas fa-star"></i> 4.5</span>
+                    <span class="tool-views"><i class="fas fa-eye"></i> 100,000</span>
+                </div>
+                <p class="tool-description">Anthropic Claude 2 - Advanced AI language model for conversation and text generation</p>
                 <div class="tool-actions">
-                    <a href="https://claude.ai" class="primary-btn" target="_blank" rel="noopener noreferrer">
+                    <a href="https://claude.ai/" class="primary-btn" target="_blank" rel="noopener noreferrer">
                         <i class="fas fa-external-link-alt"></i>
-                        Try Claude 2
+                        Visit Website
                     </a>
                 </div>
             </div>
@@ -443,8 +443,7 @@
                         <i class="fas fa-info-circle"></i>
                         Overview
                     </h2>
-                    <div class="section-content">
-                        <p>
+                    <div class="section-content"><p>
                             Claude 2 is an advanced AI assistant created by Anthropic, designed to help with a wide range of tasks including writing, analysis, coding, and math. It offers significant improvements over its predecessor in terms of reasoning, knowledge, and capabilities.
                         </p>
                         <p>
@@ -457,8 +456,7 @@
                             <li>Improved factual accuracy and reduced hallucination</li>
                             <li>Enhanced mathematical and scientific capabilities</li>
                             <li>Multi-language support</li>
-                        </ul>
-                    </div>
+                        </ul></div>
                 </section>
 
                 <section class="section">
@@ -466,59 +464,22 @@
                         <i class="fas fa-tags"></i>
                         Pricing Plans
                     </h2>
-                    <div class="pricing-cards">
-                        <div class="pricing-card">
+                    <div class="pricing-cards"><div class="pricing-card">
                             <h3>Free</h3>
                             <div class="price">$0</div>
-                            <ul>
-                                <li>Limited messages per day</li>
-                                <li>Standard response speed</li>
-                                <li>Basic features access</li>
-                            </ul>
-                            <a href="https://claude.ai" class="btn" target="_blank" rel="noopener noreferrer">Get Started</a>
-                        </div>
-                        <div class="pricing-card popular">
-                            <h3>Claude Pro</h3>
-                            <div class="price">$20/month</div>
-                            <ul>
-                                <li>Priority access</li>
-                                <li>Faster response times</li>
-                                <li>More messages per day</li>
-                                <li>Early access to features</li>
-                            </ul>
-                            <a href="https://claude.ai/settings" class="btn" target="_blank" rel="noopener noreferrer">Upgrade Now</a>
-                        </div>
-                        <div class="pricing-card">
-                            <h3>Enterprise</h3>
-                            <div class="price">Custom</div>
-                            <ul>
-                                <li>Custom solutions</li>
-                                <li>API access</li>
-                                <li>Advanced security</li>
-                                <li>Dedicated support</li>
-                            </ul>
-                            <a href="https://www.anthropic.com/enterprise" class="btn" target="_blank" rel="noopener noreferrer">Contact Sales</a>
-                        </div>
-                    </div>
-                </section>
+                </div></div></section>
 
                 <section class="section">
                     <h2 class="section-title">
                         <i class="fas fa-star"></i>
-                        Ratings & Reviews
+                        Ratings &amp; Reviews
                     </h2>
                     <div class="rating-section">
                         <div class="rating-header">
                             <div class="rating-summary">
-                                <div class="rating-stars">
-                                    ★★★★★
-                                </div>
-                                <div class="rating-score">
-                                    4.8 out of 5
-                                </div>
-                                <div class="rating-count">
-                                    Based on 2,500+ reviews
-                                </div>
+                                <div class="rating-stars">★★★★★</div>
+                                <div class="rating-score">4.8 out of 5</div>
+                                <div class="rating-count">Based on 2,500+ reviews</div>
                             </div>
                         </div>
                         
@@ -551,8 +512,7 @@
                         <i class="fas fa-info-circle"></i>
                         Quick Info
                     </h3>
-                    <ul class="info-list">
-                        <li class="info-item">
+                    <ul class="info-list"><li class="info-item">
                             <i class="fas fa-calendar"></i>
                             <span>Launched: July 2023</span>
                         </li>
@@ -562,7 +522,7 @@
                         </li>
                         <li class="info-item">
                             <i class="fas fa-globe"></i>
-                            <span>Website: claude.ai</span>
+                            <span>claude.ai</span>
                         </li>
                         <li class="info-item">
                             <i class="fas fa-users"></i>
@@ -571,8 +531,7 @@
                         <li class="info-item">
                             <i class="fas fa-language"></i>
                             <span>Languages: 100+</span>
-                        </li>
-                    </ul>
+                        </li></ul>
                 </div>
 
                 <div class="info-card">
@@ -581,11 +540,11 @@
                         Share
                     </h3>
                     <div class="tool-actions">
-                        <a href="https://twitter.com/intent/tweet?text=Check%20out%20Claude%202%20-%20Advanced%20AI%20Assistant&url=https%3A%2F%2Fclaude.ai" class="primary-btn" target="_blank" rel="noopener noreferrer">
+                        <a href="https://twitter.com/intent/tweet?text=Check%20out%20Claude%202%20-%20AI-powered%20tool&amp;url=https%3A%2F%2Fclaude-2.com" class="primary-btn" target="_blank" rel="noopener noreferrer">
                             <i class="fab fa-twitter"></i>
                             Twitter
                         </a>
-                        <a href="https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Fclaude.ai" class="primary-btn" target="_blank" rel="noopener noreferrer">
+                        <a href="https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Fclaude-2.com" class="primary-btn" target="_blank" rel="noopener noreferrer">
                             <i class="fab fa-facebook"></i>
                             Facebook
                         </a>
@@ -613,7 +572,7 @@
                 </div>
             </div>
             <div class="copyright">
-                <p>&copy; 2025 SoniceAi. All rights reserved.</p>
+                <p>© 2025 SoniceAi. All rights reserved.</p>
                 <div class="footer-legal">
                     <a href="../../pages/privacy.html">Privacy Policy</a>
                     <a href="../../pages/terms.html">Terms of Service</a>
@@ -623,5 +582,5 @@
     </footer>
 
     <script src="../../js/main.js"></script>
-</body>
-</html> 
+
+ </body></html>
