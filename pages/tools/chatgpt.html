@@ -386,20 +386,38 @@
                 grid-template-columns: 1fr;
             }
         }
+
+        /* 定义logo文本样式 */
+        .logo-text {
+            position: relative;
+            display: inline-block;
+        }
+        
+        /* 去掉下划线 */
+        .logo-text::after {
+            content: '';
+            position: absolute;
+            bottom: -2px;
+            left: 0;
+            width: 100%;
+            height: 0; /* 设为0以移除下划线 */
+            background-color: #ff3b30;
+        }
     </style>
 </head>
 <body>
     <header>
         <div class="container">
             <div class="logo">
-                <a href="../../"><i class="fas fa-robot"></i> SoniceAi</a>
+                <a href="../../"><i class="fas fa-robot"></i> <span class="logo-text">SoniceAi</span></a>
             </div>
             <nav>
                 <ul>
                     <li><a href="../../"><i class="fas fa-home"></i> Home</a></li>
                     <li><a href="../../pages/categories.html"><i class="fas fa-th-large"></i> Categories</a></li>
-                    <li><a href="../../pages/ranking.html"><i class="fas fa-chart-line"></i> Rankings</a></li>
-                    <li><a href="../../pages/new.html"><i class="fas fa-star"></i> New Releases</a></li>
+                    <li><a href="../tools/ranking.html"><i class="fas fa-chart-line"></i> Rankings</a></li>
+                    <li><a href="../tools/all-tools.html" class="active"><i class="fas fa-tools"></i> AI Tools</a></li>
+                    <li><a href="../../featured-tools.html"><i class="fas fa-star"></i> Featured</a></li>
                 </ul>
             </nav>
             <div class="search">
@@ -558,7 +576,7 @@
         <div class="container">
             <div class="footer-content">
                 <div class="footer-logo">
-                    <h3><i class="fas fa-robot"></i> SoniceAi</h3>
+                    <h3><i class="fas fa-robot"></i> <span class="logo-text">SoniceAi</span></h3>
                     <p>Discover the best AI tools and resources</p>
                 </div>
                 <div class="footer-links">
@@ -566,8 +584,9 @@
                     <ul>
                         <li><a href="../../"><i class="fas fa-home"></i> Home</a></li>
                         <li><a href="../../pages/categories.html"><i class="fas fa-th-large"></i> Categories</a></li>
-                        <li><a href="../../pages/ranking.html"><i class="fas fa-chart-line"></i> Rankings</a></li>
-                        <li><a href="../../pages/about.html"><i class="fas fa-info-circle"></i> About Us</a></li>
+                        <li><a href="../tools/ranking.html"><i class="fas fa-chart-line"></i> Rankings</a></li>
+                        <li><a href="../tools/all-tools.html"><i class="fas fa-tools"></i> AI Tools</a></li>
+                        <li><a href="../../featured-tools.html"><i class="fas fa-star"></i> Featured</a></li>
                     </ul>
                 </div>
             </div>
