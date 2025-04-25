@@ -13,6 +13,22 @@
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <link rel="icon" type="image/png" href="../../images/favicon.png">
+    <!-- 结构化数据 -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "SoftwareApplication",
+        "name": "{{toolName}}",
+        "description": "{{toolDescription}}",
+        "applicationCategory": "{{toolType}}",
+        "operatingSystem": "Web",
+        "offers": {
+            "@type": "Offer",
+            "price": "{{price}}",
+            "priceCurrency": "{{currency}}"
+        }
+    }
+    </script>
     <style>
         :root {
             --primary-color: #000000;
@@ -25,7 +41,7 @@
         }
 
         .tool-detail {
-            padding: 2rem 0;
+            padding-top: 2rem;
         }
 
         .tool-header {
@@ -320,23 +336,124 @@
             background: var(--primary-hover);
         }
 
-        .sidebar {
-            display: flex;
-            flex-direction: column;
-            gap: 2rem;
+        /* 更新侧边栏样式，与首页保持一致 */
+        body {
+            font-family: 'Inter', sans-serif;
+            margin: 0;
+            padding: 0;
+            background: var(--bg-color);
+            padding-left: 60px; /* Sidebar width */
+            padding-top: 64px; /* 导航栏的高度 */
         }
 
+        /* Sidebar Styles */
+        .sidebar {
+            position: fixed;
+            left: 0;
+            top: 64px; /* 与导航栏高度相同 */
+            bottom: 0;
+            width: 60px;
+            background: #fff;
+            box-shadow: 1px 0 2px rgba(0, 0, 0, 0.05);
+            transition: width 0.3s;
+            overflow: hidden;
+            z-index: 1000;
+            margin-top: 64px;
+        }
+
+        .sidebar:hover {
+            width: 200px;
+        }
+
+        .sidebar-nav ul {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+            display: flex;
+            flex-direction: column;
+            gap: 2px;
+        }
+
+        .sidebar-nav a {
+            display: flex;
+            align-items: center;
+            padding: 10px 16px;
+            color: #4a5568;
+            text-decoration: none;
+            transition: all 0.2s;
+        }
+
+        .sidebar-nav a:hover {
+            background-color: #f8fafc;
+            color: #6b21a8;
+        }
+
+        .sidebar-nav i {
+            font-size: 20px;
+            width: 28px;
+            text-align: center;
+            margin-right: 16px;
+        }
+
+        .sidebar-nav span {
+            font-size: 14px;
+            white-space: nowrap;
+            opacity: 0;
+            transition: opacity 0.2s;
+        }
+
+        .sidebar:hover .sidebar-nav span {
+            opacity: 1;
+        }
+
+        /* Category icon colors */
+        .category-chatbot i { background: #e0f2fe; color: #0ea5e9; }
+        .category-image i { background: #fef3c7; color: #d97706; }
+        .category-video i { background: #fce7f3; color: #db2777; }
+        .category-audio i { background: #f3e8ff; color: #9333ea; }
+        .category-writing i { background: #dcfce7; color: #16a34a; }
+        .category-coding i { background: #dbeafe; color: #2563eb; }
+        .category-marketing i { background: #ffe4e6; color: #e11d48; }
+        .category-design i { background: #f3f4f6; color: #4b5563; }
+        .category-productivity i { background: #fff7ed; color: #ea580c; }
+        .category-research i { background: #f0fdf4; color: #15803d; }
+        .category-security i { background: #fef2f2; color: #dc2626; }
+        .category-models i { background: #ecfeff; color: #0891b2; }
+
+        /* 调整主内容区域的边距 */
+        body {
+            margin-left: 48px;
+        }
+
+        @media (max-width: 768px) {
+            body {
+                margin-left: 0;
+            }
+            .sidebar {
+                transform: translateX(-100%);
+            }
+            .sidebar.active {
+                transform: translateX(0);
+            }
+        }
+
+        /* 添加Quick Info卡片样式 */
         .info-card {
-            background: var(--bg-color);
-            border-radius: 1rem;
+            background: #fff;
+            border-radius: 0.75rem;
             padding: 1.5rem;
-            box-shadow: 0 4px 24px rgba(0,0,0,0.08);
+            margin-bottom: 1rem;
+            box-shadow: 0 1px 3px rgba(0,0,0,0.1);
         }
 
         .info-title {
-            font-size: 1.25rem;
-            color: var(--text-color);
-            margin-bottom: 1rem;
+            font-size: 1rem;
+            font-weight: 600;
+            color: #111827;
+            margin: 0 0 1rem 0;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
         }
 
         .info-list {
@@ -349,55 +466,469 @@
             display: flex;
             align-items: center;
             gap: 0.75rem;
-            padding: 0.75rem 0;
-            border-bottom: 1px solid var(--border-color);
-        }
-
-        .info-item:last-child {
-            border-bottom: none;
+            padding: 0.5rem 0;
+            color: #4b5563;
+            font-size: 0.9rem;
         }
 
         .info-item i {
+            width: 16px;
+            color: #6b7280;
+        }
+
+        /* Share按钮样式 */
+        .share-buttons {
+            display: flex;
+            gap: 0.5rem;
+            margin-top: 1rem;
+        }
+
+        .share-button {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 0.5rem;
+            padding: 0.5rem 1rem;
+            border-radius: 0.5rem;
+            font-size: 0.9rem;
+            color: #fff;
+            text-decoration: none;
+            transition: opacity 0.2s;
+        }
+
+        .share-button:hover {
+            opacity: 0.9;
+        }
+
+        .twitter-share {
+            background: #1DA1F2;
+        }
+
+        .facebook-share {
+            background: #4267B2;
+        }
+
+        /* 工具特点样式 */
+        .features-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 1.5rem;
+            margin-top: 1.5rem;
+        }
+
+        .feature-card {
+            background: var(--bg-secondary);
+            border-radius: 1rem;
+            padding: 1.5rem;
+            transition: transform 0.2s;
+        }
+
+        .feature-card:hover {
+            transform: translateY(-2px);
+        }
+
+        .feature-icon {
+            width: 48px;
+            height: 48px;
+            background: #fff;
+            border-radius: 12px;
+            display: flex;
+            align-items: center;
+                justify-content: center;
+            margin-bottom: 1rem;
+            font-size: 1.5rem;
             color: var(--primary-color);
-            width: 20px;
+        }
+
+        /* 使用教程样式 */
+        .tutorial-steps {
+            counter-reset: step;
+            margin-top: 1.5rem;
+        }
+
+        .tutorial-step {
+            display: flex;
+            gap: 1.5rem;
+            padding: 1.5rem;
+            background: var(--bg-secondary);
+            border-radius: 1rem;
+            margin-bottom: 1rem;
+        }
+
+        .step-number {
+            flex-shrink: 0;
+            width: 32px;
+            height: 32px;
+            background: var(--primary-color);
+            color: white;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+                justify-content: center;
+            font-weight: 600;
+        }
+
+        .step-content h3 {
+            margin: 0 0 0.5rem 0;
+            color: var(--text-color);
+        }
+
+        .step-image {
+            margin-top: 1rem;
+            border-radius: 0.5rem;
+            max-width: 100%;
+        }
+
+        /* 用户评论样式 */
+        .reviews-list {
+            margin-top: 2rem;
+        }
+
+        .review-card {
+            background: var(--bg-secondary);
+            border-radius: 1rem;
+            padding: 1.5rem;
+            margin-bottom: 1rem;
+        }
+
+        .review-header {
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+            margin-bottom: 1rem;
+        }
+
+        .reviewer-avatar {
+            width: 48px;
+            height: 48px;
+            border-radius: 50%;
+            object-fit: cover;
+        }
+
+        .reviewer-info h4 {
+            margin: 0;
+            color: var(--text-color);
+        }
+
+        .review-date {
+            font-size: 0.875rem;
+            color: var(--text-secondary);
+        }
+
+        .review-rating {
+            color: #f59e42;
+            margin-top: 0.25rem;
+        }
+
+        .review-content {
+            color: var(--text-secondary);
+            line-height: 1.6;
+        }
+
+        /* 相关工具样式 */
+        .related-tools {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 1rem;
+            margin-top: 1.5rem;
+        }
+
+        .related-tool-card {
+            background: var(--bg-secondary);
+            border-radius: 1rem;
+            padding: 1rem;
+            text-align: center;
+            transition: transform 0.2s;
+        }
+
+        .related-tool-card:hover {
+            transform: translateY(-2px);
+        }
+
+        .related-tool-logo {
+            width: 64px;
+            height: 64px;
+            border-radius: 16px;
+            margin: 0 auto 1rem;
+        }
+
+        .related-tool-name {
+            font-weight: 600;
+            color: var(--text-color);
+            margin: 0 0 0.5rem 0;
+        }
+
+        .related-tool-category {
+            font-size: 0.875rem;
+            color: var(--text-secondary);
+        }
+
+        /* 更新logo样式 */
+        .logo {
+            display: flex;
+            align-items: center;
+        }
+
+        .logo a {
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+            text-decoration: none;
+            color: #6b21a8;
+            font-weight: 600;
+            font-size: 1.25rem;
+        }
+
+        .logo i {
+            font-size: 24px;
+        }
+
+        /* 更新header布局 */
+        header {
+            background: #fff;
+            border-bottom: 1px solid #eee;
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            z-index: 1000;
+            height: 64px;
+            display: flex;
+            align-items: center;
+        }
+
+        .container {
+            max-width: 1400px;
+            margin: 0 auto;
+            padding: 0 1rem;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+
+        /* logo样式 */
+        .logo {
+            display: flex;
+            align-items: center;
+        }
+
+        .logo a {
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+            text-decoration: none;
+            color: #6b21a8;
+            font-weight: 600;
+            font-size: 1.25rem;
+        }
+
+        .logo i {
+            font-size: 24px;
+        }
+
+        /* 导航菜单样式 */
+        header nav ul {
+            display: flex;
+            gap: 2rem;
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+
+        header nav a {
+            color: #4b5563;
+            text-decoration: none;
+            font-size: 0.9375rem;
+            font-weight: 500;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+
+        header nav a i {
+            font-size: 20px;
+        }
+
+        /* 搜索框样式 */
+        .search {
+            position: relative;
+            width: 240px;
+        }
+
+        .search input {
+            width: 100%;
+            padding: 0.5rem 2.5rem 0.5rem 1rem;
+            border: 1px solid #e5e7eb;
+            border-radius: 0.5rem;
+            font-size: 0.875rem;
+        }
+
+        .search button {
+            position: absolute;
+            right: 0.75rem;
+            top: 50%;
+            transform: translateY(-50%);
+            background: none;
+            border: none;
+            color: #6b7280;
+            cursor: pointer;
+            padding: 0;
+        }
+
+        .search button i {
+            font-size: 16px;
+        }
+
+        /* 移动端适配 */
+        @media (max-width: 1024px) {
+            header nav {
+                display: none;
+            }
+            
+            .search {
+                width: auto;
+                flex: 1;
+                margin: 0 1rem;
+            }
         }
 
         @media (max-width: 768px) {
-            .tool-header {
-                flex-direction: column;
-                text-align: center;
+            header .container {
+                padding: 0 0.5rem;
             }
+            
+            .logo span {
+                display: none;
+            }
+            
+            .search {
+                margin: 0 0.5rem;
+            }
+        }
 
-            .tool-meta {
-                justify-content: center;
-            }
+        /* 为了防止导航栏遮挡内容，给body添加上边距 */
+        body {
+            padding-top: 64px; /* 与导航栏高度相同 */
+        }
 
-            .tool-actions {
-                justify-content: center;
-            }
+        /* 定义logo文本样式 */
+        .logo-text {
+            position: relative;
+            display: inline-block;
+        }
 
-            .tool-content {
-                grid-template-columns: 1fr;
-            }
-
-            .pricing-cards {
-                grid-template-columns: 1fr;
-            }
+        /* 去掉下划线 */
+        .logo-text::after {
+            content: '';
+            position: absolute;
+            bottom: -2px;
+            left: 0;
+            width: 100%;
+            height: 0;
+            background-color: #ff3b30;
         }
     </style>
 </head>
 <body>
+    <!-- 移动端菜单按钮 -->
+    <button class="mobile-menu-btn" aria-label="Toggle menu">
+        <i class="fas fa-bars"></i>
+    </button>
+
+    <!-- 更新侧边栏结构 -->
+    <aside class="sidebar">
+        <nav class="sidebar-nav">
+            <ul>
+                <li>
+                    <a href="#" data-category="chatbot" class="category-chatbot">
+                        <i class="fas fa-comments"></i>
+                        <span>Chatbot</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="#" data-category="image" class="category-image">
+                        <i class="fas fa-image"></i>
+                        <span>Image Generation</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="#" data-category="video" class="category-video">
+                        <i class="fas fa-video"></i>
+                        <span>Video Creation</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="#" data-category="audio" class="category-audio">
+                        <i class="fas fa-microphone"></i>
+                        <span>Audio Processing</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="#" data-category="writing" class="category-writing">
+                        <i class="fas fa-pen-fancy"></i>
+                        <span>Writing Assistant</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="#" data-category="coding" class="category-coding">
+                        <i class="fas fa-code"></i>
+                        <span>Coding</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="#" data-category="marketing" class="category-marketing">
+                        <i class="fas fa-bullhorn"></i>
+                        <span>Marketing</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="#" data-category="design" class="category-design">
+                        <i class="fas fa-paint-brush"></i>
+                        <span>Design</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="#" data-category="productivity" class="category-productivity">
+                        <i class="fas fa-tasks"></i>
+                        <span>Productivity</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="#" data-category="research" class="category-research">
+                        <i class="fas fa-search"></i>
+                        <span>Research</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="#" data-category="security" class="category-security">
+                        <i class="fas fa-shield-alt"></i>
+                        <span>Security</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="#" data-category="models" class="category-models">
+                        <i class="fas fa-brain"></i>
+                        <span>AI Models</span>
+                    </a>
+                </li>
+            </ul>
+        </nav>
+    </aside>
+
     <header>
         <div class="container">
             <div class="logo">
-                <a href="../../"><i class="fas fa-robot"></i> SoniceAi</a>
+                <a href="/" style="color: #6b21a8; text-decoration: none; display: flex; align-items: center; gap: 0.5rem;">
+                    <i class="fas fa-robot" style="font-size: 24px;"></i>
+                    <span style="font-weight: 500;">SoniceAi</span>
+                </a>
             </div>
             <nav>
-                <ul>
-                    <li><a href="../../"><i class="fas fa-home"></i> Home</a></li>
-                    <li><a href="../../pages/categories.html"><i class="fas fa-th-large"></i> Categories</a></li>
-                    <li><a href="../../pages/ranking.html"><i class="fas fa-chart-line"></i> Rankings</a></li>
-                    <li><a href="../../pages/new.html"><i class="fas fa-star"></i> New Releases</a></li>
+                <ul style="display: flex; gap: 2rem; list-style: none; margin: 0; padding: 0;">
+                    <li><a href="/" style="color: #4b5563; text-decoration: none; display: flex; align-items: center; gap: 0.5rem;"><i class="fas fa-home" style="font-size: 20px;"></i> Home</a></li>
+                    <li><a href="/categories" style="color: #4b5563; text-decoration: none; display: flex; align-items: center; gap: 0.5rem;"><i class="fas fa-th-large" style="font-size: 20px;"></i> Categories</a></li>
+                    <li><a href="/rankings" style="color: #4b5563; text-decoration: none; display: flex; align-items: center; gap: 0.5rem;"><i class="fas fa-chart-line" style="font-size: 20px;"></i> Rankings</a></li>
+                    <li><a href="/new-releases" style="color: #4b5563; text-decoration: none; display: flex; align-items: center; gap: 0.5rem;"><i class="fas fa-star" style="font-size: 20px;"></i> New Releases</a></li>
                 </ul>
             </nav>
             <div class="search">
@@ -512,9 +1043,96 @@
                         </div>
                     </div>
                 </section>
+
+                <!-- 添加特点部分 -->
+                <section class="section">
+                    <h2 class="section-title">
+                        <i class="fas fa-lightbulb"></i>
+                        Key Features
+                    </h2>
+                    <div class="features-grid">
+                        {{#each features}}
+                        <div class="feature-card">
+                            <div class="feature-icon">
+                                <i class="{{icon}}"></i>
+            </div>
+                            <h3>{{title}}</h3>
+                            <p>{{description}}</p>
+                        </div>
+                        {{/each}}
+                    </div>
+                </section>
+
+                <!-- 添加使用教程部分 -->
+                <section class="section">
+                    <h2 class="section-title">
+                        <i class="fas fa-book"></i>
+                        How to Use
+                    </h2>
+                    <div class="tutorial-steps">
+                        {{#each tutorialSteps}}
+                        <div class="tutorial-step">
+                            <div class="step-number">{{@index}}</div>
+                            <div class="step-content">
+                                <h3>{{title}}</h3>
+                                <p>{{description}}</p>
+                                {{#if image}}
+                                <img src="{{image}}" alt="{{title}}" class="step-image">
+                                {{/if}}
+                            </div>
+                        </div>
+                        {{/each}}
+                    </div>
+                </section>
+
+                <!-- 更新评论部分 -->
+                <section class="section">
+                    <h2 class="section-title">
+                        <i class="fas fa-comments"></i>
+                        User Reviews
+                    </h2>
+                    <div class="reviews-list">
+                        {{#each reviews}}
+                        <div class="review-card">
+                            <div class="review-header">
+                                <img src="{{userAvatar}}" alt="{{userName}}" class="reviewer-avatar">
+                                <div class="reviewer-info">
+                                    <h4>{{userName}}</h4>
+                                    <div class="review-date">{{date}}</div>
+                                    <div class="review-rating">
+                                        {{#times rating}}★{{/times}}
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="review-content">
+                                {{content}}
+                            </div>
+                        </div>
+                        {{/each}}
+                    </div>
+                </section>
+
+                <!-- 添加相关工具部分 -->
+                <section class="section">
+                    <h2 class="section-title">
+                        <i class="fas fa-tools"></i>
+                        Related Tools
+                    </h2>
+                    <div class="related-tools">
+                        {{#each relatedTools}}
+                        <div class="related-tool-card">
+                            <img src="{{logo}}" alt="{{name}}" class="related-tool-logo">
+                            <h3 class="related-tool-name">{{name}}</h3>
+                            <div class="related-tool-category">{{category}}</div>
+                            <a href="{{url}}" class="btn btn-outline">Learn More</a>
+                        </div>
+                        {{/each}}
+                    </div>
+                </section>
             </div>
 
-            <aside class="sidebar">
+            <!-- 更新右侧信息栏 -->
+            <aside class="sidebar-info">
                 <div class="info-card">
                     <h3 class="info-title">
                         <i class="fas fa-info-circle"></i>
@@ -549,12 +1167,18 @@
                         <i class="fas fa-share-alt"></i>
                         Share
                     </h3>
-                    <div class="tool-actions">
-                        <a href="https://twitter.com/intent/tweet?text=Check%20out%20{{toolName}}%20-%20{{toolDescription}}&url={{toolWebsite}}" class="primary-btn" target="_blank" rel="noopener noreferrer">
+                    <div class="share-buttons">
+                        <a href="https://twitter.com/intent/tweet?text=Check%20out%20{{toolName}}%20-%20{{toolDescription}}&url={{toolWebsite}}" 
+                           class="share-button twitter-share" 
+                           target="_blank" 
+                           rel="noopener noreferrer">
                             <i class="fab fa-twitter"></i>
                             Twitter
                         </a>
-                        <a href="https://www.facebook.com/sharer/sharer.php?u={{toolWebsite}}" class="primary-btn" target="_blank" rel="noopener noreferrer">
+                        <a href="https://www.facebook.com/sharer/sharer.php?u={{toolWebsite}}" 
+                           class="share-button facebook-share" 
+                           target="_blank" 
+                           rel="noopener noreferrer">
                             <i class="fab fa-facebook"></i>
                             Facebook
                         </a>
@@ -606,6 +1230,53 @@
             // 显示成功消息
             alert('Thank you for your review!');
             this.reset();
+        });
+
+        // 处理移动端菜单
+        document.querySelector('.mobile-menu-btn').addEventListener('click', function() {
+            document.querySelector('.sidebar').classList.toggle('active');
+        });
+
+        // 点击页面内容区域时关闭移动端菜单
+        document.addEventListener('click', function(e) {
+            if (!e.target.closest('.sidebar') && !e.target.closest('.mobile-menu-btn')) {
+                document.querySelector('.sidebar').classList.remove('active');
+            }
+        });
+
+        // 添加评论加载功能
+        function loadMoreReviews() {
+            // TODO: 实现加载更多评论的逻辑
+        }
+
+        // 添加相关工具加载功能
+        function loadRelatedTools() {
+            // TODO: 实现加载相关工具的逻辑
+        }
+
+        // 添加工具使用统计功能
+        function trackToolUsage() {
+            // TODO: 实现工具使用统计的逻辑
+        }
+
+        // 添加分享功能
+        function shareOnSocial(platform) {
+            // TODO: 实现社交媒体分享的逻辑
+        }
+
+        // 页面加载完成后初始化
+        document.addEventListener('DOMContentLoaded', function() {
+            // 初始化评分系统
+            initRatingSystem();
+            
+            // 加载初始评论
+            loadMoreReviews();
+            
+            // 加载相关工具
+            loadRelatedTools();
+            
+            // 追踪工具使用
+            trackToolUsage();
         });
     </script>
 </body>
