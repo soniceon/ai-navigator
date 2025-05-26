@@ -1,12 +1,13 @@
 import { aiTools } from '@/data/aiTools';
-import { useLanguage } from '@/contexts/LanguageContext';
 import { useTranslation } from 'next-i18next';
+import { useRouter } from 'next/router';
 import { serverSideTranslations } from 'next-i18next/serverSideTranslations';
 type Tool = typeof aiTools[number];
 type LangKey = keyof typeof aiTools[0]['name'];
 export default function RevenueRanking() {
-  const { lang } = useLanguage();
-  const { t } = useTranslation('common');
+  const { t, i18n } = useTranslation('common');
+  const router = useRouter();
+  const lang = router.locale || i18n.language || 'en';
   const langKey: LangKey = (Object.keys(aiTools[0].name).includes(lang) ? lang : 'en') as LangKey;
   // 按评分和用户数排序，取前20
   const sorted = [...aiTools].sort((a, b) => {

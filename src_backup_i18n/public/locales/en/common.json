@@ -1,0 +1,96 @@
+{
+  "hero": {
+    "title": "Discover The Best",
+    "tools": "Tools & Websites",
+    "subtitle": "Explore a comprehensive collection of AI tools, categorized and ranked to help you find the perfect solution for your needs.",
+    "searchPlaceholder": "Search for AI tools and solutions...",
+    "search": "Search",
+    "popularSearches": "Popular searches",
+    "toolsCount1": "1250+ AI tools",
+    "toolsCount2": "across 8 different categories"
+  },
+  "home": {
+    "metaTitle": "Discover The Best AI Tools & Websites",
+    "metaDescription": "SoniceAi is your ultimate directory of AI tools and resources. Explore, compare, and find the perfect AI solutions for your projects.",
+    "browseCategories": "Browse by Category",
+    "popularTools": "Popular AI Tools",
+    "viewAll": "View all",
+    "details": "View details",
+    "visit": "Visit",
+    "toolsCount": "{{count}} tools"
+  },
+  "categories": {
+    "all": "All Tools",
+    "chatbots": "AI Chatbots",
+    "imageGeneration": "Image Generation",
+    "codeAssistants": "Code Assistants",
+    "contentWriting": "Content Writing",
+    "videoGeneration": "Video Generation",
+    "musicGeneration": "Music Generation",
+    "dataAnalysis": "Data Analysis"
+  },
+  "sidebar": {
+    "categories": "Categories",
+    "browseTools": "Browse AI tools by category",
+    "home": "Home",
+    "toolCategories": "Tool Categories",
+    "allCategories": "All Categories"
+  },
+  "featured": {
+    "title": "Featured Tools",
+    "viewAll": "View all",
+    "viewDetails": "View details",
+    "chatgpt": "Advanced AI chatbot by OpenAI with conversation capabilities",
+    "midjourney": "AI image generator that creates stunning visuals from text prompts",
+    "githubCopilot": "AI pair programmer that helps with code completion",
+    "submitYourTool": "Have an AI tool?",
+    "submitDescription": "Submit your tool to our directory and reach thousands of potential users",
+    "submitButton": "Submit a Tool"
+  },
+  "nav": {
+    "home": "Home",
+    "search": "Search",
+    "categories": "Categories",
+    "favorites": "Saved",
+    "account": "Profile"
+  },
+  "category": {
+    "description": "Discover {{count}} {{category}} AI tools in our directory",
+    "filter": "Filter",
+    "filterByTag": "Filter by tag",
+    "sortPopular": "Most Popular",
+    "sortAZ": "A-Z",
+    "viewDetails": "View details",
+    "visit": "Visit",
+    "noTools": "No tools found with the selected filters"
+  },
+  "tool": {
+    "visitWebsite": "Visit Website",
+    "saveToFavorites": "Save to Favorites",
+    "save": "Save",
+    "about": "About",
+    "features": "Key Features",
+    "screenshots": "Screenshots",
+    "reviews": "User Reviews",
+    "noReviews": "No reviews yet",
+    "toolInfo": "Tool Information",
+    "company": "Company",
+    "category": "Category",
+    "rating": "Rating",
+    "tags": "Tags",
+    "pricing": "Pricing",
+    "freeOption": "Free option",
+    "free": "Free",
+    "notFound": "Tool Not Found",
+    "notFoundDescription": "The AI tool you're looking for doesn't exist or has been removed.",
+    "backToHome": "Back to Home"
+  },
+  "tools": {
+    "chatgpt": "Advanced AI chatbot that can understand complex prompts and generate human-like text responses.",
+    "midjourney": "AI art generator that creates stunning images from text descriptions with remarkable quality.",
+    "githubCopilot": "AI pair programmer that suggests code completions and functions as you type.",
+    "dalle": "OpenAI's image generation system that creates realistic images and art from text descriptions.",
+    "jasper": "AI content assistant that helps create marketing copy, blog posts, and other written content.",
+    "runwayml": "Creative suite for AI-generated and AI-enhanced video production and editing."
+  }
+}

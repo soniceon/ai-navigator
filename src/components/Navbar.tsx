@@ -40,17 +40,27 @@ const categoryMenu = [
   { icon: '🧻', key: 'menu_gpts', descKey: 'menu_gpts_desc', link: '/categories/gpts' },
 ];
 
+// 添加工具菜单数据
+const toolsMenu = [
+  { icon: '➕', key: 'menu_submit_ai', descKey: 'menu_submit_ai_desc', link: '/submit-ai' },
+  { icon: '🔄', key: 'menu_update_ai', descKey: 'menu_update_ai_desc', link: '/update-ai' },
+  { icon: '📢', key: 'menu_advertise', descKey: 'menu_advertise_desc', link: '/advertise' },
+  { icon: '🤝', key: 'menu_business', descKey: 'menu_business_desc', link: '/business' },
+  { icon: '❓', key: 'menu_faq', descKey: 'menu_faq_desc', link: '/faq' },
+];
+
 export default function Navbar() {
-  const { t, i18n } = useTranslation('common');
-  type LangKey = 'zh' | 'en' | 'ja' | 'ko' | 'de' | 'fr' | 'es' | 'ru';
-  const lang = (i18n.language as LangKey) || 'zh';
-  const { keyword, setKeyword } = useSearch();
+  const { t, i18n, ready } = useTranslation('common');
   const router = useRouter();
+  const locale = router.locale || 'en';
+  const { keyword, setKeyword } = useSearch();
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
   const [rankingDropdown, setRankingDropdown] = useState(false);
   const [categoryDropdown, setCategoryDropdown] = useState(false);
+  const [toolsDropdown, setToolsDropdown] = useState(false);
   const rankingTimeout = useRef<NodeJS.Timeout | null>(null);
   const categoryTimeout = useRef<NodeJS.Timeout | null>(null);
+  const toolsTimeout = useRef<NodeJS.Timeout | null>(null);
   const { logout, isLoggedIn, user } = useAuth();
   const [profileDropdown, setProfileDropdown] = useState(false);
 
@@ -93,6 +103,16 @@ export default function Navbar() {
   const handleCategoryLeave = () => {
     categoryTimeout.current = setTimeout(() => setCategoryDropdown(false), 300);
   };
+
+  const handleToolsEnter = () => {
+    if (toolsTimeout.current) clearTimeout(toolsTimeout.current);
+    setToolsDropdown(true);
+  };
+  const handleToolsLeave = () => {
+    toolsTimeout.current = setTimeout(() => setToolsDropdown(false), 300);
+  };
+
+  if (!ready) return null; // 语言包未加载时不渲染，防止 hydration mismatch
 
   return (
     <nav key={i18n.language} className="w-full bg-white dark:bg-gray-900 shadow flex items-center px-4 md:px-8" style={{ minHeight: 72 }}>
@@ -157,7 +177,32 @@ export default function Navbar() {
               </div>
             )}
           </div>
-          <Link href="/tools" className={`hover:text-purple-600 flex items-center gap-1 text-base ${isActive('/tools') ? 'text-purple-600 font-bold' : ''}`}><span className="text-xl">🛠️</span>{t('navbar_tools')}</Link>
+          <div className="relative"
+            onMouseEnter={handleToolsEnter}
+            onMouseLeave={handleToolsLeave}
+          >
+            <button className={`flex items-center gap-1 text-base hover:text-purple-600 ${isActive('/tools') ? 'text-purple-600 font-bold' : ''}`}>
+              <span className="text-xl">🛠️</span>{t('navbar_tools')}
+            </button>
+            {toolsDropdown && (
+              <div className="absolute left-0 top-full mt-2 w-80 bg-white dark:bg-gray-900 shadow-xl rounded-2xl z-30"
+                onMouseEnter={handleToolsEnter}
+                onMouseLeave={handleToolsLeave}
+              >
+                <div className="py-2">
+                  {toolsMenu.map(item => (
+                    <Link key={item.link} href={{ pathname: item.link, query: {} }} locale={locale} className="flex items-start gap-3 px-5 py-3 hover:bg-purple-50 dark:hover:bg-purple-900 rounded-xl">
+                      <span className="text-2xl mt-1">{item.icon}</span>
+                      <div>
+                        <div className="font-bold text-base">{t(item.key)}</div>
+                        <div className="text-xs text-gray-500 dark:text-gray-400">{t(item.descKey)}</div>
+                      </div>
+                    </Link>
+                  ))}
+                </div>
+              </div>
+            )}
+          </div>
           <Link href="/featured" className={`hover:text-purple-600 flex items-center gap-1 text-base ${isActive('/featured') ? 'text-purple-600 font-bold' : ''}`}><span className="text-xl">⭐</span>{t('navbar_featured')}</Link>
         </div>
       </div>

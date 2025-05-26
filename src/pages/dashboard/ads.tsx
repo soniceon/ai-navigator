@@ -1,5 +1,6 @@
 import { useTranslation } from 'next-i18next';
 import DashboardSidebar from '../../components/DashboardSidebar';
+import { serverSideTranslations } from 'next-i18next/serverSideTranslations';
 
 const ads = [
   { tool: 'tool_chatgpt', url: 'ad_url_chatgpt', balance: 100, status: 'status_running' },
@@ -35,4 +36,12 @@ export default function AdsPage() {
       </main>
     </div>
   );
+}
+
+export async function getServerSideProps({ locale }) {
+  return {
+    props: {
+      ...(await serverSideTranslations(locale, ['common']))
+    }
+  };
 } 

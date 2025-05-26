@@ -207,15 +207,17 @@ export default function Dashboard() {
           <div>
             <div className="text-lg font-bold mb-1 text-gray-100 flex items-center gap-2"><span className="text-purple-400">👤</span>{user?.nickname}</div>
             <div className="text-gray-400 mb-2">{user?.email}</div>
-            <button className="px-4 py-1 bg-gradient-to-r from-purple-500 to-purple-700 hover:from-purple-600 hover:to-purple-800 text-white rounded-lg text-sm shadow flex items-center gap-2 transition hover:scale-105" onClick={handleLogout}><span className="material-icons text-base">logout</span>{t('logout')}</button>
-            <button className="ml-2 text-xs text-purple-400 hover:underline" onClick={()=>setShowAvatarModal(true)}>更换头像</button>
+            <button className="px-4 py-1 bg-gradient-to-r from-purple-500 to-purple-700 hover:from-purple-600 hover:to-purple-800 text-white rounded-lg text-sm shadow flex items-center gap-2 transition hover:scale-105" onClick={handleLogout}>
+              {t('logout')}
+            </button>
+            <button className="ml-2 text-xs text-purple-400 hover:underline" onClick={()=>setShowAvatarModal(true)}>{t('change_avatar')}</button>
             <div className="mt-2 text-sm text-gray-400 flex items-center gap-1"><span className="inline-block align-middle">🧾</span>{t('sidebar_orders')}</div>
           </div>
         </div>
         {showAvatarModal && (
           <div className="fixed inset-0 z-50 flex items-center justify-center bg-black/40">
             <div className="bg-white dark:bg-[#232136] rounded-2xl p-6 shadow-xl w-[380px]">
-              <div className="font-bold text-lg mb-4 text-center">选择头像</div>
+              <div className="font-bold text-lg mb-4 text-center">{t('choose_avatar')}</div>
               <div className="grid grid-cols-3 gap-4 mb-4">
                 {randomAvatars.map((item, idx) => (
                   <button
@@ -232,7 +234,7 @@ export default function Dashboard() {
                   </button>
                 ))}
               </div>
-              <button className="w-full mt-2 py-2 bg-purple-600 text-white rounded" onClick={() => setShowAvatarModal(false)}>完成</button>
+              <button className="w-full mt-2 py-2 bg-purple-600 text-white rounded" onClick={() => setShowAvatarModal(false)}>{t('done')}</button>
             </div>
           </div>
         )}
@@ -403,10 +405,10 @@ export default function Dashboard() {
   );
 }
 
-export const getServerSideProps: GetServerSideProps = async ({ locale }) => {
+export async function getServerSideProps({ locale }) {
   return {
     props: {
-      ...(await serverSideTranslations(locale || 'en', ['common'])),
-    },
+      ...(await serverSideTranslations(locale, ['common']))
+    }
   };
-}; 
+} 

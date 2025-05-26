@@ -1,5 +1,6 @@
 import { useState, useEffect } from 'react';
 import { useTranslation } from 'next-i18next';
+import { useRouter } from 'next/router';
 
 const categories = [
   { type: 'chatbot', icon: "💬", tKey: 'sidebar_chatbot', color: "text-cyan-500" },
@@ -16,26 +17,33 @@ const categories = [
 import Link from 'next/link';
 
 export default function Sidebar() {
-  const { t, i18n, ready } = useTranslation('common');
-  if (!ready) return null;
+  const { t, ready } = useTranslation('common');
+  const router = useRouter();
+  const locale = router.locale || 'en';
   const [hover, setHover] = useState(false);
   
   useEffect(() => {
-    i18n.reloadResources(i18n.language, ['common']);
     // 只在客户端调试输出
-    console.log('Sidebar.tsx 当前语言:', i18n.language, 'sidebar_tools:', t('sidebar_tools'));
-  }, [i18n.language, t]);
+    console.log('Sidebar.tsx 当前语言:', locale, 'sidebar_tools:', t('sidebar_tools'));
+  }, [locale, t]);
+
+  if (!ready) {
+    // loading 占位，防止页面结构丢失
+    return (
+      <aside className="hidden md:flex fixed top-20 left-0 z-40 h-[calc(100vh-2rem)] w-24 bg-white dark:bg-gray-900 rounded-r-2xl border-r border-gray-100 dark:border-gray-800 animate-pulse" />
+    );
+  }
 
   return (
     <aside
-      key={i18n.language}
+      key={locale}
       className="hidden md:flex fixed top-20 left-0 z-40 h-[calc(100vh-2rem)] w-24 hover:w-64 bg-white shadow-lg rounded-r-2xl flex-col py-2 gap-1 border-r border-gray-100 dark:bg-gray-900 dark:border-gray-800 group transition-all duration-200 overflow-y-auto"
       onMouseEnter={() => setHover(true)}
       onMouseLeave={() => setHover(false)}
     >
       {categories.map((cat, idx) => (
         <Link
-          key={`${cat.type}-${i18n.language}`}
+          key={`${cat.type}-${locale}`}
           href={`/#${cat.type}`}
           className="flex items-center gap-2 px-5 py-1.5 font-medium transition rounded-l-full group"
         >

@@ -1,9 +1,11 @@
 import React, { useState } from 'react';
 import { useRouter } from 'next/router';
 import Link from 'next/link';
+import { useTranslation } from 'next-i18next';
 
 const Register: React.FC = () => {
   const router = useRouter();
+  const { t } = useTranslation('common');
   const [formData, setFormData] = useState({
     email: '',
     name: '',
@@ -95,7 +97,7 @@ const Register: React.FC = () => {
                 value={formData.email}
                 onChange={handleChange}
                 className="appearance-none rounded-none relative block w-full px-3 py-2 border border-gray-300 placeholder-gray-500 text-gray-900 rounded-t-md focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 focus:z-10 sm:text-sm"
-                placeholder="邮箱地址"
+                placeholder={t('email')}
               />
             </div>
             <div>
@@ -111,7 +113,7 @@ const Register: React.FC = () => {
                 value={formData.name}
                 onChange={handleChange}
                 className="appearance-none rounded-none relative block w-full px-3 py-2 border border-gray-300 placeholder-gray-500 text-gray-900 focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 focus:z-10 sm:text-sm"
-                placeholder="用户名"
+                placeholder={t('username')}
               />
             </div>
             <div>
@@ -127,7 +129,7 @@ const Register: React.FC = () => {
                 value={formData.password}
                 onChange={handleChange}
                 className="appearance-none rounded-none relative block w-full px-3 py-2 border border-gray-300 placeholder-gray-500 text-gray-900 focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 focus:z-10 sm:text-sm"
-                placeholder="密码"
+                placeholder={t('password')}
               />
             </div>
             <div>
@@ -143,7 +145,7 @@ const Register: React.FC = () => {
                 value={formData.confirmPassword}
                 onChange={handleChange}
                 className="appearance-none rounded-none relative block w-full px-3 py-2 border border-gray-300 placeholder-gray-500 text-gray-900 rounded-b-md focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 focus:z-10 sm:text-sm"
-                placeholder="确认密码"
+                placeholder={t('confirm_password')}
               />
             </div>
           </div>

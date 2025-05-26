@@ -1,6 +1,7 @@
 import { aiTools } from '@/data/aiTools';
-import { useLanguage } from '@/contexts/LanguageContext';
 import { useTranslation } from 'next-i18next';
+import { useRouter } from 'next/router';
+import { serverSideTranslations } from 'next-i18next/serverSideTranslations';
 const channels = [
   { key: 'official', icon: '🌐' },
   { key: 'plugin', icon: '🧩' },
@@ -20,10 +21,12 @@ function getChannelTools(channelKey: string, allTools: Tool[]): Tool[] {
   return allTools.slice(Math.ceil(total*5/6));
 }
 export default function ChannelRanking() {
-  const { lang } = useLanguage();
-  const { t, i18n } = useTranslation('common');
+  const { t, i18n, ready } = useTranslation('common');
+  const router = useRouter();
+  const lang = router.locale || i18n.language || 'en';
+  if (!ready) return null;
   return (
-    <div className="py-8 max-w-6xl mx-auto">
+    <div key={i18n.language} className="py-8 max-w-6xl mx-auto">
       <h1 className="text-2xl font-bold mb-8 text-center">{t('channel_ranking')}</h1>
       {channels.map(channel => {
         const tools = getChannelTools(channel.key, aiTools);
@@ -52,4 +55,12 @@ export default function ChannelRanking() {
       })}
     </div>
   );
+}
+
+export async function getStaticProps({ locale }: { locale: string }) {
+  return {
+    props: {
+      ...(await serverSideTranslations(locale, ['common'])),
+    },
+  };
 } 

@@ -1,6 +1,7 @@
 import { aiTools } from '@/data/aiTools';
-import { useLanguage } from '@/contexts/LanguageContext';
 import { useTranslation } from 'next-i18next';
+import { useRouter } from 'next/router';
+import { serverSideTranslations } from 'next-i18next/serverSideTranslations';
 const regions = [
   { key: 'america', icon: '🌎' },
   { key: 'europe', icon: '🌍' },
@@ -17,10 +18,12 @@ function getRegionTools(regionKey: string, allTools: Tool[]): Tool[] {
   return allTools.slice(Math.ceil(total*3/4));
 }
 export default function RegionRanking() {
-  const { lang } = useLanguage();
-  const { t } = useTranslation('common');
+  const { t, i18n, ready } = useTranslation('common');
+  const router = useRouter();
+  const lang = router.locale || i18n.language || 'en';
+  if (!ready) return null; // 语言包未加载时不渲染，防止 hydration mismatch
   return (
-    <div className="py-8 max-w-6xl mx-auto">
+    <div key={i18n.language} className="py-8 max-w-6xl mx-auto">
       <h1 className="text-2xl font-bold mb-8 text-center">{t('region_ranking')}</h1>
       {regions.map(region => {
         const tools = getRegionTools(region.key, aiTools);
@@ -49,4 +52,12 @@ export default function RegionRanking() {
       })}
     </div>
   );
+}
+
+export async function getStaticProps({ locale }: { locale: string }) {
+  return {
+    props: {
+      ...(await serverSideTranslations(locale, ['common'])),
+    },
+  };
 } 

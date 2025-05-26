@@ -1,0 +1,130 @@
+[
+  {
+    "id": "b2bc37bb-4f48-43e5-b482-827d344f9c92",
+    "name": {
+      "zh": "聊天机器人",
+      "en": "Chatbot",
+      "ja": "チャットボット",
+      "ko": "챗봇",
+      "de": "Chatbot",
+      "fr": "Chatbot",
+      "es": "Chatbot",
+      "ru": "Чат-бот"
+    },
+    "icon": "💬",
+    "parent_id": null,
+    "type": "chatbot"
+  },
+  {
+    "id": "7f9082b6-4152-48fc-8f1b-5faef516f27d",
+    "name": {
+      "zh": "图像生成",
+      "en": "Image Generation",
+      "ja": "画像生成",
+      "ko": "이미지 생성",
+      "de": "Bildgenerierung",
+      "fr": "Génération d'image",
+      "es": "Generación de imágenes",
+      "ru": "Генерация изображений"
+    },
+    "icon": "🖼️",
+    "parent_id": null,
+    "type": "image"
+  },
+  {
+    "id": "15f1f6af-8bc8-4bcf-98ea-d981896a35aa",
+    "name": {
+      "zh": "代码助手",
+      "en": "Coding",
+      "ja": "コーディング",
+      "ko": "코딩",
+      "de": "Programmierung",
+      "fr": "Codage",
+      "es": "Codificación",
+      "ru": "Кодинг"
+    },
+    "icon": "💻",
+    "parent_id": null,
+    "type": "coding"
+  },
+  {
+    "id": "04ee93ea-c0f6-434f-90a4-e16f6fbd8afe",
+    "name": {
+      "zh": "效率工具",
+      "en": "Productivity",
+      "ja": "生産性",
+      "ko": "생산성",
+      "de": "Produktivität",
+      "fr": "Productivité",
+      "es": "Productividad",
+      "ru": "Продуктивность"
+    },
+    "icon": "📝",
+    "parent_id": null,
+    "type": "productivity"
+  },
+  {
+    "id": "3787eef7-7ebd-4401-9af1-84b97c4d7b55",
+    "name": {
+      "zh": "设计",
+      "en": "Design",
+      "ja": "デザイン",
+      "ko": "디자인",
+      "de": "Design",
+      "fr": "Design",
+      "es": "Diseño",
+      "ru": "Дизайн"
+    },
+    "icon": "🎨",
+    "parent_id": null,
+    "type": "design"
+  },
+  {
+    "id": "4e91490a-b4f4-4067-9a7e-0ea48b1fa14c",
+    "name": {
+      "zh": "写作",
+      "en": "Writing",
+      "ja": "執筆",
+      "ko": "글쓰기",
+      "de": "Schreiben",
+      "fr": "Écriture",
+      "es": "Escritura",
+      "ru": "Письмо"
+    },
+    "icon": "✍️",
+    "parent_id": null,
+    "type": "writing"
+  },
+  {
+    "id": "3964dda5-b972-440d-8ee4-d8f9ea8fad98",
+    "name": {
+      "zh": "音视频",
+      "en": "Media",
+      "ja": "メディア",
+      "ko": "미디어",
+      "de": "Medien",
+      "fr": "Médias",
+      "es": "Medios",
+      "ru": "Медиа"
+    },
+    "icon": "🎬",
+    "parent_id": null,
+    "type": "media"
+  },
+  {
+    "id": "40a3b29a-c622-45e3-a747-afdf3bff5d8f",
+    "name": {
+      "zh": "营销",
+      "en": "Marketing",
+      "ja": "マーケティング",
+      "ko": "마케팅",
+      "de": "Marketing",
+      "fr": "Marketing",
+      "es": "Marketing",
+      "ru": "Маркетинг"
+    },
+    "icon": "📢",
+    "parent_id": null,
+    "type": "marketing"
+  }
+]

@@ -5,6 +5,8 @@ import Link from 'next/link';
 import { QRCodeCanvas } from 'qrcode.react';
 import { useTranslation } from 'next-i18next';
 import { serverSideTranslations } from 'next-i18next/serverSideTranslations';
+import { useFavoriteStore } from '@/store/favoriteStore';
+import { useAuth } from '@/context/AuthContext';
 
 const chatgptDetail = {
   launchDate: 'November 2022',
@@ -103,6 +105,9 @@ export default function ToolDetailPage() {
   const [showLoginPrompt, setShowLoginPrompt] = useState(false);
   const lang = i18n.language;
   const langTyped = lang as keyof typeof chatgptDetail.features;
+  const isFavorite = useFavoriteStore(state => state.isFavorite(tool.id));
+  const toggleFavorite = useFavoriteStore(state => state.toggleFavorite);
+  const { isLoggedIn } = useAuth();
 
   // 拉取评论
   useEffect(() => {
@@ -113,9 +118,32 @@ export default function ToolDetailPage() {
       .catch(() => setLoadingReviews(false));
   }, [tool.id]);
 
+  // 收藏按钮登录校验
+  const handleFavoriteClick = () => {
+    if (!isLoggedIn) {
+      setShowLoginPrompt(true);
+      return;
+    }
+    toggleFavorite(tool.id);
+  };
+
+  // 评分点击登录校验
+  const handleStarClick = (star: number) => {
+    if (!isLoggedIn) {
+      setShowLoginPrompt(true);
+      return;
+    }
+    setUserRating(star);
+  };
+
+  // 评论提交登录校验
   const handleReviewSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
     setReviewError('');
+    if (!isLoggedIn) {
+      setShowLoginPrompt(true);
+      return;
+    }
     const userEmail = localStorage.getItem('userEmail');
     const username = localStorage.getItem('username') || userEmail;
     if (!userEmail) {
@@ -123,7 +151,7 @@ export default function ToolDetailPage() {
       return;
     }
     if (!userRating) {
-      setReviewError('请先评分');
+      setReviewError(t('rate_this_tool'));
       return;
     }
     const res = await fetch('/api/reviews', {
@@ -133,12 +161,11 @@ export default function ToolDetailPage() {
     });
     const data = await res.json();
     if (!res.ok) {
-      setReviewError(data.message || '提交失败');
+      setReviewError(data.message || t('submit_failed'));
       return;
     }
     setUserRating(0);
     setReview('');
-    // 重新拉取评论
     fetch(`/api/reviews?toolId=${tool.id}`)
       .then(res => res.json())
       .then(data => setReviews(data));
@@ -165,18 +192,28 @@ export default function ToolDetailPage() {
         <div className="w-full bg-white dark:bg-gray-800 rounded-2xl shadow p-6 flex flex-col md:flex-row gap-6 mb-8">
           <div className="flex items-center gap-4 flex-1">
             <div className="w-16 h-16 rounded-xl bg-purple-200 flex items-center justify-center text-3xl font-bold text-purple-700 overflow-hidden relative">
-              <img
-                src={`https://www.google.com/s2/favicons?sz=64&domain_url=${encodeURIComponent(tool.website ?? '')}`}
-                alt={tool.name && tool.name[lang] ? tool.name[lang] : ''}
-                className="w-12 h-12"
-                onError={e => { e.currentTarget.style.display = 'none'; }}
-              />
-              <span className="absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 pointer-events-none select-none">
-                {tool.icon || tool.name[lang][0]}
-              </span>
+              {tool.iconUrl ? (
+                <img
+                  src={tool.iconUrl}
+                  alt={tool.name && tool.name[lang] ? tool.name[lang] : ''}
+                  className="w-12 h-12 object-contain"
+                />
+              ) : (
+                <span className="text-3xl">{tool.icon || tool.name[lang][0]}</span>
+              )}
             </div>
             <div>
-              <div className="text-2xl font-bold text-gray-900 dark:text-white">{tool.name[lang]}</div>
+              <div className="text-2xl font-bold text-gray-900 dark:text-white flex items-center gap-2">
+                {tool.name[lang]}
+                <button
+                  onClick={handleFavoriteClick}
+                  aria-label={isFavorite ? t('unfavorite') : t('favorite')}
+                  className="ml-2 text-pink-500 text-3xl transition-all duration-150 hover:scale-125 focus:outline-none"
+                  style={{ cursor: 'pointer' }}
+                >
+                  {isFavorite ? '♥' : '♡'}
+                </button>
+              </div>
               <div className="text-gray-500 dark:text-gray-300 text-sm mt-1">{t('tool_category_chatbot')}</div>
               <div className="flex items-center gap-2 mt-1">
                 <span className="text-yellow-500">★</span>
@@ -336,17 +373,19 @@ export default function ToolDetailPage() {
               <span
                 key={star}
                 className={`cursor-pointer text-2xl ${userRating >= star ? 'text-yellow-400' : 'text-gray-300'}`}
-                onClick={() => setUserRating(star)}
+                onClick={() => handleStarClick(star)}
               >★</span>
             ))}
           </div>
-          <textarea
-            className="w-full border rounded p-2 mb-2 bg-gray-50 dark:bg-gray-900 text-gray-800 dark:text-gray-100"
-            placeholder={t('share_your_experience_with_this_tool_optional')}
-            value={review}
-            onChange={e => setReview(e.target.value)}
-          />
-          <button className="px-4 py-2 bg-purple-600 text-white rounded hover:bg-purple-700 transition">{t('submit_review')}</button>
+          <form onSubmit={handleReviewSubmit}>
+            <textarea
+              className="w-full border rounded p-2 mb-2 bg-gray-50 dark:bg-gray-900 text-gray-800 dark:text-gray-100"
+              placeholder={t('share_your_experience_with_this_tool_optional')}
+              value={review}
+              onChange={e => setReview(e.target.value)}
+            />
+            <button type="submit" className="px-4 py-2 bg-purple-600 text-white rounded hover:bg-purple-700 transition">{t('submit_review')}</button>
+          </form>
         </div>
 
         {/* 评论区展示 */}

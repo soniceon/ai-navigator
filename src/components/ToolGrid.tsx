@@ -1,6 +1,7 @@
 import Link from 'next/link';
 import { useState } from 'react';
-import { aiTools, AiTool } from '../data/aiTools';
+import { aiTools } from '../data/aiTools';
+import type { AiTool } from '@/types/aiTool';
 import { useTranslation } from 'next-i18next';
 import { messages } from '@/locales';
 import { useSearch } from '@/contexts/SearchContext';

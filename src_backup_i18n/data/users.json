@@ -1,0 +1,32 @@
+[
+  {
+    "id": "1",
+    "email": "test@example.com",
+    "name": "测试用户",
+    "password": "$2a$10$MkyZo7HGmC1DBcccdjg9POgcRbpwyyfm3UwJd4.4nwWCYALl.LTqC",
+    "createdAt": "2024-03-20T00:00:00.000Z",
+    "updatedAt": "2024-03-20T00:00:00.000Z"
+  },
+  {
+    "id": "c08a6c08-2e3b-4e77-9753-77b8cf188b97",
+    "email": "13860392700@163.com",
+    "password": "$2a$10$1HXOENDsf4WKrP/Rvs1.u.Z1RFBanNu1wncIwBukqFZIxvZeCqcj.",
+    "name": "sonice",
+    "verified": true,
+    "token": null,
+    "createdAt": "2025-05-22T10:12:33.379Z",
+    "updatedAt": "2025-05-22T10:12:33.379Z",
+    "avatar": "https://api.dicebear.com/7.x/avataaars/svg?seed=13860392700%40163.com"
+  },
+  {
+    "id": "3aa1a487-e5ad-4e32-a41c-7413402e1644",
+    "email": "451502315@qq.com",
+    "password": "$2a$10$9eFMn9SrFXET6ve069mjx.oDUQX5QJOh2f1DdFHAYZNtXmpZrkZd.",
+    "name": "soniceon",
+    "verified": true,
+    "token": null,
+    "createdAt": "2025-05-22T12:05:21.809Z",
+    "updatedAt": "2025-05-22T12:05:21.809Z",
+    "avatar": "https://api.dicebear.com/7.x/avataaars/svg?seed=451502315%40qq.com"
+  }
+]

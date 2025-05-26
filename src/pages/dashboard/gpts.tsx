@@ -1,5 +1,6 @@
 import { useTranslation } from 'next-i18next';
 import DashboardSidebar from '../../components/DashboardSidebar';
+import { serverSideTranslations } from 'next-i18next/serverSideTranslations';
 
 const gpts = [
   { name: 'gpt_writing_assistant', date: '2024-05-01', status: 'status_online' },
@@ -34,4 +35,12 @@ export default function GptsPage() {
       </main>
     </div>
   );
+}
+
+export async function getServerSideProps({ locale }) {
+  return {
+    props: {
+      ...(await serverSideTranslations(locale, ['common']))
+    }
+  };
 } 

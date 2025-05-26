@@ -281,7 +281,7 @@ export default function Profile() {
       {showAvatarModal && (
         <div className="fixed inset-0 z-50 flex items-center justify-center bg-black/40">
           <div className="bg-white dark:bg-[#232136] rounded-2xl p-6 shadow-xl w-[380px]">
-            <div className="font-bold text-lg mb-4 text-center">选择头像</div>
+            <div className="font-bold text-lg mb-4 text-center">{t('choose_avatar')}</div>
             <div className="grid grid-cols-3 gap-4 mb-4">
               {randomAvatars.map((item, idx) => (
                 <button
@@ -298,7 +298,7 @@ export default function Profile() {
                 </button>
               ))}
             </div>
-            <button className="w-full mt-2 py-2 bg-purple-600 text-white rounded" onClick={() => setShowAvatarModal(false)}>完成</button>
+            <button className="w-full mt-2 py-2 bg-purple-600 text-white rounded" onClick={() => setShowAvatarModal(false)}>{t('done')}</button>
           </div>
         </div>
       )}

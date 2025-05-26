@@ -1,5 +1,6 @@
 import { useTranslation } from 'next-i18next';
 import DashboardSidebar from '../../components/DashboardSidebar';
+import { serverSideTranslations } from 'next-i18next/serverSideTranslations';
 
 const tools = [
   { name: 'tool_chatgpt', url: 'https://chat.openai.com', type: 'type_chat', date: '2024-05-01', status: 'status_online' },
@@ -36,4 +37,12 @@ export default function ToolsPage() {
       </main>
     </div>
   );
+}
+
+export async function getServerSideProps({ locale }) {
+  return {
+    props: {
+      ...(await serverSideTranslations(locale, ['common']))
+    }
+  };
 } 

@@ -1,6 +1,8 @@
 import { aiTools } from '@/data/aiTools';
-import { useLanguage } from '@/contexts/LanguageContext';
 import { useTranslation } from 'next-i18next';
+import { serverSideTranslations } from 'next-i18next/serverSideTranslations';
+import { useRouter } from 'next/router';
+
 const categories = [
   { type: 'chatbot', icon: '💬' },
   { type: 'image', icon: '🖼️' },
@@ -13,8 +15,9 @@ const categories = [
 ];
 type Tool = typeof aiTools[number];
 export default function CategoryRanking() {
-  const { lang } = useLanguage();
   const { t, i18n } = useTranslation('common');
+  const router = useRouter();
+  const lang = router.locale || i18n.language || 'en';
   return (
     <div className="py-8 max-w-6xl mx-auto">
       <h1 className="text-2xl font-bold mb-8 text-center">{t('category_ranking')}</h1>
@@ -45,4 +48,12 @@ export default function CategoryRanking() {
       })}
     </div>
   );
+}
+
+export async function getStaticProps({ locale }: { locale: string }) {
+  return {
+    props: {
+      ...(await serverSideTranslations(locale, ['common'])),
+    },
+  };
 } 

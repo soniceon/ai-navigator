@@ -4,7 +4,6 @@ import { appWithTranslation } from 'next-i18next';
 import nextI18NextConfig from '../../next-i18next.config.js';
 import { AuthProvider } from '../context/AuthContext';
 import { SearchProvider } from '../contexts/SearchContext';
-import { LanguageProvider } from '../contexts/LanguageContext';
 import Navbar from '../components/Navbar';
 import Sidebar from '../components/Sidebar';
 import Footer from '../components/Footer';
@@ -32,35 +31,34 @@ function MyApp({ Component, pageProps }) {
     }
   }, [i18n.language, ready]);
   
+  // 确保 i18n 实例与 router.locale 保持同步
   useEffect(() => {
-    if (i18n && router.locale) {
+    if (i18n && router.locale && i18n.language !== router.locale) {
       i18n.changeLanguage(router.locale);
     }
-  }, [router.locale]);
+  }, [router.locale, i18n]);
   
   if (!ready) return null;
   
   return (
     <ThemeProvider attribute="class" defaultTheme="dark">
-      <LanguageProvider>
-        <SearchProvider>
-          <AuthProvider>
-            <div className="min-h-screen flex flex-col bg-gray-50 dark:bg-[#181825] transition-colors" key={`app-${i18n.language}-${languageKey}`}>
-              <DynamicNavbar />
-              {isHome && <Hero />}
-              <div className="flex flex-1">
-                <Sidebar key={i18n.language} />
-                <div className="flex-1 ml-20 md:ml-56">
-                  <main className="max-w-7xl mx-auto w-full px-4">
-                    <Component {...pageProps} />
-                  </main>
-                </div>
+      <SearchProvider>
+        <AuthProvider>
+          <div className="min-h-screen flex flex-col bg-gray-50 dark:bg-[#181825] transition-colors" key={`app-${i18n.language}-${languageKey}`}>
+            <DynamicNavbar />
+            {isHome && <Hero />}
+            <div className="flex flex-1">
+              <Sidebar key={i18n.language} />
+              <div className="flex-1 ml-20 md:ml-56">
+                <main className="max-w-7xl mx-auto w-full px-4">
+                  <Component {...pageProps} />
+                </main>
               </div>
-              <DynamicFooter />
             </div>
-          </AuthProvider>
-        </SearchProvider>
-      </LanguageProvider>
+            <DynamicFooter />
+          </div>
+        </AuthProvider>
+      </SearchProvider>
     </ThemeProvider>
   );
 }
