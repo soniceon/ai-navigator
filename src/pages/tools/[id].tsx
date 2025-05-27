@@ -313,17 +313,15 @@ export default function ToolDetailPage() {
                 >
                   {t('whatsapp')}
                 </a>
-                {/* Instagram（引导复制链接） */}
-                <button
+                {/* Instagram */}
+                <a
+                  href={`https://www.instagram.com/?url=${encodeURIComponent(typeof window !== 'undefined' ? window.location.href : '')}`}
+                  target="_blank"
+                  rel="noopener noreferrer"
                   className="px-3 py-1 bg-pink-500 text-white rounded"
-                  onClick={() => {
-                    navigator.clipboard.writeText(typeof window !== 'undefined' ? window.location.href : '');
-                    setCopied(true);
-                    setTimeout(() => setCopied(false), 1500);
-                  }}
                 >
                   {t('instagram')}
-                </button>
+                </a>
               </div>
             </div>
           </div>
@@ -415,7 +413,7 @@ export default function ToolDetailPage() {
           <div className="fixed inset-0 bg-black/40 flex items-center justify-center z-50">
             <div className="bg-white dark:bg-gray-800 p-6 rounded shadow text-center">
               <div className="mb-4">{t('please_login_before_comment')}</div>
-              <button className="px-4 py-2 bg-purple-600 text-white rounded" onClick={() => { setShowLoginPrompt(false); window.location.href = '/login'; }}>{t('go_to_login')}</button>
+              <button className="px-4 py-2 bg-purple-600 text-white rounded" onClick={() => { setShowLoginPrompt(false); window.location.href = `/${i18n.language}/login`; }}>{t('go_to_login')}</button>
             </div>
           </div>
         )}

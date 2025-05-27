@@ -693,7 +693,7 @@
   "menu_advertise": "付费推广",
   "menu_advertise_desc": "让你的AI工具获得更多曝光",
   "menu_business": "商务合作",
-  "menu_business_desc": "探索更多商业合作机会",
+  "menu_business_desc": "探索更多商务合作机会",
   "menu_faq": "常见问题",
   "menu_faq_desc": "了解更多关于SoniceAI的信息",
   "submit_ai_tool": "提交AI工具",
@@ -727,8 +727,8 @@
   "advertise_benefit2": "分类置顶，精准用户",
   "advertise_benefit3": "专题展示，提升转化",
   "business_title": "商务合作",
-  "business_intro": "探索更多商业合作机会",
-  "business_desc": "我们欢迎各类AI相关合作，包括数据、API、内容、渠道等。",
+  "business_intro": "探索更多商务合作机会",
+  "business_desc": "我们欢迎各种AI相关合作，包括数据、API、内容、渠道等。",
   "business_case1": "API/数据合作",
   "business_case2": "内容/品牌合作",
   "business_case3": "渠道/流量合作",
@@ -769,5 +769,7 @@
   "please_enter_tool_name": "请输入工具名称",
   "please_enter_tool_url": "请输入工具网址",
   "please_enter_tool_description": "请输入工具描述",
-  "please_enter_field": "请填写此字段"
+  "please_enter_field": "请填写此字段",
+  "coming_soon": "敬请期待",
+  "faq": "常见问题"
 }

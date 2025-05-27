@@ -5,13 +5,12 @@ import { nanoid } from 'nanoid';
 import { serverSideTranslations } from 'next-i18next/serverSideTranslations';
 import { GetServerSideProps } from 'next';
 
-const AVATAR_STYLES = ['ins', 'dicebear'] as const;
+const AVATAR_STYLES = ['ins', 'dicebear', 'avataaars'] as const;
 type AvatarStyle = typeof AVATAR_STYLES[number];
 
 // dicebear 卡通风格列表
 const DICEBEAR_STYLES = ['avataaars', 'bottts', 'micah', 'adventurer'] as const;
 type DicebearStyle = typeof DICEBEAR_STYLES[number];
-type AvatarStyle = DicebearStyle | 'ins';
 
 const sidebarMenu = [
   { icon: '👤', key: 'profile_info' },

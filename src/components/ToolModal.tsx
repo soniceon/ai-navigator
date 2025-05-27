@@ -73,6 +73,7 @@ export default function ToolModal({ isOpen, onClose, mode, initialData }: ToolMo
               onChange={e => setFormData({ ...formData, name: e.target.value })}
               className="w-full px-4 py-2 rounded-lg border border-gray-300 dark:border-gray-600 bg-white dark:bg-gray-700 text-gray-900 dark:text-white"
               required
+              placeholder={t('please_enter_tool_name')}
             />
           </div>
 
@@ -86,6 +87,7 @@ export default function ToolModal({ isOpen, onClose, mode, initialData }: ToolMo
               onChange={e => setFormData({ ...formData, url: e.target.value })}
               className="w-full px-4 py-2 rounded-lg border border-gray-300 dark:border-gray-600 bg-white dark:bg-gray-700 text-gray-900 dark:text-white"
               required
+              placeholder={t('please_enter_tool_url')}
             />
           </div>
 
@@ -99,6 +101,7 @@ export default function ToolModal({ isOpen, onClose, mode, initialData }: ToolMo
               className="w-full px-4 py-2 rounded-lg border border-gray-300 dark:border-gray-600 bg-white dark:bg-gray-700 text-gray-900 dark:text-white"
               rows={3}
               required
+              placeholder={t('please_enter_tool_description')}
             />
           </div>
 

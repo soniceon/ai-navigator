@@ -2,9 +2,13 @@ import { useState } from 'react';
 import { useTranslation } from 'next-i18next';
 import { serverSideTranslations } from 'next-i18next/serverSideTranslations';
 import { GetServerSideProps } from 'next';
+import Link from 'next/link';
+import { useRouter } from 'next/router';
 
 export default function SubmitAIPage() {
   const { t } = useTranslation('common');
+  const router = useRouter();
+  const locale = router.locale || 'en';
   const [form, setForm] = useState({ name: '', url: '', desc: '', email: '' });
   const [submitted, setSubmitted] = useState(false);
   const [faqOpen, setFaqOpen] = useState<number | null>(null);
@@ -40,7 +44,14 @@ export default function SubmitAIPage() {
       {/* 顶部Tab */}
       <div className="flex gap-2 mb-8">
         {tabs.map(tab => (
-          <a key={tab.key} href={tab.path} className={`px-4 py-2 rounded-t-lg font-bold ${tab.path === '/submit-ai' ? 'bg-purple-600 text-white' : 'bg-gray-100 dark:bg-gray-800 text-gray-700 dark:text-gray-200'}`}>{tab.label}</a>
+          <Link
+            key={tab.key}
+            href={tab.path}
+            locale={locale}
+            className={`px-4 py-2 rounded-t-lg font-bold ${tab.path === '/submit-ai' ? 'bg-purple-600 text-white' : 'bg-gray-100 dark:bg-gray-800 text-gray-700 dark:text-gray-200'}`}
+          >
+            {tab.label}
+          </Link>
         ))}
       </div>
       {/* 表单区 */}
